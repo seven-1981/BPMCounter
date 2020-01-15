@@ -1,0 +1,1 @@
+/usr/bin/cc       CMakeFiles/cmTC_37572.dir/testCCompiler.c.o  -o cmTC_37572 -rdynamic 
