@@ -12,16 +12,3 @@ Compilation of the C compiler identification source "CMakeCCompilerId.c" produce
 
 The C compiler identification is GNU, found in "/home/pi/eclipse-workspace/BPMDetector/Audio/TestAudio/build/CMakeFiles/3.7.2/CompilerIdC/a.out"
 
-Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
-Compiler: /usr/bin/c++ 
-Build flags: 
-Id flags: 
-
-The output was:
-0
-
-
-Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.out"
-
-The CXX compiler identification is GNU, found in "/home/pi/eclipse-workspace/BPMDetector/Audio/TestAudio/build/CMakeFiles/3.7.2/CompilerIdCXX/a.out"
-

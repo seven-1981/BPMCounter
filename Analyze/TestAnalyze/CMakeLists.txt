@@ -10,7 +10,9 @@ list(APPEND includes "${PROJ_PATH}"
 		     		 "${PROJ_PATH}/Analyze/TestAnalyze")
 
 # Locate sources
-#list(APPEND sources "${PROJ_PATH}/Audio/AudioCardLister.cpp")
+list(APPEND sources "${PROJ_PATH}/Analyze/ParamList.cpp"
+					"${PROJ_PATH}/Analyze/AnalyzerParam.cpp"
+					"${PROJ_PATH}/Analyze/AnalyzerContainer.cpp")
 
 include_directories(${includes})
  
@@ -19,7 +21,7 @@ find_package(GTest REQUIRED)
 include_directories(${GTEST_INCLUDE_DIRS}) 
 
 # Link runTests with what we want to test and the GTest and pthread library
-add_executable(runTests TestMain.cpp)
+add_executable(runTests TestMain.cpp ${sources})
 target_link_libraries(runTests ${GTEST_LIBRARIES} pthread)                 
 
 # Set compiler flags

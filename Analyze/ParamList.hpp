@@ -12,27 +12,15 @@ public:
 	using VEC = std::vector<Param*>;
 	using LIST = std::initializer_list<Param*>;
 
-	ParamList() { }
+	ParamList();
 
-	explicit ParamList(LIST list)
-	{
-		using IT = LIST::iterator;
-		for (IT it = list.begin(); it != list.end(); ++it)
-			add(*it);
-	}
+	explicit ParamList(LIST list);
 
-	~ParamList() { }
+	~ParamList();
 
-	ParamList& add(Param* param)
-	{
-		m_params.push_back(param);
-		return *this;
-	}
+	ParamList& add(Param* param);
 
-	unsigned int size()
-	{
-		return m_params.size();
-	}
+	unsigned int size();
 
 	template <typename T, ParamType DT = Type2Int<T>::type>
 	int get(std::string name, T& param)
@@ -56,11 +44,11 @@ public:
 	using iterator = VEC::iterator;
 	using const_iterator = VEC::const_iterator;
 
-	iterator begin() { return m_params.begin(); }
-	iterator end() { return m_params.end();	}
-	const_iterator cbegin() const { return m_params.cbegin(); }
-	const_iterator cend() const	{ return m_params.cend(); }
-	void clear() { m_params.clear(); }
+	iterator begin();
+	iterator end();
+	const_iterator cbegin() const;
+	const_iterator cend() const;
+	void clear();
 
 private:
 	VEC m_params;

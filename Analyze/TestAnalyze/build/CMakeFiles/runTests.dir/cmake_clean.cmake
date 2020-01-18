@@ -1,5 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/runTests.dir/TestMain.cpp.o"
+  "CMakeFiles/runTests.dir/home/pi/eclipse-workspace/BPMDetector/Analyze/ParamList.cpp.o"
+  "CMakeFiles/runTests.dir/home/pi/eclipse-workspace/BPMDetector/Analyze/AnalyzerParam.cpp.o"
+  "CMakeFiles/runTests.dir/home/pi/eclipse-workspace/BPMDetector/Analyze/AnalyzerContainer.cpp.o"
   "runTests.pdb"
   "runTests"
 )

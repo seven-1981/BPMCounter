@@ -1,32 +1,46 @@
 #include <gtest/gtest.h>
-#include "Analyzer.hpp"
-#include "BPMAnalyzer.hpp"
-#include "TestProcedure.hpp"
+
+#include "AnalyzerContainer.hpp"
+#include "AnalyzerParam.hpp"
 #include "Buffer.hpp"
+#include "FakeAnalyzerParam.hpp"
 
 
-class TestAnalyzer : public testing::Test
+class TestAnalyzerParam : public testing::Test
 {
 public:
 
 };
 
-class TestBPMAnalyzer : public testing::Test
+class TestAnalyzerContainer : public testing::Test
 {
 public:
 	Buffer<char> buffer;
 	const int SIZE = 5;
 
+	AnalyzerContainer container;
+	FakeAnalyzerParam<char>* analyzerProc1;
+	FakeAnalyzerParam<char>* analyzerProc2;
+
 	void SetUp() override
 	{
 		buffer = { 1, 2, 3, 4, 5 };
+
+		analyzerProc1 = new FakeAnalyzerParam<char>(buffer);
+		analyzerProc2 = new FakeAnalyzerParam<char>(buffer, FACTOR2);
+	}
+
+	void TearDown() override
+	{
+		delete analyzerProc1;
+		delete analyzerProc2;
 	}
 };
 
 
-TEST_F(TestAnalyzer, InitializesParamList)
+TEST_F(TestAnalyzerParam, InitializesParamList)
 {
-	Analyzer analyzer
+	AnalyzerParam analyzer
 	{
     	new TypedParam<ParamType::Bool>("My bool", true),
     	new TypedParam<ParamType::Float>("My float", -3.1f),
@@ -36,27 +50,48 @@ TEST_F(TestAnalyzer, InitializesParamList)
 	};
 }
 
-TEST_F(TestBPMAnalyzer, CreatesInstance)
+TEST_F(TestAnalyzerContainer, CreatesInstance)
 {
-	BPMAnalyzer analyzer;
+	AnalyzerContainer container;
 }
 
 
-TEST_F(TestBPMAnalyzer, PerformsAnalysis)
+TEST_F(TestAnalyzerContainer, PerformsAnalysis)
 {
-	BPMAnalyzer analyzer;
-	TestProcedure<char> procedure(buffer);
-	analyzer.set_procedure(&procedure);
+	container.init_analyzer(analyzerProc1);
 
-	ASSERT_EQ(analyzer.analyze(), FACTOR);
+	ASSERT_EQ(container.analyze(), FACTOR1);
 }
 
-TEST_F(TestBPMAnalyzer, CorrectBehaviourUponParamFailure)
+TEST_F(TestAnalyzerContainer, CorrectBehaviourUponParamFailure)
 {
-	BPMAnalyzer analyzer;
-	TestProcedure<char> procedure(buffer);
-	procedure.set_state(State_ParamFailure);
-	analyzer.set_procedure(&procedure);
+	analyzerProc1->set_state(State_ParamFailure);
+	container.init_analyzer(analyzerProc1);
 
-	ASSERT_EQ(analyzer.analyze(), 0.0f);
+	ASSERT_EQ(container.analyze(), 0.0f);
+}
+
+TEST_F(TestAnalyzerContainer, ReturnsZeroIfNoAnalyzerConfigured)
+{
+	ASSERT_EQ(container.analyze(), 0.0f);
+}
+
+TEST_F(TestAnalyzerContainer, SelectsProperAnalyzer)
+{
+	container.init_analyzer(analyzerProc1);
+	container.init_analyzer(analyzerProc2);
+
+	container.set_analyzer(1);
+
+	ASSERT_EQ(container.analyze(), FACTOR2);
+}
+
+TEST_F(TestAnalyzerContainer, SelectsProperAnalyzerIfInvalidIndex)
+{
+	container.init_analyzer(analyzerProc1);
+	container.init_analyzer(analyzerProc2);
+
+	container.set_analyzer(77);
+
+	ASSERT_EQ(container.analyze(), FACTOR1);
 }
