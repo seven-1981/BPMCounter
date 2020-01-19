@@ -13,8 +13,7 @@ class AnalyzerController : public IAnalyzer
 public:
 	AnalyzerController(Buffer<T>& buffer) : m_container()
 	{
-		m_container.init_analyzer(
-			new Analyzer1<T>(buffer) );
+		m_container.init_analyzer( new Analyzer1<T>(buffer) );
 	}
 
 	~AnalyzerController()
@@ -28,6 +27,16 @@ public:
 	FLOAT_TYPE analyze() override
 	{
 		return m_container.analyze();
+	}
+
+	void init_analyzer(IAnalyzer* analyzer)
+	{
+		m_container.init_analyzer(analyzer);
+	}
+
+	void set_analyzer(unsigned int index)
+	{
+		m_container.set_analyzer(index);
 	}
 
 private:

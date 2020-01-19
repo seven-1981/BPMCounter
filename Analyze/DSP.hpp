@@ -196,7 +196,7 @@ namespace DSP
 	}
 	
 	template <typename T>
-	FLOAT_TYPE get_autocorr_value(Buffer<T>& buffer, SIZE_TYPE lag_samples)
+	FLOAT_TYPE get_autocorr_value(const Buffer<T>& buffer, SIZE_TYPE lag_samples)
 	{
 		SIZE_TYPE size = buffer.get_size();
 		FLOAT_TYPE mean_value = DSP::get_mean_value(buffer);
@@ -211,7 +211,7 @@ namespace DSP
 	}
 	
 	template <typename T>
-	FLOAT_TYPE get_autocorr_value(Buffer<T>& buffer, SIZE_TYPE lag_samples, SIZE_TYPE size, FLOAT_TYPE mean_value, FLOAT_TYPE variance_value)
+	FLOAT_TYPE get_autocorr_value(const Buffer<T>& buffer, SIZE_TYPE lag_samples, SIZE_TYPE size, FLOAT_TYPE mean_value, FLOAT_TYPE variance_value)
 	{
 		FLOAT_TYPE autocv = 0.0;
 		for (SIZE_TYPE i = 0; i < (size - lag_samples); ++i)
@@ -223,7 +223,7 @@ namespace DSP
 	}
 
 	template <typename T>
-	void auto_correlation(Buffer<T>& inbuffer, Buffer<T>& outbuffer)
+	void auto_correlation(const Buffer<T>& inbuffer, Buffer<T>& outbuffer)
 	{
 		SIZE_TYPE size = inbuffer.get_size();
 		
@@ -525,6 +525,23 @@ namespace DSP
 			}
 			outbuffer[i] = ma_value;
 			ma_value = 0.0;
+		}
+	}
+
+	template <typename T1, typename T2>
+	void lowpass_filter(Buffer<T1>& inbuffer, Buffer<T2>& filtbuffer, FLOAT_TYPE cutoff_Hz, FLOAT_TYPE sampleT_s)
+	{
+		FLOAT_TYPE e_pow = 1.0f - exp(-sampleT_s * 2.0f * M_PI * cutoff_Hz);
+
+		unsigned int size_in = inbuffer.get_size();
+		unsigned int size_filt = filtbuffer.get_size();
+		assert(size_in == size_filt);
+
+		FLOAT_TYPE output = 0;
+		for (unsigned int i = 0; i < size_in; ++i)
+		{
+			output += (static_cast<FLOAT_TYPE>(inbuffer[i] - output) * e_pow);
+			filtbuffer[i] = static_cast<T2>(output);
 		}
 	}
 

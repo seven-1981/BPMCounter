@@ -3,5 +3,6 @@
 
 CMakeFiles/Plot.dir/main.cpp.o: /home/pi/eclipse-workspace/BPMDetector/Analyze/DSP.hpp
 CMakeFiles/Plot.dir/main.cpp.o: /home/pi/eclipse-workspace/BPMDetector/Audio/Buffer.hpp
+CMakeFiles/Plot.dir/main.cpp.o: ../Plotting.hpp
 CMakeFiles/Plot.dir/main.cpp.o: ../main.cpp
 

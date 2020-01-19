@@ -3,7 +3,6 @@
 #include "IRecordingService.hpp"
 #include "ALSACardConfiguration.hpp"
 #include "globals.hpp"
-#include <iostream>
 
  
 AudioRecorder::AudioRecorder() :
@@ -96,7 +95,6 @@ void AudioRecorder::samples_available(int num_samples)
 	if (num_samples < m_periodSize)
 		return;
 	m_samplesAvailable = true;
-	std::cout << "Samples available = " << (int)num_samples << std::endl;
 }
 
 bool AudioRecorder::is_samplesAvailable()

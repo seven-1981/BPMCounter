@@ -107,6 +107,8 @@ gtest/gtest.h
 -
 AnalyzerController.hpp
 /home/pi/eclipse-workspace/BPMDetector/Analyze/TestAnalyze/AnalyzerController.hpp
+FakeAnalyzerParam.hpp
+/home/pi/eclipse-workspace/BPMDetector/Analyze/TestAnalyze/FakeAnalyzerParam.hpp
 Buffer.hpp
 /home/pi/eclipse-workspace/BPMDetector/Analyze/TestAnalyze/Buffer.hpp
 

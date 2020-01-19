@@ -22,7 +22,10 @@ list(APPEND sources "${PROJ_PATH}/Audio/AudioCardLister.cpp"
 				    "${PROJ_PATH}/Audio/AudioController.cpp"
 				    "${PROJ_PATH}/Gui/MainWindow.cpp"
 				    "${PROJ_PATH}/Gui/FrequencySpectrum.cpp"
-				    "${PROJ_PATH}/Gui/Spectrograph.cpp")
+				    "${PROJ_PATH}/Gui/Spectrograph.cpp"
+				    "${PROJ_PATH}/Analyze/ParamList.cpp"
+				    "${PROJ_PATH}/Analyze/AnalyzerParam.cpp"
+				    "${PROJ_PATH}/Analyze/AnalyzerContainer.cpp")
 
 # Locate ALSA
 find_package(ALSA REQUIRED) 

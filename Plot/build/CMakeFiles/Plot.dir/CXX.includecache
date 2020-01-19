@@ -32,13 +32,9 @@ memory
 algorithm
 -
 
-/home/pi/eclipse-workspace/BPMDetector/Plot/main.cpp
+/home/pi/eclipse-workspace/BPMDetector/Plot/Plotting.hpp
 Buffer.hpp
 /home/pi/eclipse-workspace/BPMDetector/Plot/Buffer.hpp
-DSP.hpp
-/home/pi/eclipse-workspace/BPMDetector/Plot/DSP.hpp
-iostream
--
 gnuplot-iostream.h
 -
 vector
@@ -47,4 +43,14 @@ utility
 -
 string
 -
+
+/home/pi/eclipse-workspace/BPMDetector/Plot/main.cpp
+Buffer.hpp
+/home/pi/eclipse-workspace/BPMDetector/Plot/Buffer.hpp
+DSP.hpp
+/home/pi/eclipse-workspace/BPMDetector/Plot/DSP.hpp
+iostream
+-
+Plotting.hpp
+/home/pi/eclipse-workspace/BPMDetector/Plot/Plotting.hpp
 

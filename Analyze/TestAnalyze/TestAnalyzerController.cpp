@@ -1,13 +1,14 @@
 #include <gtest/gtest.h>
 
 #include "AnalyzerController.hpp"
+#include "FakeAnalyzerParam.hpp"
 #include "Buffer.hpp"
 
 
 class TestAnalyzerController : public testing::Test
 {
 public:
-	Buffer<char> buffer;
+	Buffer<float> buffer;
 	const int SIZE = 5;
 
 	void SetUp() override
@@ -24,12 +25,16 @@ public:
 
 TEST_F(TestAnalyzerController, CreatesInstance)
 {
-	AnalyzerController<char> controller(buffer);
+	AnalyzerController<float> controller(buffer);
 }
 
 TEST_F(TestAnalyzerController, PerformsAnalysis)
 {
-	AnalyzerController<char> controller(buffer);
+	AnalyzerController<float> controller(buffer);
+	FakeAnalyzerParam<float>* fakeAnalyzer = new FakeAnalyzerParam<float>(buffer);
 
-	ASSERT_EQ(controller.analyze(), 1.0f);
+	controller.init_analyzer(fakeAnalyzer);
+	controller.set_analyzer(1);
+
+	ASSERT_EQ(controller.analyze(), FACTOR1);
 }

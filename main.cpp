@@ -9,6 +9,7 @@
 #include "ALSACardConfiguration.hpp"
 #include "Buffer.hpp"
 #include "WavFile.hpp"
+#include "AnalyzerController.hpp"
 
 #include <qt5/QtWidgets/qapplication.h>
 #include "MainWindow.hpp"
@@ -33,16 +34,19 @@ int main (int argc, char **argv)
 	ALSACardConfiguration_t config;
 	AudioController controller(config);
 	std::cout << "Config = " << (int)controller.config_audio(config) << std::endl;
-	std::cout << "Starting = " << (int)controller.start_asynchronous_record() << std::endl;
+	//std::cout << "Starting = " << (int)controller.start_asynchronous_record() << std::endl;
 	std::this_thread::sleep_for(std::chrono::seconds(1));
 
-	int cycle = 0;
+	//int cycle = 0;
 	Buffer<short signed int> abuffer;
-	while (cycle++ < 1000)
-	{
-		controller.read_asynchronous_samples(abuffer);
-	}
-	std::cout << "Stopping = " << (int)controller.stop_asynchronous_record() << std::endl;
+	AnalyzerController<short signed int> analyzer(abuffer);
+	controller.synchronous_record(abuffer);
+	std::cout << "Value = " << analyzer.analyze() << std::endl;
+//	while (cycle++ < 1000)
+//	{
+//		controller.read_asynchronous_samples(abuffer);
+//	}
+//	std::cout << "Stopping = " << (int)controller.stop_asynchronous_record() << std::endl;
 	std::this_thread::sleep_for(std::chrono::seconds(1));
 
 //	Buffer<short signed int> buffer;

@@ -1,7 +1,8 @@
 #include "AnalyzerParam.hpp"
 
 
-AnalyzerParam::AnalyzerParam(LIST list) : ParamList(list) { }
+AnalyzerParam::AnalyzerParam(LIST list) :
+	ParamList(list) { }
 
 AnalyzerParam::~AnalyzerParam()
 {
