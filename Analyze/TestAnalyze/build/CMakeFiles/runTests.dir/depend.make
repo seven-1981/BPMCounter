@@ -9,6 +9,7 @@ CMakeFiles/runTests.dir/TestMain.cpp.o: /home/pi/eclipse-workspace/BPMDetector/A
 CMakeFiles/runTests.dir/TestMain.cpp.o: /home/pi/eclipse-workspace/BPMDetector/Analyze/IAnalyzer.hpp
 CMakeFiles/runTests.dir/TestMain.cpp.o: /home/pi/eclipse-workspace/BPMDetector/Analyze/Param.hpp
 CMakeFiles/runTests.dir/TestMain.cpp.o: /home/pi/eclipse-workspace/BPMDetector/Analyze/ParamList.hpp
+CMakeFiles/runTests.dir/TestMain.cpp.o: /home/pi/eclipse-workspace/BPMDetector/Analyze/StopWatch.hpp
 CMakeFiles/runTests.dir/TestMain.cpp.o: ../FakeAnalyzerParam.hpp
 CMakeFiles/runTests.dir/TestMain.cpp.o: ../TestAnalyzer.cpp
 CMakeFiles/runTests.dir/TestMain.cpp.o: ../TestAnalyzerController.cpp

@@ -10,6 +10,7 @@
 #include "Buffer.hpp"
 #include "WavFile.hpp"
 #include "AnalyzerController.hpp"
+#include "DSP.hpp"
 
 #include <qt5/QtWidgets/qapplication.h>
 #include "MainWindow.hpp"
@@ -38,10 +39,13 @@ int main (int argc, char **argv)
 	std::this_thread::sleep_for(std::chrono::seconds(1));
 
 	//int cycle = 0;
-	Buffer<short signed int> abuffer;
+	Buffer<short signed int> abuffer(config.PCM_BUFFER_SIZE);
 	AnalyzerController<short signed int> analyzer(abuffer);
-	controller.synchronous_record(abuffer);
+	std::cout << "Record = " << (int)controller.synchronous_record(abuffer) << std::endl;
 	std::cout << "Value = " << analyzer.analyze() << std::endl;
+	Buffer<float> b(88200);
+	DSP::convert_buffer(abuffer, b);
+	//PLOT::plot(b, "Audio data");
 //	while (cycle++ < 1000)
 //	{
 //		controller.read_asynchronous_samples(abuffer);
@@ -62,11 +66,11 @@ int main (int argc, char **argv)
 //	}
 //	wavfile.finish();
 //	fs.close();
-
-    QApplication a(argc, argv);
-    MainWindow w;
-   // w.setBaseSize(800, 600);
-    w.showFullScreen();
-    w.show();
-    return a.exec();
+	return 0;
+//    QApplication a(argc, argv);
+//    MainWindow w;
+//   // w.setBaseSize(800, 600);
+//    w.showFullScreen();
+//    w.show();
+//    return a.exec();
 }

@@ -8,7 +8,8 @@ list(APPEND includes "${PROJ_PATH}"
 		     		 "${PROJ_PATH}/Audio"
 		     		 "${PROJ_PATH}/Audio/Wavfiles"
 		     		 "${PROJ_PATH}/Analyze"
-		     		 "${PROJ_PATH}/Gui")
+		     		 "${PROJ_PATH}/Gui"
+		     		 "${PROJ_PATH}/Plot")
 
 # Locate sources
 list(APPEND sources "${PROJ_PATH}/Audio/AudioCardLister.cpp"
@@ -44,9 +45,10 @@ set(CMAKE_AUTOMOC ON)
 add_executable(BPMDetector main.cpp ${sources})
 target_link_libraries(BPMDetector pthread ${ALSA_LIBRARIES})
 target_link_libraries(BPMDetector Qt5::Widgets)  
-target_link_libraries(BPMDetector qwt-qt5)      
+target_link_libraries(BPMDetector qwt-qt5)  
+target_link_libraries(BPMDetector boost_iostreams boost_system boost_filesystem)    
 
 # Set compiler flags
-list(APPEND flags "-Wall" "-std=c++11" "-g")
+list(APPEND flags "-Wall" "-std=c++11" "-g" "-Wno-psabi")
 target_compile_options(BPMDetector PUBLIC ${flags})
 

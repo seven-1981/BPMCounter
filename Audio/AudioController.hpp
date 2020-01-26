@@ -25,7 +25,7 @@ public:
 	Errors_e synchronous_record(Buffer<T>& buffer)
 	{
 		//Buffer must not be initialized here, as this is done in recorder
-		unsigned int size = buffer.get_size();
+		int size = static_cast<int>(buffer.get_size());
 		if (size != 0 && size != m_config.PCM_BUFFER_SIZE)
 		{
 			return Errors_e::AUDIO_CONTROLLER_BUFFER_ERROR;

@@ -109,8 +109,6 @@ ALSACardConfiguration.hpp
 /home/pi/eclipse-workspace/BPMDetector/Audio/ALSACardConfiguration.hpp
 globals.hpp
 /home/pi/eclipse-workspace/BPMDetector/Audio/globals.hpp
-iostream
--
 
 /home/pi/eclipse-workspace/BPMDetector/Audio/AudioRecorder.hpp
 IAudioRecorder.hpp

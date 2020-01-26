@@ -43,6 +43,16 @@ TEST_F(TestParam, SetAndGetInt)
 	ASSERT_EQ(tpi.get(), 77);
 }
 
+TEST_F(TestParam, SetAndGetUnsignedInt)
+{
+	TypedParam<ParamType::UInt> tpu("My param", 0U);
+
+	tpu.set(55U);
+
+	ASSERT_EQ(tpu.type(), ParamType::UInt);
+	ASSERT_EQ(tpu.get(), 55U);
+}
+
 TEST_F(TestParam, SetAndGetFloat)
 {
 	TypedParam<ParamType::Float> tpf("My param", 0.0f);
@@ -51,6 +61,16 @@ TEST_F(TestParam, SetAndGetFloat)
 
 	ASSERT_EQ(tpf.type(), ParamType::Float);
 	ASSERT_NEAR(tpf.get(), 8.7f, 0.1);
+}
+
+TEST_F(TestParam, SetAndGetDouble)
+{
+	TypedParam<ParamType::Double> tpd("My param", 0.0L);
+
+	tpd.set(-11.2);
+
+	ASSERT_EQ(tpd.type(), ParamType::Double);
+	ASSERT_NEAR(tpd.get(), -11.2, 0.1);
 }
 
 TEST_F(TestParam, SetAndGetString)

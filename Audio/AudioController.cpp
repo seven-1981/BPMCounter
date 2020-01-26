@@ -27,8 +27,8 @@ Errors_e AudioController::config_audio(ALSACardConfiguration_t& config)
 		return retVal;
 	if ((retVal = m_recorder.prepare_recorder(config)) != Errors_e::NO_ERROR)
 		return retVal;
-	if ((retVal = m_recorder.set_callback(m_callbackConfig)) != Errors_e::NO_ERROR)
-		return retVal;
+	//if ((retVal = m_recorder.set_callback(m_callbackConfig)) != Errors_e::NO_ERROR)
+	//	return retVal;
 	m_config = config;
 	return retVal;
 }

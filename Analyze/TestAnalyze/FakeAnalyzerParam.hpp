@@ -8,8 +8,8 @@
 #include "DSP.hpp"
 
 
-const float FACTOR1 = 33.3f;
-const float FACTOR2 = 66.6f;
+const FLOAT_TYPE FACTOR1 = 33.3;
+const FLOAT_TYPE FACTOR2 = 66.6;
 
 //States used in this mock
 enum TestProcedureStates_e
@@ -25,7 +25,7 @@ class FakeAnalyzerParam : public AnalyzerParam
 public:
 	explicit FakeAnalyzerParam(Buffer<T>& buffer, FLOAT_TYPE value = FACTOR1) :
 		AnalyzerParam( {
-			new TypedParam<ParamType::Float>("factor", value) } ),
+			new TypedParam<ParamType::Double>("factor", value) } ),
 		m_buffer(buffer),
 		m_state(State_Success),
 		m_paramName("factor") { }

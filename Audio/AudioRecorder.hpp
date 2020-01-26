@@ -11,7 +11,6 @@
 #include <unordered_map>
 #include <atomic>
 
-
 //Typename simplifications
 using GEN_CARD_CONFIG_TYPE = ICardConfiguration_t;
 using GEN_CARD_CALLBACK_CONFIG_TYPE = ICardCallbackConfiguration_t;

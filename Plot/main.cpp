@@ -54,15 +54,15 @@ int main()
 	if (sel[3] == '1')
 	{
 		//FFT
-		Buffer<float> dirac = { 1,0, 0,0, 0,0, 0,0, 0,0, 0,0, 0,0, 0,0 };
-		Buffer<float> fft(dirac.get_size() * 2);
-		Buffer<float> f_real(dirac.get_size());
-		Buffer<float> f_imag(dirac.get_size());
+		Buffer<double> dirac = { 1,0, 0,0, 0,0, 0,0, 0,0, 0,0, 0,0, 0,0 };
+		Buffer<double> fft(dirac.get_size() * 2);
+		Buffer<double> f_real(dirac.get_size());
+		Buffer<double> f_imag(dirac.get_size());
 		DSP::perform_fft(dirac, fft, +1);
 		DSP::separate_buffers(fft, f_real, f_imag);
 		PLOT::plot(f_real, "FFT - dirac");
 
-		Buffer<float> sine = { 0,0, 1,0, 0,0, 0,0, 0,0, 0,0, 0,0, 0,0 };
+		Buffer<double> sine = { 0,0, 1,0, 0,0, 0,0, 0,0, 0,0, 0,0, 0,0 };
 		DSP::perform_fft(sine, fft, +1);
 		DSP::separate_buffers(fft, f_real, f_imag);
 		PLOT::plot(f_real, "FFT - sine");
@@ -72,49 +72,49 @@ int main()
 	{
 		//Windowing
 		unsigned int size = 100;
-		Buffer<float> buf_base(size);
+		Buffer<double> buf_base(size);
 		for (unsigned int i = 0; i < size; ++i)
 			buf_base[i] = 1.0;
 
-		Buffer<float> w1(buf_base);
+		Buffer<double> w1(buf_base);
 		DSP::apply_window(w1, DSP::hanning);
 
-		Buffer<float> w2(buf_base);
+		Buffer<double> w2(buf_base);
 		DSP::apply_window(w2, DSP::hamming);
 		PLOT::plot2(w1, w2, "Hanning window", "Hamming window");
 
-		Buffer<float> w3(buf_base);
+		Buffer<double> w3(buf_base);
 		DSP::apply_window(w3, DSP::blackman, 0.16);
 
-		Buffer<float> w4(buf_base);
+		Buffer<double> w4(buf_base);
 		DSP::apply_window(w4, DSP::blackman_harris);
 		PLOT::plot2(w3, w4, "Blackman window", "Blackman harris window");
 
-		Buffer<float> w5(buf_base);
+		Buffer<double> w5(buf_base);
 		DSP::apply_window(w5, DSP::flat_top);
 		PLOT::plot(w5, "Flat top window");
 
-		Buffer<float> w6(buf_base);
+		Buffer<double> w6(buf_base);
 		DSP::apply_window(w6, DSP::tukey, 0.5);
 		PLOT::plot(w6, "Tukey window");
 
-		Buffer<float> w7(buf_base);
+		Buffer<double> w7(buf_base);
 		DSP::apply_window(w7, DSP::bartlett);
 		PLOT::plot(w7, "Bartlett window");
 	}
 
 	if (sel[5] == '1')
 	{
-		Buffer<float> mov_buf = { 0, 0, 1, 1, 1, 1, 0, 0, 0, 0 };
-		Buffer<float> avged(mov_buf.get_size());
+		Buffer<double> mov_buf = { 0, 0, 1, 1, 1, 1, 0, 0, 0, 0 };
+		Buffer<double> avged(mov_buf.get_size());
 		DSP::moving_average(mov_buf, avged, 4);
 		PLOT::plot2(mov_buf, avged, "Base data", "Moving average");
 	}
 
 	if (sel[6] == '1')
 	{
-		Buffer<float> filt(size);
-		Buffer<float> unfilt(size);
+		Buffer<double> filt(size);
+		Buffer<double> unfilt(size);
 		unsigned int cycle = 50, cnt = cycle;
 		float ampl = 10.0f;
 		for (unsigned int i = 0; i < size; ++i)

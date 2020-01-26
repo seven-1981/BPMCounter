@@ -13,7 +13,7 @@
 
 namespace DSP
 {
-	using FLOAT_TYPE = float;
+	using FLOAT_TYPE = double;
 
 	template <typename T>
 	void SWAP(T& v1, T& v2)
@@ -282,7 +282,7 @@ namespace DSP
 	    const FLOAT_TYPE factor = dest_len / static_cast<FLOAT_TYPE>(src_len);
 	    const FLOAT_TYPE filter_radius = 3.0;
 
-	    FLOAT_TYPE scale   = std::min(factor, 1.0f) / blur;
+	    FLOAT_TYPE scale   = std::min(factor, 1.0) / blur;
 	    FLOAT_TYPE support = filter_radius / scale;
 
 	    //5 -> room for rounding up in calculations of start, stop and support
@@ -297,11 +297,11 @@ namespace DSP
 	    for (SIZE_TYPE x = 0; x < dest_len; ++x)
 	    {
 	    	FLOAT_TYPE center = (x + 0.5f) / factor;
-	        SIZE_TYPE start = static_cast<SIZE_TYPE>(std::max(center - support + 0.5f, 0.0f));
-	        SIZE_TYPE stop  = static_cast<SIZE_TYPE>(std::min(center + support + 0.5f, static_cast<FLOAT_TYPE>(src_len)));
+	        SIZE_TYPE start = static_cast<SIZE_TYPE>(std::max(center - support + 0.5, 0.0));
+	        SIZE_TYPE stop  = static_cast<SIZE_TYPE>(std::min(center + support + 0.5, static_cast<FLOAT_TYPE>(src_len)));
 	        FLOAT_TYPE density = 0.0f;
 	        SIZE_TYPE nmax = stop - start;
-	        FLOAT_TYPE s = start - center + 0.5f;
+	        FLOAT_TYPE s = start - center + 0.5;
 	        outbuffer[x] = 0;
 	        for (SIZE_TYPE n = 0; n < nmax; ++n, ++s)
 	        {
@@ -531,11 +531,11 @@ namespace DSP
 	template <typename T1, typename T2>
 	void lowpass_filter(Buffer<T1>& inbuffer, Buffer<T2>& filtbuffer, FLOAT_TYPE cutoff_Hz, FLOAT_TYPE sampleT_s)
 	{
-		FLOAT_TYPE e_pow = 1.0f - exp(-sampleT_s * 2.0f * M_PI * cutoff_Hz);
-
 		unsigned int size_in = inbuffer.get_size();
 		unsigned int size_filt = filtbuffer.get_size();
 		assert(size_in == size_filt);
+
+		FLOAT_TYPE e_pow = 1.0 - exp(-sampleT_s * 2.0 * M_PI * cutoff_Hz);
 
 		FLOAT_TYPE output = 0;
 		for (unsigned int i = 0; i < size_in; ++i)

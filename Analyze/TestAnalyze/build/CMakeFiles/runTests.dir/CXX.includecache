@@ -13,6 +13,10 @@ Buffer.hpp
 /home/pi/eclipse-workspace/BPMDetector/Analyze/Buffer.hpp
 DSP.hpp
 /home/pi/eclipse-workspace/BPMDetector/Analyze/DSP.hpp
+StopWatch.hpp
+/home/pi/eclipse-workspace/BPMDetector/Analyze/StopWatch.hpp
+iostream
+-
 
 /home/pi/eclipse-workspace/BPMDetector/Analyze/AnalyzerContainer.cpp
 AnalyzerContainer.hpp
@@ -79,6 +83,10 @@ cassert
 -
 Param.hpp
 /home/pi/eclipse-workspace/BPMDetector/Analyze/Param.hpp
+
+/home/pi/eclipse-workspace/BPMDetector/Analyze/StopWatch.hpp
+chrono
+-
 
 /home/pi/eclipse-workspace/BPMDetector/Analyze/TestAnalyze/FakeAnalyzerParam.hpp
 string

@@ -5,7 +5,7 @@
 class IAnalyzer
 {
 public:
-	using FLOAT_TYPE = float;
+	using FLOAT_TYPE = double;
 
 	virtual ~IAnalyzer() { }
 
