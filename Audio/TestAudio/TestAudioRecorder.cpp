@@ -188,3 +188,10 @@ TEST_F(TestAudioRecorder, SetCallbackReturnsErrorIfNotConfigured)
 	ASSERT_EQ(recorder.set_callback(callback_config), Errors_e::AUDIO_RECORDER_NOT_INITIALIZED);
 }
 
+TEST_F(TestAudioRecorder, ClearsCallbackConfig)
+{
+	IGNORE recorder.prepare_recorder(config);
+	recorder.set_callback(callback_config);
+
+	ASSERT_EQ(recorder.clear_callback(callback_config), Errors_e::NO_ERROR);
+}

@@ -32,6 +32,7 @@ public:
     int pcm_readi(void* buffer, int size) override;
 
     int add_pcm_handler(GEN_CARD_CALLBACK_CONFIG_TYPE& config) override;
+    int del_pcm_handler(GEN_CARD_CALLBACK_CONFIG_TYPE& config) override;
     int pcm_start() override;
     int pcm_stop() override;
     bool is_callbackSet() override;

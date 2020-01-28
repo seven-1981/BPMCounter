@@ -27,19 +27,23 @@ Errors_e AudioController::config_audio(ALSACardConfiguration_t& config)
 		return retVal;
 	if ((retVal = m_recorder.prepare_recorder(config)) != Errors_e::NO_ERROR)
 		return retVal;
-	//if ((retVal = m_recorder.set_callback(m_callbackConfig)) != Errors_e::NO_ERROR)
-	//	return retVal;
 	m_config = config;
 	return retVal;
 }
 
 Errors_e AudioController::start_asynchronous_record()
 {
+	Errors_e retVal = Errors_e::NO_ERROR;
+	if ((retVal = m_recorder.set_callback(m_callbackConfig)) != Errors_e::NO_ERROR)
+		return retVal;
 	return m_recorder.start_capturing();
 }
 
 Errors_e AudioController::stop_asynchronous_record()
 {
+	Errors_e retVal = Errors_e::NO_ERROR;
+	if ((retVal = m_recorder.clear_callback(m_callbackConfig)) != Errors_e::NO_ERROR)
+		return retVal;
 	return m_recorder.stop_capturing();
 }
 

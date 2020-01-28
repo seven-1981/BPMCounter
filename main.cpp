@@ -1,11 +1,9 @@
 #include <iostream>
-#include <vector>
-#include <string>
-#include <cmath> 
 #include <fstream>
-#include <thread>
 #include <chrono>
+#include <thread>
 #include "AudioController.hpp"
+#include "AudioRecorder.hpp"
 #include "ALSACardConfiguration.hpp"
 #include "Buffer.hpp"
 #include "WavFile.hpp"
@@ -27,6 +25,23 @@ void clear_screen()
 {
 	//Clear screen
 	std::cout << "\033[2J\033[1;1H";
+}
+
+void record_wavfile(AudioRecorder& recorder, ALSACardConfiguration_t& config)
+{
+	Buffer<short signed int> buffer;
+	std::cout << "Capture = " << (int)recorder.capture_samples(config, buffer) << std::endl;
+
+	WavHeader_t header;
+	std::fstream fs("/home/pi/eclipse-workspace/BPMDetector/record.wav", std::ios_base::out | std::ios_base::binary);
+	WavFile wavfile(fs);
+	wavfile.write_header(header);
+	for (unsigned int i = 0; i < buffer.get_size(); ++i)
+	{
+		wavfile << buffer[i];
+	}
+	wavfile.finish();
+	fs.close();
 }
 
 int main (int argc, char **argv)
@@ -53,24 +68,10 @@ int main (int argc, char **argv)
 //	std::cout << "Stopping = " << (int)controller.stop_asynchronous_record() << std::endl;
 	std::this_thread::sleep_for(std::chrono::seconds(1));
 
-//	Buffer<short signed int> buffer;
-//	std::cout << "Capture = " << (int)recorder.capture_samples(config, buffer) << std::endl;
-//
-//	WavHeader_t header;
-//	std::fstream fs("/home/pi/eclipse-workspace/BPMDetector/record.wav", std::ios_base::out | std::ios_base::binary);
-//	WavFile wavfile(fs);
-//	wavfile.write_header(header);
-//	for (unsigned int i = 0; i < buffer.get_size(); ++i)
-//	{
-//		wavfile << buffer[i];
-//	}
-//	wavfile.finish();
-//	fs.close();
-	return 0;
-//    QApplication a(argc, argv);
-//    MainWindow w;
-//   // w.setBaseSize(800, 600);
-//    w.showFullScreen();
-//    w.show();
-//    return a.exec();
+    QApplication a(argc, argv);
+    MainWindow w;
+    // w.setBaseSize(800, 600);
+    w.showFullScreen();
+    w.show();
+    return a.exec();
 }

@@ -7,6 +7,7 @@
 class Spectrograph;
 class AudioController;
 QT_FORWARD_DECLARE_CLASS(QStatusBar)
+QT_FORWARD_DECLARE_CLASS(QLCDNumber)
 
 
 class MainWindow : public QMainWindow
@@ -23,6 +24,7 @@ private:
 	AudioController* m_controller;
     Spectrograph* m_spectrograph;
     QStatusBar* m_statusbar;
+    QLCDNumber* m_number;
 };
 
 #endif

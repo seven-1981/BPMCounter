@@ -72,6 +72,28 @@ int ALSARecordingService::add_pcm_handler(GEN_CARD_CALLBACK_CONFIG_TYPE& config)
 	}
 }
 
+int ALSARecordingService::del_pcm_handler(GEN_CARD_CALLBACK_CONFIG_TYPE& config)
+{
+	if (is_callbackSet() == true)
+	{
+		CARD_CALLBACK_CONFIG_TYPE& typedConfig = dynamic_cast<CARD_CALLBACK_CONFIG_TYPE&>(config);
+		ALSA_CALLBACK_PARAM ahandler = typedConfig.PCM_ASYNC_HANDLER;
+		if (snd_async_del_handler(ahandler) < 0)
+		{
+			return ANY_ERROR;
+		}
+		else
+		{
+			m_isCallbackSet = false;
+			return NO_ERROR;
+		}
+	}
+	else
+	{
+		return ANY_ERROR;
+	}
+}
+
 bool ALSARecordingService::is_callbackSet()
 {
 	return m_isCallbackSet;

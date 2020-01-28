@@ -47,6 +47,7 @@ public:
 
     //Asynchronous interface functions
     Errors_e set_callback(GEN_CARD_CALLBACK_CONFIG_TYPE& config) override;
+    Errors_e clear_callback(GEN_CARD_CALLBACK_CONFIG_TYPE& config) override;
     Errors_e start_capturing() override;
     Errors_e stop_capturing() override;
     void samples_available(int num_samples) override;

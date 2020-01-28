@@ -64,6 +64,25 @@ Errors_e AudioRecorder::set_callback(GEN_CARD_CALLBACK_CONFIG_TYPE& config)
 	}
 }
 
+Errors_e AudioRecorder::clear_callback(GEN_CARD_CALLBACK_CONFIG_TYPE& config)
+{
+	if (m_service != nullptr)
+	{
+		if (m_service->del_pcm_handler(config) < 0)
+		{
+			return Errors_e::AUDIO_RECORDER_NOT_INITIALIZED;
+		}
+		else
+		{
+			return Errors_e::NO_ERROR;
+		}
+	}
+	else
+	{
+		return Errors_e::AUDIO_RECORDER_NOT_INITIALIZED;
+	}
+}
+
 Errors_e AudioRecorder::start_capturing()
 {
 	if ((m_service == nullptr) || (m_service->is_callbackSet() == false))

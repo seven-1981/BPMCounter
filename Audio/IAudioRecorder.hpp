@@ -26,6 +26,7 @@ public:
 
     //Asynchronous interface functions
     virtual Errors_e set_callback(ICardCallbackConfiguration_t& config) = 0;
+    virtual Errors_e clear_callback(ICardCallbackConfiguration_t& config) = 0;
     virtual Errors_e start_capturing() = 0;
     virtual Errors_e stop_capturing() = 0;
     virtual void samples_available(int num_samples) = 0;

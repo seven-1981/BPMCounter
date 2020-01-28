@@ -1,5 +1,6 @@
 #include <qt5/QtWidgets/qpushbutton.h>
 #include <qt5/QtCore/QTimer>
+#include <QLCDNumber>
 #include "MainWindow.hpp"
 #include "Spectrograph.hpp"
 #include "AudioController.hpp"
@@ -8,18 +9,23 @@
 
 MainWindow::MainWindow(QWidget* parent) : QMainWindow(parent)
 {
-	m_spectrograph = new Spectrograph(this);
-	setCentralWidget(m_spectrograph);
-	m_spectrograph->set_params(10, 0.0, 100.0);
-	FrequencySpectrum* spec = new FrequencySpectrum(10);
-	(*spec)[1].amplitude = 0.4;
-	(*spec)[1].frequency = 10.0;
-	(*spec)[2].amplitude = 0.8;
-	(*spec)[2].frequency = 20.0;
-	(*spec)[3].amplitude = 0.2;
-	(*spec)[3].frequency = 60.0;
-	m_spectrograph->spectrum_changed(*spec);
-	m_spectrograph->update();
+//	m_spectrograph = new Spectrograph(this);
+//	setCentralWidget(m_spectrograph);
+//	m_spectrograph->set_params(10, 0.0, 100.0);
+//	FrequencySpectrum* spec = new FrequencySpectrum(10);
+//	(*spec)[1].amplitude = 0.4;
+//	(*spec)[1].frequency = 10.0;
+//	(*spec)[2].amplitude = 0.8;
+//	(*spec)[2].frequency = 20.0;
+//	(*spec)[3].amplitude = 0.2;
+//	(*spec)[3].frequency = 60.0;
+//	m_spectrograph->spectrum_changed(*spec);
+//	m_spectrograph->update();
+
+	m_number = new QLCDNumber(this);
+	m_number->setSegmentStyle(QLCDNumber::Outline);
+	setCentralWidget(m_number);
+	m_number->display(11.44);
 
 //
 //    m_chart->setOrientation( orientationBox->currentIndex() );

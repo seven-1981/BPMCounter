@@ -20,6 +20,7 @@ public:
     virtual int pcm_drop() = 0;
     virtual int pcm_recover(int err, int silent) = 0;
     virtual int add_pcm_handler(ICardCallbackConfiguration_t& config) = 0;
+    virtual int del_pcm_handler(ICardCallbackConfiguration_t& config) = 0;
     virtual int pcm_start() = 0;
     virtual int pcm_stop() = 0;
     virtual bool is_callbackSet() = 0;

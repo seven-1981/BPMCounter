@@ -126,6 +126,19 @@ int FakeRecordingService::add_pcm_handler(GEN_CARD_CALLBACK_CONFIG_TYPE& config)
 	}
 }
 
+int FakeRecordingService::del_pcm_handler(GEN_CARD_CALLBACK_CONFIG_TYPE& config)
+{
+	if (is_callbackSet() == true)
+	{
+		m_isCallbackSet = false;
+		return RETURN_NO_ERROR;
+	}
+	else
+	{
+		return RETURN_ANY_ERROR;
+	}
+}
+
 int FakeRecordingService::pcm_start()
 {
 	if (m_isCallbackSet == false)
