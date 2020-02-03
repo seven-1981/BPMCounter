@@ -206,7 +206,7 @@ namespace DSP
 		{
 			autocv += ((buffer[i] - mean_value) * (buffer[i + lag_samples] - mean_value));
 		}
-		autocv = (1.0 / (size - lag_samples)) * autocv;
+		autocv /= (size - lag_samples);
 		return autocv / variance_value;
 	}
 	
@@ -218,7 +218,7 @@ namespace DSP
 		{
 			autocv += ((buffer[i] - mean_value) * (buffer[i + lag_samples] - mean_value));
 		}
-		autocv = (1.0 / (size - lag_samples)) * autocv;
+		autocv /= (size - lag_samples);
 		return autocv / variance_value;
 	}
 
@@ -570,7 +570,6 @@ namespace DSP
 			lag_samples = static_cast<SIZE_TYPE>(ceil(lag / time_max * size_inbuffer));
 			//autocorr_values[i] = DSP::get_autocorr_value(inbuffer, lag); //Slow
 			autocorr_values[i] = DSP::get_autocorr_value(inbuffer, lag_samples, size_inbuffer, mean, variance);
-
 		}
 	}
 

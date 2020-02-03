@@ -8,6 +8,7 @@ list(APPEND includes "${PROJ_PATH}"
 		     		 "${PROJ_PATH}/Audio"
 		     		 "${PROJ_PATH}/Audio/Wavfiles"
 		     		 "${PROJ_PATH}/Analyze"
+		     		 "${PROJ_PATH}/Async"
 		     		 "${PROJ_PATH}/Gui"
 		     		 "${PROJ_PATH}/Plot")
 
@@ -49,6 +50,6 @@ target_link_libraries(BPMDetector qwt-qt5)
 target_link_libraries(BPMDetector boost_iostreams boost_system boost_filesystem)    
 
 # Set compiler flags
-list(APPEND flags "-Wall" "-std=c++11" "-g" "-Wno-psabi")
+list(APPEND flags "-Wall" "-std=c++11" "-g" "-Wno-psabi" "-O1")
 target_compile_options(BPMDetector PUBLIC ${flags})
 

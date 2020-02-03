@@ -2,6 +2,7 @@
 #define _STOPWATCH_H
 
 #include <chrono>
+#include <ostream>
 
 
 class StopWatch
@@ -30,6 +31,16 @@ public:
 		long long us = std::chrono::duration_cast<std::chrono::microseconds>(yet - this->m_startTime).count();
 		this->m_startTime = yet;
 		return us;
+	}
+
+	void tic_total(std::ostream& os)
+	{
+		os << "us since start: " << get_total_time_us() << "\n";
+	}
+
+	void tic(std::ostream& os)
+	{
+		os << "us since last start: " << get_time_us() << "\n";
 	}
 
 private:

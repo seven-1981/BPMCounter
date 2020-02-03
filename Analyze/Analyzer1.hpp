@@ -6,7 +6,6 @@
 #include "DSP.hpp"
 //#include "Plotting.hpp"
 #include "StopWatch.hpp"
-#include <iostream>
 
 
 template <typename T>
@@ -52,15 +51,15 @@ public:
 		StopWatch watch;
 		FLOAT_TYPE dt = 1.0f / static_cast<FLOAT_TYPE>(m_sample_rate_Hz);
 		DSP::lowpass_filter(m_buffer, *m_bf_lp, m_cutoffFreq, dt);
-		std::cout << "Time = " << watch.get_time_us() / 1000.0f << std::endl;
+		watch.tic(std::cout);
 		DSP::resample_buffer(*m_bf_lp, *m_bf_ds);
-		std::cout << "Time = " << watch.get_time_us() / 1000.0f << std::endl;
+		watch.tic(std::cout);
 		DSP::envelope_filter(*m_bf_ds, *m_bf_ef, m_env_filt_rec, m_sample_rate_Hz / m_dsFactor);
-		std::cout << "Time = " << watch.get_time_us() / 1000.0f << std::endl;
+		watch.tic(std::cout);
 		//PLOT::plot(*m_bf_ef, "Env");
 		DSP::autocorr_bpm(*m_bf_ef, *m_bf_ac, m_sample_rate_Hz / m_dsFactor, m_bpm_min, m_bpm_max);
 		//PLOT::plot(*m_bf_ac, "Ac");
-		std::cout << "Time = " << watch.get_time_us() / 1000.0f << std::endl;
+		watch.tic(std::cout);
 		return DSP::extract_bpm_value(*m_bf_ac, m_bpm_min, m_bpm_max);
 	}
 

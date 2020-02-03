@@ -8,6 +8,7 @@ class Spectrograph;
 class AudioController;
 QT_FORWARD_DECLARE_CLASS(QStatusBar)
 QT_FORWARD_DECLARE_CLASS(QLCDNumber)
+QT_FORWARD_DECLARE_CLASS(QKeyEvent)
 
 
 class MainWindow : public QMainWindow
@@ -25,6 +26,8 @@ private:
     Spectrograph* m_spectrograph;
     QStatusBar* m_statusbar;
     QLCDNumber* m_number;
+
+    void keyPressEvent(QKeyEvent* event);
 };
 
 #endif
