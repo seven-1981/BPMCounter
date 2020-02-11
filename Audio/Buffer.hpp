@@ -6,11 +6,18 @@
 #include <algorithm>
 
 
+class BufferBase
+{
+public:
+	virtual ~BufferBase() { }
+};
+
+
 using SIZE_TYPE = unsigned int;
 
 
 template <typename DATA_TYPE>
-class Buffer
+class Buffer : public BufferBase
 {
     using CONT_TYPE = std::unique_ptr<DATA_TYPE[]>;
     using LIST_TYPE = std::initializer_list<DATA_TYPE>;

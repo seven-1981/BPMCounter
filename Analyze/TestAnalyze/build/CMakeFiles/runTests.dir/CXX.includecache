@@ -15,8 +15,8 @@ DSP.hpp
 /home/pi/eclipse-workspace/BPMDetector/Analyze/DSP.hpp
 StopWatch.hpp
 /home/pi/eclipse-workspace/BPMDetector/Analyze/StopWatch.hpp
-iostream
--
+Plotting.hpp
+/home/pi/eclipse-workspace/BPMDetector/Analyze/Plotting.hpp
 
 /home/pi/eclipse-workspace/BPMDetector/Analyze/AnalyzerContainer.cpp
 AnalyzerContainer.hpp
@@ -86,6 +86,8 @@ Param.hpp
 
 /home/pi/eclipse-workspace/BPMDetector/Analyze/StopWatch.hpp
 chrono
+-
+ostream
 -
 
 /home/pi/eclipse-workspace/BPMDetector/Analyze/TestAnalyze/FakeAnalyzerParam.hpp

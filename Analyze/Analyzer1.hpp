@@ -4,8 +4,14 @@
 #include "AnalyzerParam.hpp"
 #include "Buffer.hpp"
 #include "DSP.hpp"
-//#include "Plotting.hpp"
 #include "StopWatch.hpp"
+
+#ifdef ENABLE_ANALYZER1_PLOT
+#include "Plotting.hpp"
+#define PLOT_BUF(bf, title) PLOT::plot(bf, title)
+#else
+#define PLOT_BUF(bf, title)
+#endif
 
 
 template <typename T>
@@ -54,11 +60,12 @@ public:
 		watch.tic(std::cout);
 		DSP::resample_buffer(*m_bf_lp, *m_bf_ds);
 		watch.tic(std::cout);
+		PLOT_BUF(*m_bf_ds, "Resampled");
 		DSP::envelope_filter(*m_bf_ds, *m_bf_ef, m_env_filt_rec, m_sample_rate_Hz / m_dsFactor);
 		watch.tic(std::cout);
-		//PLOT::plot(*m_bf_ef, "Env");
+		PLOT_BUF(*m_bf_ef, "Envelope filter");
 		DSP::autocorr_bpm(*m_bf_ef, *m_bf_ac, m_sample_rate_Hz / m_dsFactor, m_bpm_min, m_bpm_max);
-		//PLOT::plot(*m_bf_ac, "Ac");
+		PLOT_BUF(*m_bf_ac, "Autocorrelation");
 		watch.tic(std::cout);
 		return DSP::extract_bpm_value(*m_bf_ac, m_bpm_min, m_bpm_max);
 	}
