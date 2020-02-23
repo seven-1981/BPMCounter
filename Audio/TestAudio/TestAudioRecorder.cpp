@@ -81,7 +81,7 @@ TEST_F(TestAudioRecorder, PreparesBuffer)
 
 TEST_F(TestAudioRecorder, ReturnsErrorCodeIfCaptureCalledWithoutPreparation)
 {
-    Errors_e returnValue = recorder.capture_samples(config, buffer);
+    Errors_e returnValue = recorder.capture_samples(buffer);
 
     ASSERT_EQ(returnValue, Errors_e::AUDIO_RECORDER_NOT_INITIALIZED);
 }
@@ -91,7 +91,7 @@ TEST_F(TestAudioRecorder, CapturesSamplesInSynchronousMode)
     service.set_state(State_CaptureSuccess);
     IGNORE recorder.prepare_recorder(config);
 
-    ASSERT_EQ(recorder.capture_samples(config, buffer), Errors_e::NO_ERROR);
+    ASSERT_EQ(recorder.capture_samples(buffer), Errors_e::NO_ERROR);
 }
 
 TEST_F(TestAudioRecorder, CapturesLessSamplesThanBufferSize)
@@ -99,7 +99,7 @@ TEST_F(TestAudioRecorder, CapturesLessSamplesThanBufferSize)
     service.set_state(State_CaptureLessSamples);
     IGNORE recorder.prepare_recorder(config);
 
-    ASSERT_EQ(recorder.capture_samples(config, buffer), Errors_e::AUDIO_RECORDER_CAPTURE_ERROR);
+    ASSERT_EQ(recorder.capture_samples(buffer), Errors_e::AUDIO_RECORDER_CAPTURE_ERROR);
 }
 
 TEST_F(TestAudioRecorder, ReturnsErrorCodeIfCaptureFailsWithEBADFD)
@@ -107,7 +107,7 @@ TEST_F(TestAudioRecorder, ReturnsErrorCodeIfCaptureFailsWithEBADFD)
     service.set_state(State_CaptureReturns_EBADFD_RecoverNotPossible);
     IGNORE recorder.prepare_recorder(config);
 
-    ASSERT_EQ(recorder.capture_samples(config, buffer), Errors_e::AUDIO_RECORDER_CAPTURE_EBADFD);
+    ASSERT_EQ(recorder.capture_samples(buffer), Errors_e::AUDIO_RECORDER_CAPTURE_EBADFD);
 }
 
 TEST_F(TestAudioRecorder, ReturnsErrorCodeIfCaptureFailsWithEPIPERecoverError)
@@ -115,7 +115,7 @@ TEST_F(TestAudioRecorder, ReturnsErrorCodeIfCaptureFailsWithEPIPERecoverError)
     service.set_state(State_CaptureReturns_EPIPE_RecoverError);
     IGNORE recorder.prepare_recorder(config);
 
-    ASSERT_EQ(recorder.capture_samples(config, buffer), Errors_e::AUDIO_RECORDER_CAPTURE_EPIPE);
+    ASSERT_EQ(recorder.capture_samples(buffer), Errors_e::AUDIO_RECORDER_CAPTURE_EPIPE);
 }
 
 TEST_F(TestAudioRecorder, ReturnsErrorCodeIfCaptureFailsWithEPIPERecoverSuccess)
@@ -123,7 +123,7 @@ TEST_F(TestAudioRecorder, ReturnsErrorCodeIfCaptureFailsWithEPIPERecoverSuccess)
     service.set_state(State_CaptureReturns_EPIPE_RecoverSuccess);
     IGNORE recorder.prepare_recorder(config);
 
-    ASSERT_EQ(recorder.capture_samples(config, buffer), Errors_e::NO_ERROR);
+    ASSERT_EQ(recorder.capture_samples(buffer), Errors_e::NO_ERROR);
 }
 
 TEST_F(TestAudioRecorder, ReturnsErrorCodeIfCaptureFailsWithESTRPIPERecoverError)
@@ -131,7 +131,7 @@ TEST_F(TestAudioRecorder, ReturnsErrorCodeIfCaptureFailsWithESTRPIPERecoverError
     service.set_state(State_CaptureReturns_ESTRPIPE_RecoverError);
     IGNORE recorder.prepare_recorder(config);
 
-    ASSERT_EQ(recorder.capture_samples(config, buffer), Errors_e::AUDIO_RECORDER_CAPTURE_ESTRPIPE);
+    ASSERT_EQ(recorder.capture_samples(buffer), Errors_e::AUDIO_RECORDER_CAPTURE_ESTRPIPE);
 }
 
 TEST_F(TestAudioRecorder, ReturnsErrorCodeIfCaptureFailsWithESTRPIPERecoverSuccess)
@@ -139,7 +139,7 @@ TEST_F(TestAudioRecorder, ReturnsErrorCodeIfCaptureFailsWithESTRPIPERecoverSucce
     service.set_state(State_CaptureReturns_ESTRPIPE_RecoverSuccess);
     IGNORE recorder.prepare_recorder(config);
 
-    ASSERT_EQ(recorder.capture_samples(config, buffer), Errors_e::NO_ERROR);
+    ASSERT_EQ(recorder.capture_samples(buffer), Errors_e::NO_ERROR);
 }
 
 TEST_F(TestAudioRecorder, PerformsCheckIfCallbackIsSet)

@@ -5,15 +5,16 @@ set(PROJ_PATH "/home/pi/eclipse-workspace/BPMDetector")
 
 # Set include directories
 list(APPEND includes "${PROJ_PATH}"
+					 "${PROJ_PATH}/App"
 		     		 "${PROJ_PATH}/Audio"
 		     		 "${PROJ_PATH}/Audio/Wavfiles"
 		     		 "${PROJ_PATH}/Analyze"
-		     		 "${PROJ_PATH}/Async"
 		     		 "${PROJ_PATH}/Gui"
 		     		 "${PROJ_PATH}/Plot")
 
 # Locate sources
-list(APPEND sources "${PROJ_PATH}/Audio/AudioCardLister.cpp"
+list(APPEND sources "${PROJ_PATH}/App/AppContainer.cpp"
+					"${PROJ_PATH}/Audio/AudioCardLister.cpp"
 		    		"${PROJ_PATH}/Audio/ALSACardInfoGetter.cpp"
 				    "${PROJ_PATH}/Audio/AudioCardConfigurator.cpp"
 				    "${PROJ_PATH}/Audio/AudioCardManager.cpp"
@@ -25,6 +26,7 @@ list(APPEND sources "${PROJ_PATH}/Audio/AudioCardLister.cpp"
 				    "${PROJ_PATH}/Gui/MainWindow.cpp"
 				    "${PROJ_PATH}/Gui/FrequencySpectrum.cpp"
 				    "${PROJ_PATH}/Gui/Spectrograph.cpp"
+				    "${PROJ_PATH}/Gui/LED.cpp"
 				    "${PROJ_PATH}/Analyze/ParamList.cpp"
 				    "${PROJ_PATH}/Analyze/AnalyzerParam.cpp"
 				    "${PROJ_PATH}/Analyze/AnalyzerContainer.cpp")
@@ -53,6 +55,6 @@ target_link_libraries(BPMDetector boost_iostreams boost_system boost_filesystem)
 #add_definitions(-DENABLE_ANALYZER1_PLOT)
 
 # Set compiler flags
-list(APPEND flags "-Wall" "-std=c++11" "-g" "-Wno-psabi" "-O1")
+list(APPEND flags "-Wall" "-std=c++11" "-g" "-Wno-psabi" "-O1" "-Og")
 target_compile_options(BPMDetector PUBLIC ${flags})
 

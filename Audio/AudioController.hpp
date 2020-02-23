@@ -32,7 +32,7 @@ public:
 		}
 		else
 		{
-			return m_recorder.capture_samples(m_config, buffer);
+			return m_recorder.capture_samples(buffer);
 		}
 	}
 
@@ -50,7 +50,7 @@ public:
 		}
 		else
 		{
-			return m_recorder.read_samples(m_config, buffer);
+			return m_recorder.read_samples(buffer);
 		}
 	}
 

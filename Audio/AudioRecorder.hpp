@@ -33,7 +33,7 @@ public:
 
     //Implicit interface functions
     template <typename T>
-    Errors_e capture_samples(GEN_CARD_CONFIG_TYPE& config, Buffer<T>& bufferToFill)
+    Errors_e capture_samples(Buffer<T>& bufferToFill)
     {
         if ((m_service == nullptr) || (m_service->is_handleSet() == false))
         {
@@ -41,7 +41,7 @@ public:
         }
         else
         {
-            return create_and_fill(config, bufferToFill, m_bufferSize);
+            return create_and_fill(bufferToFill, m_bufferSize);
         }
     }
 
@@ -54,7 +54,7 @@ public:
     bool is_samplesAvailable();
 
     template <typename T>
-    Errors_e read_samples(GEN_CARD_CONFIG_TYPE& config, Buffer<T>& bufferToFill)
+    Errors_e read_samples(Buffer<T>& bufferToFill)
     {
     	if (is_samplesAvailable() == false)
     	{
@@ -62,7 +62,7 @@ public:
     	}
     	else
     	{
-    		return create_and_fill(config, bufferToFill, m_periodSize);
+    		return create_and_fill(bufferToFill, m_periodSize);
     	}
     }
 
@@ -94,10 +94,9 @@ private:
     }
 
     template <typename T>
-    Errors_e create_and_fill(GEN_CARD_CONFIG_TYPE& config, Buffer<T>& bufferToFill, int size)
+    Errors_e create_and_fill(Buffer<T>& bufferToFill, int size)
     {
-        CARD_CONFIG_TYPE& typedConfig = static_cast<CARD_CONFIG_TYPE&>(config);
-        using SAMPLE_TYPE = decltype(typedConfig.PCM_SAMPLE_TYPE);
+        using SAMPLE_TYPE = CARD_CONFIG_TYPE::SAMPLE_TYPE;
         SAMPLE_TYPE buffer[size] = { 0 };
         return fill_buffer(buffer, bufferToFill, size);
     }

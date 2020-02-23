@@ -9,6 +9,8 @@
 //Struct for ALSA card configuration parameters
 struct ALSACardConfiguration_t : public ICardConfiguration_t
 {
+	using SAMPLE_TYPE = short signed int;
+
 	snd_pcm_stream_t 	PCM_CAPTURE_MODE 	= SND_PCM_STREAM_CAPTURE;
 	int 				PCM_BLOCKING_MODE 	= 0;
 	snd_pcm_access_t 	PCM_ACCESS_MODE 	= SND_PCM_ACCESS_RW_INTERLEAVED;
@@ -21,7 +23,6 @@ struct ALSACardConfiguration_t : public ICardConfiguration_t
 	bool					INITIALIZED		= false;
 
 	int 				PCM_BUFFER_SIZE 	= 88200;
-	short signed int	PCM_SAMPLE_TYPE		= 0;
 
 	snd_pcm_uframes_t	PCM_PERIOD_SIZE		= 256;
 	int					PCM_DIRECTION		= 0;

@@ -1,22 +1,22 @@
 Determining if the pthread_create exist failed with the following output:
 Change Dir: /home/pi/eclipse-workspace/BPMDetector/Audio/TestAudio/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_b694a/fast"
-/usr/bin/make -f CMakeFiles/cmTC_b694a.dir/build.make CMakeFiles/cmTC_b694a.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_3a145/fast"
+/usr/bin/make -f CMakeFiles/cmTC_3a145.dir/build.make CMakeFiles/cmTC_3a145.dir/build
 make[1]: Verzeichnis „/home/pi/eclipse-workspace/BPMDetector/Audio/TestAudio/build/CMakeFiles/CMakeTmp“ wird betreten
-Building C object CMakeFiles/cmTC_b694a.dir/CheckSymbolExists.c.o
-/usr/bin/cc     -o CMakeFiles/cmTC_b694a.dir/CheckSymbolExists.c.o   -c /home/pi/eclipse-workspace/BPMDetector/Audio/TestAudio/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
-Linking C executable cmTC_b694a
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b694a.dir/link.txt --verbose=1
-/usr/bin/cc       CMakeFiles/cmTC_b694a.dir/CheckSymbolExists.c.o  -o cmTC_b694a -rdynamic 
-CMakeFiles/cmTC_b694a.dir/CheckSymbolExists.c.o: In function `main':
+Building C object CMakeFiles/cmTC_3a145.dir/CheckSymbolExists.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_3a145.dir/CheckSymbolExists.c.o   -c /home/pi/eclipse-workspace/BPMDetector/Audio/TestAudio/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_3a145
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3a145.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_3a145.dir/CheckSymbolExists.c.o  -o cmTC_3a145 -rdynamic 
+CMakeFiles/cmTC_3a145.dir/CheckSymbolExists.c.o: In function `main':
 CheckSymbolExists.c:(.text+0x38): undefined reference to `pthread_create'
 collect2: error: ld returned 1 exit status
-CMakeFiles/cmTC_b694a.dir/build.make:97: die Regel für Ziel „cmTC_b694a“ scheiterte
-make[1]: *** [cmTC_b694a] Fehler 1
+CMakeFiles/cmTC_3a145.dir/build.make:97: die Regel für Ziel „cmTC_3a145“ scheiterte
+make[1]: *** [cmTC_3a145] Fehler 1
 make[1]: Verzeichnis „/home/pi/eclipse-workspace/BPMDetector/Audio/TestAudio/build/CMakeFiles/CMakeTmp“ wird verlassen
-Makefile:126: die Regel für Ziel „cmTC_b694a/fast“ scheiterte
-make: *** [cmTC_b694a/fast] Fehler 2
+Makefile:126: die Regel für Ziel „cmTC_3a145/fast“ scheiterte
+make: *** [cmTC_3a145/fast] Fehler 2
 
 File /home/pi/eclipse-workspace/BPMDetector/Audio/TestAudio/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
 /* */
@@ -36,20 +36,20 @@ int main(int argc, char** argv)
 Determining if the function pthread_create exists in the pthreads failed with the following output:
 Change Dir: /home/pi/eclipse-workspace/BPMDetector/Audio/TestAudio/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_91644/fast"
-/usr/bin/make -f CMakeFiles/cmTC_91644.dir/build.make CMakeFiles/cmTC_91644.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_3cf4a/fast"
+/usr/bin/make -f CMakeFiles/cmTC_3cf4a.dir/build.make CMakeFiles/cmTC_3cf4a.dir/build
 make[1]: Verzeichnis „/home/pi/eclipse-workspace/BPMDetector/Audio/TestAudio/build/CMakeFiles/CMakeTmp“ wird betreten
-Building C object CMakeFiles/cmTC_91644.dir/CheckFunctionExists.c.o
-/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_91644.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.7/Modules/CheckFunctionExists.c
-Linking C executable cmTC_91644
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_91644.dir/link.txt --verbose=1
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_91644.dir/CheckFunctionExists.c.o  -o cmTC_91644 -rdynamic -lpthreads 
+Building C object CMakeFiles/cmTC_3cf4a.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_3cf4a.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.7/Modules/CheckFunctionExists.c
+Linking C executable cmTC_3cf4a
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3cf4a.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_3cf4a.dir/CheckFunctionExists.c.o  -o cmTC_3cf4a -rdynamic -lpthreads 
 /usr/bin/ld: cannot find -lpthreads
 collect2: error: ld returned 1 exit status
-CMakeFiles/cmTC_91644.dir/build.make:97: die Regel für Ziel „cmTC_91644“ scheiterte
-make[1]: *** [cmTC_91644] Fehler 1
+CMakeFiles/cmTC_3cf4a.dir/build.make:97: die Regel für Ziel „cmTC_3cf4a“ scheiterte
+make[1]: *** [cmTC_3cf4a] Fehler 1
 make[1]: Verzeichnis „/home/pi/eclipse-workspace/BPMDetector/Audio/TestAudio/build/CMakeFiles/CMakeTmp“ wird verlassen
-Makefile:126: die Regel für Ziel „cmTC_91644/fast“ scheiterte
-make: *** [cmTC_91644/fast] Fehler 2
+Makefile:126: die Regel für Ziel „cmTC_3cf4a/fast“ scheiterte
+make: *** [cmTC_3cf4a/fast] Fehler 2
 
 
