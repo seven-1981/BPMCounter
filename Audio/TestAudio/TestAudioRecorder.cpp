@@ -142,6 +142,14 @@ TEST_F(TestAudioRecorder, ReturnsErrorCodeIfCaptureFailsWithESTRPIPERecoverSucce
     ASSERT_EQ(recorder.capture_samples(buffer), Errors_e::NO_ERROR);
 }
 
+TEST_F(TestAudioRecorder, ReturnsErrorCodeIfPrepareFails)
+{
+    service.set_state(State_PrepareFailure);
+    IGNORE recorder.prepare_recorder(config);
+
+    ASSERT_EQ(recorder.capture_samples(buffer), Errors_e::AUDIO_RECORDER_CAPTURE_ERROR);
+}
+
 TEST_F(TestAudioRecorder, PerformsCheckIfCallbackIsSet)
 {
 	service.set_state(State_CaptureAsyncSuccess);

@@ -28,7 +28,8 @@ enum FakeRecordingServiceStates_e
 	State_CaptureLessSamples,
 	State_CaptureAsyncSuccess,
 	State_CaptureAsyncSuccessWithMemberFunction,
-	State_CaptureAsyncFailure
+	State_CaptureAsyncFailure,
+	State_PrepareFailure
 };
 
 
@@ -62,6 +63,7 @@ private:
 
     int pcm_drop() override;
     int pcm_recover(int err, int silent) override;
+    int pcm_prepare() override;
 };
 
 #endif

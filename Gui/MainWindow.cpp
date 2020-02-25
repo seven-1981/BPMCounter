@@ -9,6 +9,7 @@
 #include "MainWindow.hpp"
 #include "AppContainer.hpp"
 #include "LED.hpp"
+#include "globals.hpp"
 
 
 MainWindow::MainWindow(AppContainer& app, QWidget* parent) : QMainWindow(parent), m_app(app)
@@ -28,12 +29,25 @@ MainWindow::~MainWindow()
 	delete m_timer;
 }
 
-void MainWindow::update()
+void MainWindow::update_bpm()
 {
-	double bpm = m_app.fetch_bpmValue();
-	int i = static_cast<int>(bpm);
+	double bpmVal = m_app.fetch_bpmValue();
+	int i = static_cast<int>(bpmVal);
 	m_bpmNumber->display(QString("%1").arg(i, 3, 10, QChar('0')) + "."
-			+ QString("%1").arg(qRound((bpm - i) * 10), 1, 10, QChar('0')));
+			+ QString("%1").arg(qRound((bpmVal - i) * 10), 1, 10, QChar('0')));
+}
+
+void MainWindow::update_rec()
+{
+	Errors_e recRetval = m_app.fetch_recRetval();
+	if (recRetval != Errors_e::NO_ERROR)
+	{
+		m_app.stop_detection();
+		QCoreApplication::quit();
+	}
+
+	m_recLed->setPower(!m_app.get_status());
+	m_detLed->setPower(m_app.get_status());
 }
 
 void MainWindow::keyPressEvent(QKeyEvent* event)
@@ -143,6 +157,7 @@ void MainWindow::setup_led()
 void MainWindow::setup_updater(int interval_ms)
 {
     m_timer = new QTimer(this);
-    connect (m_timer, SIGNAL( timeout() ), this, SLOT( update() ) );
+    connect (m_timer, SIGNAL( timeout() ), this, SLOT( update_bpm() ) );
+    connect (m_timer, SIGNAL( timeout() ), this, SLOT( update_rec() ) );
     m_timer->start(interval_ms);
 }

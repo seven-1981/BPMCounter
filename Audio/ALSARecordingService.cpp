@@ -32,7 +32,12 @@ bool ALSARecordingService::is_handleSet()
 
 int ALSARecordingService::pcm_readi(void* buffer, int size)
 {
-    int retVal = snd_pcm_readi(m_pcmHandle, buffer, size);
+	int retVal = pcm_prepare();
+	if (retVal < 0)
+	{
+		return retVal;
+	}
+    retVal = snd_pcm_readi(m_pcmHandle, buffer, size);
     if (retVal < 0)
     {
         IGNORE pcm_drop();
@@ -145,7 +150,13 @@ int ALSARecordingService::pcm_drop()
 int ALSARecordingService::pcm_recover(int err, int silent)
 {
     return snd_pcm_recover(m_pcmHandle, err, silent);
+}
 
+int ALSARecordingService::pcm_prepare()
+{
+	IGNORE pcm_drop();
+	IGNORE pcm_recover(0, RECOVER_SILENT);
+	return snd_pcm_prepare(m_pcmHandle);
 }
 
 void ALSARecordingService::callback_wrapper(snd_async_handler_t* ahandler)

@@ -19,6 +19,7 @@ public:
     virtual int pcm_readi(void* buffer, int size) = 0;
     virtual int pcm_drop() = 0;
     virtual int pcm_recover(int err, int silent) = 0;
+    virtual int pcm_prepare() = 0;
     virtual int add_pcm_handler(ICardCallbackConfiguration_t& config) = 0;
     virtual int del_pcm_handler(ICardCallbackConfiguration_t& config) = 0;
     virtual int pcm_start() = 0;

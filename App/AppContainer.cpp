@@ -39,34 +39,30 @@ Errors_e AppContainer::init()
 
 Errors_e AppContainer::record_audio()
 {
-	return record();
+	return m_audioController.synchronous_record(*m_buffer);
 }
 
 double AppContainer::detect_bpm()
 {
-	return detect();
+	return m_analyzerController->analyze();
 }
 
 double AppContainer::fetch_bpmValue()
 {
-	return m_wrapper.get_value();
+	return m_wrapper.get_consRetval();
+}
+
+Errors_e AppContainer::fetch_recRetval()
+{
+	return m_wrapper.get_prodRetval();
+}
+
+bool AppContainer::get_status()
+{
+	return m_wrapper.get_status();
 }
 
 void AppContainer::stop_detection()
 {
 	m_wrapper.stop_production();
-}
-
-Errors_e AppContainer::record()
-{
-	Errors_e retVal = Errors_e::NO_ERROR;
-	if ((retVal = m_audioController.synchronous_record(*m_buffer)) != Errors_e::NO_ERROR)
-		return retVal;
-	return Errors_e::NO_ERROR;
-}
-
-double AppContainer::detect()
-{
-	double bpm = m_analyzerController->analyze();
-	return bpm;
 }

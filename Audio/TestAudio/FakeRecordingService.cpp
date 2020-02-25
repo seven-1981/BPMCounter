@@ -63,6 +63,10 @@ int FakeRecordingService::pcm_readi(void* buffer, int size)
         case State_CaptureLessSamples:
             return size - 1;
             break;
+
+        case State_PrepareFailure:
+        	return pcm_prepare();
+        	break;
         
         default:
             return RETURN_ANY_ERROR;
@@ -110,6 +114,15 @@ int FakeRecordingService::pcm_recover(int err, int silent)
             return RETURN_ANY_ERROR;
             break;        
     }
+}
+
+int FakeRecordingService::pcm_prepare()
+{
+	IGNORE pcm_drop();
+	IGNORE pcm_recover(0, RECOVER_SILENT);
+	if (m_state == State_PrepareFailure)
+		return RETURN_ANY_ERROR;
+	return RETURN_NO_ERROR;
 }
 
 int FakeRecordingService::add_pcm_handler(GEN_CARD_CALLBACK_CONFIG_TYPE& config)

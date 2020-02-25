@@ -19,7 +19,8 @@ public:
 		m_funcProd(nullptr),
 		m_funcCons(nullptr),
 		m_instance(inst),
-		m_retVal(0),
+		m_prodRetval(),
+		m_consRetval(),
 		m_continueProd(true),
 		m_continueCons(true),
 		m_finishedProd(false),
@@ -47,9 +48,10 @@ public:
 		while (m_continueProd.load() == true)
 		{
 			std::unique_lock<std::mutex> lck(m_mtx);
-			m_produce.wait(lck, [this] { return !m_productionComplete; } );
+			m_produce.wait(lck, [this] { return !m_productionComplete.load(); } );
 			retVal = (m_instance->*m_funcProd)();
-			m_productionComplete = true;
+			m_prodRetval.store(retVal);
+			m_productionComplete.store(true);
 			lck.unlock();
 			m_consume.notify_one();
 		}
@@ -63,10 +65,10 @@ public:
 		while (m_continueCons.load() == true)
 		{
 			std::unique_lock<std::mutex> lck(m_mtx);
-			m_consume.wait(lck, [this] { return m_productionComplete; } );
+			m_consume.wait(lck, [this] { return m_productionComplete.load(); } );
 			retVal = (m_instance->*m_funcCons)();
-			m_retVal.store(retVal);
-			m_productionComplete = false;
+			m_consRetval.store(retVal);
+			m_productionComplete.store(false);
 			lck.unlock();
 			m_produce.notify_one();
 		}
@@ -74,10 +76,8 @@ public:
 		return retVal;
 	}
 
-	RC get_value()
-	{
-		return m_retVal.load();
-	}
+	RP get_prodRetval() { return m_prodRetval.load(); }
+	RC get_consRetval() { return m_consRetval.load(); }
 
 	void stop_production()
 	{
@@ -87,20 +87,23 @@ public:
 		while (m_finishedCons.load() == false) { /*Wait for cons. to exit*/ }
 		m_finishedProd.store(false);
 		m_finishedCons.store(false);
-		m_productionComplete = false;
+		m_productionComplete.store(false);
 	}
+
+	bool get_status() { return m_productionComplete.load(); }
 
 private:
 	std::condition_variable m_produce;
 	std::condition_variable m_consume;
 	std::mutex m_mtx;
-	bool m_productionComplete;
+	std::atomic<bool> m_productionComplete;
 	std::future<RP> m_futureProduce;
 	std::future<RC> m_futureConsume;
 	Func<CL, RP> m_funcProd;
 	Func<CL, RC> m_funcCons;
 	CL* m_instance;
-	std::atomic<RC> m_retVal;
+	std::atomic<RP> m_prodRetval;
+	std::atomic<RC> m_consRetval;
 	std::atomic<bool> m_continueProd;
 	std::atomic<bool> m_continueCons;
 	std::atomic<bool> m_finishedProd;

@@ -23,7 +23,8 @@ public:
     ~MainWindow();
 
 public Q_SLOTS:
-	void update();
+	void update_bpm();
+	void update_rec();
 
 private:
     AppContainer& m_app;

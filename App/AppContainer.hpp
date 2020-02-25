@@ -25,8 +25,10 @@ public:
 	Errors_e record_audio();
 	double detect_bpm();
 
+	Errors_e fetch_recRetval();
 	double fetch_bpmValue();
 
+	bool get_status();
 	void stop_detection();
 
 private:
@@ -35,9 +37,6 @@ private:
 	AudioController m_audioController;
 	IAnalyzer* m_analyzerController;
 	ThreadWrapper<Errors_e, double, AppContainer> m_wrapper;
-
-	Errors_e record();
-	double detect();
 };
 
 #endif

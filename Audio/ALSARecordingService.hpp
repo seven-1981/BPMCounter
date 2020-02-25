@@ -44,6 +44,7 @@ private:
 
     int pcm_drop() override;
     int pcm_recover(int err, int silent) override;
+    int pcm_prepare() override;
 
     static void callback_wrapper(ALSA_CALLBACK_PARAM handler);
 };
