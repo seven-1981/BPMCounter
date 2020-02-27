@@ -1,6 +1,7 @@
 #ifndef _MAINWINDOW_H
 #define _MAINWINDOW_H
 
+#include <QString>
 #include <QMainWindow>
 
 class AppContainer;
@@ -60,6 +61,21 @@ private:
     void setup_label();
     void setup_led();
     void setup_updater(int interval_ms);
+
+    void stop_application();
+
+    void convert_to_string(double number, QString& str);
+
+    const int VALUE_UPDATE_INTERVAL_MS = 200;
+    const int FONT_SIZE = 48;
+    const int LAYOUT_STRETCH_TOP_BPM  = 4;
+    const int LAYOUT_STRETCH_BOT_STAT = 1;
+    const int LAYOUT_STRETCH_LT_STAT = 1;
+    const int LAYOUT_STRETCH_RT_STAT = 1;
+    const int LAYOUT_STRETCH_RMS_LT = 1;
+    const int LAYOUT_STRETCH_RMS_RT = 4;
+    const int LAYOUT_STRETCH_LED_LT = 1;
+    const int LAYOUT_STRETCH_LED_RT = 8;
 };
 
 #endif

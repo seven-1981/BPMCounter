@@ -1,5 +1,6 @@
 #include "LED.hpp"
 
+
 void Led::setOn()
 {
 	m_onPix.fill(Qt::red);
@@ -12,9 +13,9 @@ void Led::setOff()
 	setPixmap(m_onPix);
 }
 
-void Led::setPower(bool val)
+void Led::setPower(bool power)
 {
-	if (val == true) setOn();
+	if (power == true) setOn();
 	else setOff();
 }
 

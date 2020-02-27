@@ -27,7 +27,7 @@ public:
 public slots:
 	void setOn();
 	void setOff();
-	void setPower(bool val);
+	void setPower(bool power);
 
 private:
 	QPixmap m_onPix;

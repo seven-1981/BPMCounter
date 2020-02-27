@@ -1,6 +1,5 @@
 #include <QTimer>
 #include <QLCDNumber>
-#include <QString>
 #include <QChar>
 #include <QKeyEvent>
 #include <QApplication>
@@ -19,7 +18,7 @@ MainWindow::MainWindow(AppContainer& app, QWidget* parent) : QMainWindow(parent)
 	setup_label();
 	setup_led();
 	setup_layout();
-	setup_updater(200);
+	setup_updater(VALUE_UPDATE_INTERVAL_MS);
 }
 
 MainWindow::~MainWindow()
@@ -32,9 +31,9 @@ MainWindow::~MainWindow()
 void MainWindow::update_bpm()
 {
 	double bpmVal = m_app.fetch_bpmValue();
-	int i = static_cast<int>(bpmVal);
-	m_bpmNumber->display(QString("%1").arg(i, 3, 10, QChar('0')) + "."
-			+ QString("%1").arg(qRound((bpmVal - i) * 10), 1, 10, QChar('0')));
+	QString str;
+	convert_to_string(bpmVal, str);
+	m_bpmNumber->display(str);
 }
 
 void MainWindow::update_rec()
@@ -42,8 +41,7 @@ void MainWindow::update_rec()
 	Errors_e recRetval = m_app.fetch_recRetval();
 	if (recRetval != Errors_e::NO_ERROR)
 	{
-		m_app.stop_detection();
-		QCoreApplication::quit();
+		stop_application();
 	}
 
 	m_recLed->setPower(!m_app.get_status());
@@ -54,15 +52,14 @@ void MainWindow::keyPressEvent(QKeyEvent* event)
 {
 	if (event->key() == Qt::Key_Q)
 	{
-		m_app.stop_detection();
-		QCoreApplication::quit();
+		stop_application();
 	}
 }
 
 void MainWindow::closeEvent(QCloseEvent* event)
 {
-	m_app.stop_detection();
-	QCoreApplication::quit();
+	Q_UNUSED(event)
+	stop_application();
 }
 
 void MainWindow::setup_widget()
@@ -88,30 +85,30 @@ void MainWindow::setup_layout()
 
     m_topLayout->addWidget(m_bpmNumber);
     m_topLayout->addLayout(m_l1BotLayout);
-    m_topLayout->setStretch(0, 4);
-    m_topLayout->setStretch(1, 1);
+    m_topLayout->setStretch(0, LAYOUT_STRETCH_TOP_BPM);
+    m_topLayout->setStretch(1, LAYOUT_STRETCH_BOT_STAT);
 
     m_l1BotLayout->addLayout(m_l2LeftLayout);
     m_l1BotLayout->addLayout(m_l2RightLayout);
-    m_l1BotLayout->setStretch(0, 1);
-    m_l1BotLayout->setStretch(1, 1);
+    m_l1BotLayout->setStretch(0, LAYOUT_STRETCH_LT_STAT);
+    m_l1BotLayout->setStretch(1, LAYOUT_STRETCH_RT_STAT);
 
     m_l2RightLayout->addWidget(m_rmsLabel);
     m_l2RightLayout->addWidget(m_rmsNumber);
-    m_l2RightLayout->setStretch(0, 1);
-    m_l2RightLayout->setStretch(1, 4);
+    m_l2RightLayout->setStretch(0, LAYOUT_STRETCH_RMS_LT);
+    m_l2RightLayout->setStretch(1, LAYOUT_STRETCH_RMS_RT);
 
     m_l2LeftLayout->addLayout(m_l3LeftTopLayout);
     m_l2LeftLayout->addLayout(m_l3LeftBotLayout);
 
     m_l3LeftTopLayout->addWidget(m_recLed);
     m_l3LeftTopLayout->addWidget(m_recLabel);
-    m_l3LeftTopLayout->setStretch(0, 1);
-    m_l3LeftTopLayout->setStretch(1, 8);
+    m_l3LeftTopLayout->setStretch(0, LAYOUT_STRETCH_LED_LT);
+    m_l3LeftTopLayout->setStretch(1, LAYOUT_STRETCH_LED_RT);
     m_l3LeftBotLayout->addWidget(m_detLed);
     m_l3LeftBotLayout->addWidget(m_detLabel);
-    m_l3LeftBotLayout->setStretch(0, 1);
-    m_l3LeftBotLayout->setStretch(1, 8);
+    m_l3LeftBotLayout->setStretch(0, LAYOUT_STRETCH_LED_LT);
+    m_l3LeftBotLayout->setStretch(1, LAYOUT_STRETCH_LED_RT);
 
     m_widget->setLayout(m_topLayout);
 }
@@ -138,7 +135,7 @@ void MainWindow::setup_label()
 	m_rmsLabel = new QLabel("RMS");
 
 	QFont font = m_recLabel->font();
-	font.setPointSize(48);
+	font.setPointSize(FONT_SIZE);
 	font.setBold(true);
 	m_recLabel->setFont(font);
 	m_detLabel->setFont(font);
@@ -148,10 +145,10 @@ void MainWindow::setup_label()
 void MainWindow::setup_led()
 {
     m_recLed = new RoundLed(m_widget);
-    m_recLed->setPower(true);
+    m_recLed->setPower(false);
 
     m_detLed = new RoundLed(m_widget);
-    m_detLed->setPower(true);
+    m_detLed->setPower(false);
 }
 
 void MainWindow::setup_updater(int interval_ms)
@@ -160,4 +157,24 @@ void MainWindow::setup_updater(int interval_ms)
     connect (m_timer, SIGNAL( timeout() ), this, SLOT( update_bpm() ) );
     connect (m_timer, SIGNAL( timeout() ), this, SLOT( update_rec() ) );
     m_timer->start(interval_ms);
+}
+
+void MainWindow::stop_application()
+{
+	m_app.stop_detection();
+	QCoreApplication::quit();
+}
+
+void MainWindow::convert_to_string(double number, QString& str)
+{
+	int hundred = static_cast<int>( number 										 / 100);
+	int ten		= static_cast<int>((number - hundred * 100) 					 /  10);
+	int one		= static_cast<int>((number - hundred * 100 - ten * 10) 			 /   1);
+	int tenth	= static_cast<int>((number - hundred * 100 - ten * 10 - one * 1) *  10);
+	str.clear();
+	str.append(QString('0' + hundred));
+	str.append(QString('0' + ten));
+	str.append(QString('0' + one));
+	str.append(QString("."));
+	str.append(QString('0' + tenth));
 }
