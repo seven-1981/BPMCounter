@@ -5,6 +5,8 @@
 #include <QApplication>
 #include <QVBoxLayout>
 #include <QHBoxLayout>
+#include <QFrame>
+#include <cmath>
 #include "MainWindow.hpp"
 #include "AppContainer.hpp"
 #include "LED.hpp"
@@ -30,10 +32,16 @@ MainWindow::~MainWindow()
 
 void MainWindow::update_bpm()
 {
+	double rmsVal = m_app.fetch_rmsValue();
+	set_number(m_rmsNumber, fabs(rmsVal));
+	if (rmsVal < 0)
+	{
+		set_color(m_rmsNumber, Qt::red);
+		return;
+	}
+	set_color(m_rmsNumber, Qt::green);
 	double bpmVal = m_app.fetch_bpmValue();
-	QString str;
-	convert_to_string(bpmVal, str);
-	m_bpmNumber->display(str);
+	set_number(m_bpmNumber, bpmVal);
 }
 
 void MainWindow::update_rec()
@@ -64,11 +72,7 @@ void MainWindow::closeEvent(QCloseEvent* event)
 
 void MainWindow::setup_widget()
 {
-	QPalette Pal = palette();
-	Pal.setColor(QPalette::Normal, QPalette::WindowText, Qt::green);
-	Pal.setColor(QPalette::Normal, QPalette::Window, Qt::black);
-	setPalette(Pal);
-
+	set_color(this, Qt::green);
 	m_widget = new QWidget;
 	setCentralWidget(m_widget);
 }
@@ -116,16 +120,17 @@ void MainWindow::setup_layout()
 void MainWindow::setup_number()
 {
 	m_bpmNumber = new QLCDNumber(m_widget);
-	m_bpmNumber->display(0);
 	m_bpmNumber->setSegmentStyle(QLCDNumber::Filled);
 	m_bpmNumber->setDigitCount(5);
 	m_bpmNumber->setAutoFillBackground(true);
 
 	m_rmsNumber = new QLCDNumber(m_widget);
-	m_rmsNumber->display(0);
 	m_rmsNumber->setSegmentStyle(QLCDNumber::Filled);
 	m_rmsNumber->setDigitCount(5);
 	m_rmsNumber->setAutoFillBackground(true);
+
+	set_number(m_bpmNumber, 0);
+	set_number(m_rmsNumber, 0);
 }
 
 void MainWindow::setup_label()
@@ -177,4 +182,19 @@ void MainWindow::convert_to_string(double number, QString& str)
 	str.append(QString('0' + one));
 	str.append(QString("."));
 	str.append(QString('0' + tenth));
+}
+
+void MainWindow::set_color(QWidget* widget, Qt::GlobalColor color)
+{
+	QPalette Pal = palette();
+	Pal.setColor(QPalette::Normal, QPalette::WindowText, color);
+	Pal.setColor(QPalette::Normal, QPalette::Window, Qt::black);
+	widget->setPalette(Pal);
+}
+
+void MainWindow::set_number(QLCDNumber* lcdnbr, double number)
+{
+	QString str;
+	convert_to_string(number, str);
+	lcdnbr->display(str);
 }

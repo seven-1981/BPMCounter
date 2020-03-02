@@ -57,6 +57,11 @@ Errors_e AppContainer::fetch_recRetval()
 	return m_wrapper.get_prodRetval();
 }
 
+double AppContainer::fetch_rmsValue()
+{
+	return m_analyzerController->analyze_rms();
+}
+
 bool AppContainer::get_status()
 {
 	return m_wrapper.get_status();

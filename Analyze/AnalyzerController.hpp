@@ -3,17 +3,23 @@
 
 #include "IAnalyzer.hpp"
 #include "AnalyzerContainer.hpp"
-#include "Analyzer1.hpp"
+#include "BPMAnalyzer.hpp"
+#include "RMSAnalyzer.hpp"
 #include "Buffer.hpp"
 
 
 template <typename T>
-class AnalyzerController : public IAnalyzer
+class AnalyzerController : public IAnalyzerTuple
 {
 public:
-	AnalyzerController(Buffer<T>& buffer) : m_container()
+	AnalyzerController(Buffer<T>& buffer) :
+		m_container(),
+		m_rmsValue(0),
+		m_indexRms(0),
+		m_indexBpm(1)
 	{
-		m_container.init_analyzer( new Analyzer1<T>(buffer) );
+		init_analyzer( new RMSAnalyzer<T>(buffer) );
+		init_analyzer( new BPMAnalyzer<T>(buffer) );
 	}
 
 	~AnalyzerController()
@@ -26,7 +32,17 @@ public:
 
 	FLOAT_TYPE analyze() override
 	{
+		//Determine RMS value - if below threshold, no detection is performed
+		set_analyzer(m_indexRms);
+		m_rmsValue = m_container.analyze();
+		if (m_rmsValue < 0)	return 0.0;
+		set_analyzer(m_indexBpm);
 		return m_container.analyze();
+	}
+
+	FLOAT_TYPE analyze_rms() override
+	{
+		return m_rmsValue;
 	}
 
 	void init_analyzer(IAnalyzer* analyzer)
@@ -39,8 +55,18 @@ public:
 		m_container.set_analyzer(index);
 	}
 
+	void set_index(int rmsIndex, int bpmIndex)
+	{
+		m_indexRms = rmsIndex;
+		m_indexBpm = bpmIndex;
+	}
+
 private:
 	AnalyzerContainer m_container;
+
+	FLOAT_TYPE m_rmsValue;
+	int m_indexRms;
+	int m_indexBpm;
 };
 
 #endif

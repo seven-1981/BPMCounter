@@ -52,7 +52,7 @@ target_link_libraries(BPMDetector qwt-qt5)
 target_link_libraries(BPMDetector boost_iostreams boost_system boost_filesystem)   
 
 # Definitions
-#add_definitions(-DENABLE_ANALYZER1_PLOT)
+#add_definitions(-DENABLE_BPMANALYZER_PLOT)
 
 # Set compiler flags
 list(APPEND flags "-Wall" "-std=c++11" "-g" "-Wno-psabi" "-O1" "-Og")

@@ -12,4 +12,13 @@ public:
 	virtual FLOAT_TYPE analyze() = 0;
 };
 
+
+class IAnalyzerTuple : public IAnalyzer
+{
+public:
+	virtual ~IAnalyzerTuple() { }
+
+	virtual FLOAT_TYPE analyze_rms() = 0;
+};
+
 #endif

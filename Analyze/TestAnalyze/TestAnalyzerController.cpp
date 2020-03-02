@@ -31,10 +31,12 @@ TEST_F(TestAnalyzerController, CreatesInstance)
 TEST_F(TestAnalyzerController, PerformsAnalysis)
 {
 	AnalyzerController<float> controller(buffer);
-	FakeAnalyzerParam<float>* fakeAnalyzer = new FakeAnalyzerParam<float>(buffer);
+	FakeAnalyzerParam<float>* fakeAnalyzer2 = new FakeAnalyzerParam<float>(buffer);
 
-	controller.init_analyzer(fakeAnalyzer);
-	controller.set_analyzer(1);
+	//AnalyzerController already has 2 instances
+	controller.init_analyzer(fakeAnalyzer2);
+	controller.set_analyzer(2);
+	controller.set_index(2, 2);
 
 	ASSERT_EQ(controller.analyze(), FACTOR1);
 }

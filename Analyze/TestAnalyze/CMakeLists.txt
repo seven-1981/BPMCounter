@@ -25,5 +25,5 @@ add_executable(runTests TestMain.cpp ${sources})
 target_link_libraries(runTests ${GTEST_LIBRARIES} pthread)                 
 
 # Set compiler flags
-list(APPEND flags "-Wall" "-std=c++11")
+list(APPEND flags "-Wall" "-std=c++11" "-g")
 target_compile_options(runTests PUBLIC ${flags})

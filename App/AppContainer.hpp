@@ -10,7 +10,7 @@ using CARD_CONFIG_TYPE = ALSACardConfiguration_t;
 using SAMPLE_TYPE = CARD_CONFIG_TYPE::SAMPLE_TYPE;
 using BUFFER_TYPE = Buffer<SAMPLE_TYPE>;
 
-class IAnalyzer;
+class IAnalyzerTuple;
 enum class Errors_e;
 
 
@@ -27,6 +27,7 @@ public:
 
 	Errors_e fetch_recRetval();
 	double fetch_bpmValue();
+	double fetch_rmsValue();
 
 	bool get_status();
 	void stop_detection();
@@ -35,7 +36,7 @@ private:
 	CARD_CONFIG_TYPE m_config;
 	BUFFER_TYPE* m_buffer;
 	AudioController m_audioController;
-	IAnalyzer* m_analyzerController;
+	IAnalyzerTuple* m_analyzerController;
 	ThreadWrapper<Errors_e, double, AppContainer> m_wrapper;
 };
 
