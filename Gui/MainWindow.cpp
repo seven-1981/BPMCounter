@@ -7,6 +7,7 @@
 #include <QHBoxLayout>
 #include <QFrame>
 #include <cmath>
+#include <iostream>
 #include "MainWindow.hpp"
 #include "AppContainer.hpp"
 #include "LED.hpp"
@@ -33,7 +34,7 @@ MainWindow::~MainWindow()
 void MainWindow::update_bpm()
 {
 	double rmsVal = m_app.fetch_rmsValue();
-	set_number(m_rmsNumber, fabs(rmsVal));
+	set_number(m_rmsNumber, fabs(rmsVal), 5, 0);
 	if (rmsVal < 0)
 	{
 		set_color(m_rmsNumber, Qt::red);
@@ -41,7 +42,7 @@ void MainWindow::update_bpm()
 	}
 	set_color(m_rmsNumber, Qt::green);
 	double bpmVal = m_app.fetch_bpmValue();
-	set_number(m_bpmNumber, bpmVal);
+	set_number(m_bpmNumber, bpmVal, 4, 1);
 }
 
 void MainWindow::update_rec()
@@ -129,8 +130,8 @@ void MainWindow::setup_number()
 	m_rmsNumber->setDigitCount(5);
 	m_rmsNumber->setAutoFillBackground(true);
 
-	set_number(m_bpmNumber, 0);
-	set_number(m_rmsNumber, 0);
+	set_number(m_bpmNumber, 0, 4, 1);
+	set_number(m_rmsNumber, 0, 5, 0);
 }
 
 void MainWindow::setup_label()
@@ -184,6 +185,26 @@ void MainWindow::convert_to_string(double number, QString& str)
 	str.append(QString('0' + tenth));
 }
 
+void MainWindow::convert_to_string(double number, QString& str, int digits, int precision)
+{
+	int digit[digits] = { 0 };
+	double sum = 0;
+	double ex = pow(10, -(digits - precision - 1));
+	for (int i = 0; i < digits; ++i)
+	{
+		digit[i] = static_cast<int>((number - sum) * ex);
+		sum += digit[i] / ex;
+		ex *= 10;
+	}
+	str.clear();
+	for (int i = 0; i < digits; ++i)
+	{
+		str.append(QString('0' + digit[i]));
+		if ((i == digits - precision - 1) && (precision != 0))
+			str.append(QString("."));
+	}
+}
+
 void MainWindow::set_color(QWidget* widget, Qt::GlobalColor color)
 {
 	QPalette Pal = palette();
@@ -192,9 +213,9 @@ void MainWindow::set_color(QWidget* widget, Qt::GlobalColor color)
 	widget->setPalette(Pal);
 }
 
-void MainWindow::set_number(QLCDNumber* lcdnbr, double number)
+void MainWindow::set_number(QLCDNumber* lcdnbr, double number, int digits, int precision)
 {
 	QString str;
-	convert_to_string(number, str);
+	convert_to_string(number, str, digits, precision);
 	lcdnbr->display(str);
 }

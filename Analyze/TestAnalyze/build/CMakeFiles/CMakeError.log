@@ -1,22 +1,22 @@
 Determining if the pthread_create exist failed with the following output:
 Change Dir: /home/pi/eclipse-workspace/BPMDetector/Analyze/TestAnalyze/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_a4002/fast"
-/usr/bin/make -f CMakeFiles/cmTC_a4002.dir/build.make CMakeFiles/cmTC_a4002.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_f9bca/fast"
+/usr/bin/make -f CMakeFiles/cmTC_f9bca.dir/build.make CMakeFiles/cmTC_f9bca.dir/build
 make[1]: Verzeichnis „/home/pi/eclipse-workspace/BPMDetector/Analyze/TestAnalyze/build/CMakeFiles/CMakeTmp“ wird betreten
-Building C object CMakeFiles/cmTC_a4002.dir/CheckSymbolExists.c.o
-/usr/bin/cc     -o CMakeFiles/cmTC_a4002.dir/CheckSymbolExists.c.o   -c /home/pi/eclipse-workspace/BPMDetector/Analyze/TestAnalyze/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
-Linking C executable cmTC_a4002
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a4002.dir/link.txt --verbose=1
-/usr/bin/cc       CMakeFiles/cmTC_a4002.dir/CheckSymbolExists.c.o  -o cmTC_a4002 -rdynamic 
-CMakeFiles/cmTC_a4002.dir/CheckSymbolExists.c.o: In function `main':
+Building C object CMakeFiles/cmTC_f9bca.dir/CheckSymbolExists.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_f9bca.dir/CheckSymbolExists.c.o   -c /home/pi/eclipse-workspace/BPMDetector/Analyze/TestAnalyze/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_f9bca
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f9bca.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_f9bca.dir/CheckSymbolExists.c.o  -o cmTC_f9bca -rdynamic 
+CMakeFiles/cmTC_f9bca.dir/CheckSymbolExists.c.o: In function `main':
 CheckSymbolExists.c:(.text+0x38): undefined reference to `pthread_create'
 collect2: error: ld returned 1 exit status
-CMakeFiles/cmTC_a4002.dir/build.make:97: die Regel für Ziel „cmTC_a4002“ scheiterte
-make[1]: *** [cmTC_a4002] Fehler 1
+CMakeFiles/cmTC_f9bca.dir/build.make:97: die Regel für Ziel „cmTC_f9bca“ scheiterte
+make[1]: *** [cmTC_f9bca] Fehler 1
 make[1]: Verzeichnis „/home/pi/eclipse-workspace/BPMDetector/Analyze/TestAnalyze/build/CMakeFiles/CMakeTmp“ wird verlassen
-Makefile:126: die Regel für Ziel „cmTC_a4002/fast“ scheiterte
-make: *** [cmTC_a4002/fast] Fehler 2
+Makefile:126: die Regel für Ziel „cmTC_f9bca/fast“ scheiterte
+make: *** [cmTC_f9bca/fast] Fehler 2
 
 File /home/pi/eclipse-workspace/BPMDetector/Analyze/TestAnalyze/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
 /* */
@@ -36,20 +36,20 @@ int main(int argc, char** argv)
 Determining if the function pthread_create exists in the pthreads failed with the following output:
 Change Dir: /home/pi/eclipse-workspace/BPMDetector/Analyze/TestAnalyze/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_755dd/fast"
-/usr/bin/make -f CMakeFiles/cmTC_755dd.dir/build.make CMakeFiles/cmTC_755dd.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_4cf05/fast"
+/usr/bin/make -f CMakeFiles/cmTC_4cf05.dir/build.make CMakeFiles/cmTC_4cf05.dir/build
 make[1]: Verzeichnis „/home/pi/eclipse-workspace/BPMDetector/Analyze/TestAnalyze/build/CMakeFiles/CMakeTmp“ wird betreten
-Building C object CMakeFiles/cmTC_755dd.dir/CheckFunctionExists.c.o
-/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_755dd.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.7/Modules/CheckFunctionExists.c
-Linking C executable cmTC_755dd
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_755dd.dir/link.txt --verbose=1
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_755dd.dir/CheckFunctionExists.c.o  -o cmTC_755dd -rdynamic -lpthreads 
+Building C object CMakeFiles/cmTC_4cf05.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_4cf05.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.7/Modules/CheckFunctionExists.c
+Linking C executable cmTC_4cf05
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4cf05.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_4cf05.dir/CheckFunctionExists.c.o  -o cmTC_4cf05 -rdynamic -lpthreads 
 /usr/bin/ld: cannot find -lpthreads
 collect2: error: ld returned 1 exit status
-CMakeFiles/cmTC_755dd.dir/build.make:97: die Regel für Ziel „cmTC_755dd“ scheiterte
-make[1]: *** [cmTC_755dd] Fehler 1
+CMakeFiles/cmTC_4cf05.dir/build.make:97: die Regel für Ziel „cmTC_4cf05“ scheiterte
+make[1]: *** [cmTC_4cf05] Fehler 1
 make[1]: Verzeichnis „/home/pi/eclipse-workspace/BPMDetector/Analyze/TestAnalyze/build/CMakeFiles/CMakeTmp“ wird verlassen
-Makefile:126: die Regel für Ziel „cmTC_755dd/fast“ scheiterte
-make: *** [cmTC_755dd/fast] Fehler 2
+Makefile:126: die Regel für Ziel „cmTC_4cf05/fast“ scheiterte
+make: *** [cmTC_4cf05/fast] Fehler 2
 
 

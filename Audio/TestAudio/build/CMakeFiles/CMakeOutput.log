@@ -28,28 +28,28 @@ The CXX compiler identification is GNU, found in "/home/pi/eclipse-workspace/BPM
 Determining if the C compiler works passed with the following output:
 Change Dir: /home/pi/eclipse-workspace/BPMDetector/Audio/TestAudio/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_6aabd/fast"
-/usr/bin/make -f CMakeFiles/cmTC_6aabd.dir/build.make CMakeFiles/cmTC_6aabd.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_7335a/fast"
+/usr/bin/make -f CMakeFiles/cmTC_7335a.dir/build.make CMakeFiles/cmTC_7335a.dir/build
 make[1]: Verzeichnis „/home/pi/eclipse-workspace/BPMDetector/Audio/TestAudio/build/CMakeFiles/CMakeTmp“ wird betreten
-Building C object CMakeFiles/cmTC_6aabd.dir/testCCompiler.c.o
-/usr/bin/cc     -o CMakeFiles/cmTC_6aabd.dir/testCCompiler.c.o   -c /home/pi/eclipse-workspace/BPMDetector/Audio/TestAudio/build/CMakeFiles/CMakeTmp/testCCompiler.c
-Linking C executable cmTC_6aabd
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6aabd.dir/link.txt --verbose=1
-/usr/bin/cc       CMakeFiles/cmTC_6aabd.dir/testCCompiler.c.o  -o cmTC_6aabd -rdynamic 
+Building C object CMakeFiles/cmTC_7335a.dir/testCCompiler.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_7335a.dir/testCCompiler.c.o   -c /home/pi/eclipse-workspace/BPMDetector/Audio/TestAudio/build/CMakeFiles/CMakeTmp/testCCompiler.c
+Linking C executable cmTC_7335a
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_7335a.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_7335a.dir/testCCompiler.c.o  -o cmTC_7335a -rdynamic 
 make[1]: Verzeichnis „/home/pi/eclipse-workspace/BPMDetector/Audio/TestAudio/build/CMakeFiles/CMakeTmp“ wird verlassen
 
 
 Detecting C compiler ABI info compiled with the following output:
 Change Dir: /home/pi/eclipse-workspace/BPMDetector/Audio/TestAudio/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_cf3d1/fast"
-/usr/bin/make -f CMakeFiles/cmTC_cf3d1.dir/build.make CMakeFiles/cmTC_cf3d1.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_5e2e9/fast"
+/usr/bin/make -f CMakeFiles/cmTC_5e2e9.dir/build.make CMakeFiles/cmTC_5e2e9.dir/build
 make[1]: Verzeichnis „/home/pi/eclipse-workspace/BPMDetector/Audio/TestAudio/build/CMakeFiles/CMakeTmp“ wird betreten
-Building C object CMakeFiles/cmTC_cf3d1.dir/CMakeCCompilerABI.c.o
-/usr/bin/cc     -o CMakeFiles/cmTC_cf3d1.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-3.7/Modules/CMakeCCompilerABI.c
-Linking C executable cmTC_cf3d1
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_cf3d1.dir/link.txt --verbose=1
-/usr/bin/cc      -v CMakeFiles/cmTC_cf3d1.dir/CMakeCCompilerABI.c.o  -o cmTC_cf3d1 -rdynamic  
+Building C object CMakeFiles/cmTC_5e2e9.dir/CMakeCCompilerABI.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_5e2e9.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-3.7/Modules/CMakeCCompilerABI.c
+Linking C executable cmTC_5e2e9
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5e2e9.dir/link.txt --verbose=1
+/usr/bin/cc      -v CMakeFiles/cmTC_5e2e9.dir/CMakeCCompilerABI.c.o  -o cmTC_5e2e9 -rdynamic  
 Using built-in specs.
 COLLECT_GCC=/usr/bin/cc
 COLLECT_LTO_WRAPPER=/usr/lib/gcc/arm-linux-gnueabihf/6/lto-wrapper
@@ -59,9 +59,9 @@ Thread model: posix
 gcc version 6.3.0 20170516 (Raspbian 6.3.0-18+rpi1+deb9u1) 
 COMPILER_PATH=/usr/lib/gcc/arm-linux-gnueabihf/6/:/usr/lib/gcc/arm-linux-gnueabihf/6/:/usr/lib/gcc/arm-linux-gnueabihf/:/usr/lib/gcc/arm-linux-gnueabihf/6/:/usr/lib/gcc/arm-linux-gnueabihf/
 LIBRARY_PATH=/usr/lib/gcc/arm-linux-gnueabihf/6/:/usr/lib/gcc/arm-linux-gnueabihf/6/../../../arm-linux-gnueabihf/:/usr/lib/gcc/arm-linux-gnueabihf/6/../../../:/lib/arm-linux-gnueabihf/:/lib/:/usr/lib/arm-linux-gnueabihf/:/usr/lib/
-COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_cf3d1' '-rdynamic' '-march=armv6' '-mfloat-abi=hard' '-mfpu=vfp' '-mtls-dialect=gnu'
- /usr/lib/gcc/arm-linux-gnueabihf/6/collect2 -plugin /usr/lib/gcc/arm-linux-gnueabihf/6/liblto_plugin.so -plugin-opt=/usr/lib/gcc/arm-linux-gnueabihf/6/lto-wrapper -plugin-opt=-fresolution=/tmp/ccfkYuCS.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/ --build-id --eh-frame-hdr -export-dynamic -dynamic-linker /lib/ld-linux-armhf.so.3 -X --hash-style=gnu -m armelf_linux_eabi -o cmTC_cf3d1 /usr/lib/gcc/arm-linux-gnueabihf/6/../../../arm-linux-gnueabihf/crt1.o /usr/lib/gcc/arm-linux-gnueabihf/6/../../../arm-linux-gnueabihf/crti.o /usr/lib/gcc/arm-linux-gnueabihf/6/crtbegin.o -L/usr/lib/gcc/arm-linux-gnueabihf/6 -L/usr/lib/gcc/arm-linux-gnueabihf/6/../../../arm-linux-gnueabihf -L/usr/lib/gcc/arm-linux-gnueabihf/6/../../.. -L/lib/arm-linux-gnueabihf -L/usr/lib/arm-linux-gnueabihf CMakeFiles/cmTC_cf3d1.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/arm-linux-gnueabihf/6/crtend.o /usr/lib/gcc/arm-linux-gnueabihf/6/../../../arm-linux-gnueabihf/crtn.o
-COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_cf3d1' '-rdynamic' '-march=armv6' '-mfloat-abi=hard' '-mfpu=vfp' '-mtls-dialect=gnu'
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_5e2e9' '-rdynamic' '-march=armv6' '-mfloat-abi=hard' '-mfpu=vfp' '-mtls-dialect=gnu'
+ /usr/lib/gcc/arm-linux-gnueabihf/6/collect2 -plugin /usr/lib/gcc/arm-linux-gnueabihf/6/liblto_plugin.so -plugin-opt=/usr/lib/gcc/arm-linux-gnueabihf/6/lto-wrapper -plugin-opt=-fresolution=/tmp/ccaU6xCE.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/ --build-id --eh-frame-hdr -export-dynamic -dynamic-linker /lib/ld-linux-armhf.so.3 -X --hash-style=gnu -m armelf_linux_eabi -o cmTC_5e2e9 /usr/lib/gcc/arm-linux-gnueabihf/6/../../../arm-linux-gnueabihf/crt1.o /usr/lib/gcc/arm-linux-gnueabihf/6/../../../arm-linux-gnueabihf/crti.o /usr/lib/gcc/arm-linux-gnueabihf/6/crtbegin.o -L/usr/lib/gcc/arm-linux-gnueabihf/6 -L/usr/lib/gcc/arm-linux-gnueabihf/6/../../../arm-linux-gnueabihf -L/usr/lib/gcc/arm-linux-gnueabihf/6/../../.. -L/lib/arm-linux-gnueabihf -L/usr/lib/arm-linux-gnueabihf CMakeFiles/cmTC_5e2e9.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/arm-linux-gnueabihf/6/crtend.o /usr/lib/gcc/arm-linux-gnueabihf/6/../../../arm-linux-gnueabihf/crtn.o
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_5e2e9' '-rdynamic' '-march=armv6' '-mfloat-abi=hard' '-mfpu=vfp' '-mtls-dialect=gnu'
 make[1]: Verzeichnis „/home/pi/eclipse-workspace/BPMDetector/Audio/TestAudio/build/CMakeFiles/CMakeTmp“ wird verlassen
 
 
@@ -69,14 +69,14 @@ Parsed C implicit link information from above output:
   link line regex: [^( *|.*[/\])(ld|([^/\]+-)?ld|collect2)[^/\]*( |$)]
   ignore line: [Change Dir: /home/pi/eclipse-workspace/BPMDetector/Audio/TestAudio/build/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_cf3d1/fast"]
-  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_cf3d1.dir/build.make CMakeFiles/cmTC_cf3d1.dir/build]
+  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_5e2e9/fast"]
+  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_5e2e9.dir/build.make CMakeFiles/cmTC_5e2e9.dir/build]
   ignore line: [make[1]: Verzeichnis „/home/pi/eclipse-workspace/BPMDetector/Audio/TestAudio/build/CMakeFiles/CMakeTmp“ wird betreten]
-  ignore line: [Building C object CMakeFiles/cmTC_cf3d1.dir/CMakeCCompilerABI.c.o]
-  ignore line: [/usr/bin/cc     -o CMakeFiles/cmTC_cf3d1.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-3.7/Modules/CMakeCCompilerABI.c]
-  ignore line: [Linking C executable cmTC_cf3d1]
-  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_cf3d1.dir/link.txt --verbose=1]
-  ignore line: [/usr/bin/cc      -v CMakeFiles/cmTC_cf3d1.dir/CMakeCCompilerABI.c.o  -o cmTC_cf3d1 -rdynamic  ]
+  ignore line: [Building C object CMakeFiles/cmTC_5e2e9.dir/CMakeCCompilerABI.c.o]
+  ignore line: [/usr/bin/cc     -o CMakeFiles/cmTC_5e2e9.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-3.7/Modules/CMakeCCompilerABI.c]
+  ignore line: [Linking C executable cmTC_5e2e9]
+  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5e2e9.dir/link.txt --verbose=1]
+  ignore line: [/usr/bin/cc      -v CMakeFiles/cmTC_5e2e9.dir/CMakeCCompilerABI.c.o  -o cmTC_5e2e9 -rdynamic  ]
   ignore line: [Using built-in specs.]
   ignore line: [COLLECT_GCC=/usr/bin/cc]
   ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/arm-linux-gnueabihf/6/lto-wrapper]
@@ -86,13 +86,13 @@ Parsed C implicit link information from above output:
   ignore line: [gcc version 6.3.0 20170516 (Raspbian 6.3.0-18+rpi1+deb9u1) ]
   ignore line: [COMPILER_PATH=/usr/lib/gcc/arm-linux-gnueabihf/6/:/usr/lib/gcc/arm-linux-gnueabihf/6/:/usr/lib/gcc/arm-linux-gnueabihf/:/usr/lib/gcc/arm-linux-gnueabihf/6/:/usr/lib/gcc/arm-linux-gnueabihf/]
   ignore line: [LIBRARY_PATH=/usr/lib/gcc/arm-linux-gnueabihf/6/:/usr/lib/gcc/arm-linux-gnueabihf/6/../../../arm-linux-gnueabihf/:/usr/lib/gcc/arm-linux-gnueabihf/6/../../../:/lib/arm-linux-gnueabihf/:/lib/:/usr/lib/arm-linux-gnueabihf/:/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_cf3d1' '-rdynamic' '-march=armv6' '-mfloat-abi=hard' '-mfpu=vfp' '-mtls-dialect=gnu']
-  link line: [ /usr/lib/gcc/arm-linux-gnueabihf/6/collect2 -plugin /usr/lib/gcc/arm-linux-gnueabihf/6/liblto_plugin.so -plugin-opt=/usr/lib/gcc/arm-linux-gnueabihf/6/lto-wrapper -plugin-opt=-fresolution=/tmp/ccfkYuCS.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/ --build-id --eh-frame-hdr -export-dynamic -dynamic-linker /lib/ld-linux-armhf.so.3 -X --hash-style=gnu -m armelf_linux_eabi -o cmTC_cf3d1 /usr/lib/gcc/arm-linux-gnueabihf/6/../../../arm-linux-gnueabihf/crt1.o /usr/lib/gcc/arm-linux-gnueabihf/6/../../../arm-linux-gnueabihf/crti.o /usr/lib/gcc/arm-linux-gnueabihf/6/crtbegin.o -L/usr/lib/gcc/arm-linux-gnueabihf/6 -L/usr/lib/gcc/arm-linux-gnueabihf/6/../../../arm-linux-gnueabihf -L/usr/lib/gcc/arm-linux-gnueabihf/6/../../.. -L/lib/arm-linux-gnueabihf -L/usr/lib/arm-linux-gnueabihf CMakeFiles/cmTC_cf3d1.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/arm-linux-gnueabihf/6/crtend.o /usr/lib/gcc/arm-linux-gnueabihf/6/../../../arm-linux-gnueabihf/crtn.o]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_5e2e9' '-rdynamic' '-march=armv6' '-mfloat-abi=hard' '-mfpu=vfp' '-mtls-dialect=gnu']
+  link line: [ /usr/lib/gcc/arm-linux-gnueabihf/6/collect2 -plugin /usr/lib/gcc/arm-linux-gnueabihf/6/liblto_plugin.so -plugin-opt=/usr/lib/gcc/arm-linux-gnueabihf/6/lto-wrapper -plugin-opt=-fresolution=/tmp/ccaU6xCE.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/ --build-id --eh-frame-hdr -export-dynamic -dynamic-linker /lib/ld-linux-armhf.so.3 -X --hash-style=gnu -m armelf_linux_eabi -o cmTC_5e2e9 /usr/lib/gcc/arm-linux-gnueabihf/6/../../../arm-linux-gnueabihf/crt1.o /usr/lib/gcc/arm-linux-gnueabihf/6/../../../arm-linux-gnueabihf/crti.o /usr/lib/gcc/arm-linux-gnueabihf/6/crtbegin.o -L/usr/lib/gcc/arm-linux-gnueabihf/6 -L/usr/lib/gcc/arm-linux-gnueabihf/6/../../../arm-linux-gnueabihf -L/usr/lib/gcc/arm-linux-gnueabihf/6/../../.. -L/lib/arm-linux-gnueabihf -L/usr/lib/arm-linux-gnueabihf CMakeFiles/cmTC_5e2e9.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/arm-linux-gnueabihf/6/crtend.o /usr/lib/gcc/arm-linux-gnueabihf/6/../../../arm-linux-gnueabihf/crtn.o]
     arg [/usr/lib/gcc/arm-linux-gnueabihf/6/collect2] ==> ignore
     arg [-plugin] ==> ignore
     arg [/usr/lib/gcc/arm-linux-gnueabihf/6/liblto_plugin.so] ==> ignore
     arg [-plugin-opt=/usr/lib/gcc/arm-linux-gnueabihf/6/lto-wrapper] ==> ignore
-    arg [-plugin-opt=-fresolution=/tmp/ccfkYuCS.res] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/ccaU6xCE.res] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
     arg [-plugin-opt=-pass-through=-lc] ==> ignore
@@ -109,7 +109,7 @@ Parsed C implicit link information from above output:
     arg [-m] ==> ignore
     arg [armelf_linux_eabi] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_cf3d1] ==> ignore
+    arg [cmTC_5e2e9] ==> ignore
     arg [/usr/lib/gcc/arm-linux-gnueabihf/6/../../../arm-linux-gnueabihf/crt1.o] ==> ignore
     arg [/usr/lib/gcc/arm-linux-gnueabihf/6/../../../arm-linux-gnueabihf/crti.o] ==> ignore
     arg [/usr/lib/gcc/arm-linux-gnueabihf/6/crtbegin.o] ==> ignore
@@ -118,7 +118,7 @@ Parsed C implicit link information from above output:
     arg [-L/usr/lib/gcc/arm-linux-gnueabihf/6/../../..] ==> dir [/usr/lib/gcc/arm-linux-gnueabihf/6/../../..]
     arg [-L/lib/arm-linux-gnueabihf] ==> dir [/lib/arm-linux-gnueabihf]
     arg [-L/usr/lib/arm-linux-gnueabihf] ==> dir [/usr/lib/arm-linux-gnueabihf]
-    arg [CMakeFiles/cmTC_cf3d1.dir/CMakeCCompilerABI.c.o] ==> ignore
+    arg [CMakeFiles/cmTC_5e2e9.dir/CMakeCCompilerABI.c.o] ==> ignore
     arg [-lgcc] ==> lib [gcc]
     arg [--as-needed] ==> ignore
     arg [-lgcc_s] ==> lib [gcc_s]
@@ -149,14 +149,14 @@ Parsed C implicit link information from above output:
 Detecting C [-std=c11] compiler features compiled with the following output:
 Change Dir: /home/pi/eclipse-workspace/BPMDetector/Audio/TestAudio/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_c0001/fast"
-/usr/bin/make -f CMakeFiles/cmTC_c0001.dir/build.make CMakeFiles/cmTC_c0001.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_12c89/fast"
+/usr/bin/make -f CMakeFiles/cmTC_12c89.dir/build.make CMakeFiles/cmTC_12c89.dir/build
 make[1]: Verzeichnis „/home/pi/eclipse-workspace/BPMDetector/Audio/TestAudio/build/CMakeFiles/CMakeTmp“ wird betreten
-Building C object CMakeFiles/cmTC_c0001.dir/feature_tests.c.o
-/usr/bin/cc    -std=c11 -o CMakeFiles/cmTC_c0001.dir/feature_tests.c.o   -c /home/pi/eclipse-workspace/BPMDetector/Audio/TestAudio/build/CMakeFiles/feature_tests.c
-Linking C executable cmTC_c0001
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c0001.dir/link.txt --verbose=1
-/usr/bin/cc       CMakeFiles/cmTC_c0001.dir/feature_tests.c.o  -o cmTC_c0001 -rdynamic 
+Building C object CMakeFiles/cmTC_12c89.dir/feature_tests.c.o
+/usr/bin/cc    -std=c11 -o CMakeFiles/cmTC_12c89.dir/feature_tests.c.o   -c /home/pi/eclipse-workspace/BPMDetector/Audio/TestAudio/build/CMakeFiles/feature_tests.c
+Linking C executable cmTC_12c89
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_12c89.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_12c89.dir/feature_tests.c.o  -o cmTC_12c89 -rdynamic 
 make[1]: Verzeichnis „/home/pi/eclipse-workspace/BPMDetector/Audio/TestAudio/build/CMakeFiles/CMakeTmp“ wird verlassen
 
 
@@ -169,14 +169,14 @@ make[1]: Verzeichnis „/home/pi/eclipse-workspace/BPMDetector/Audio/TestAudio/b
 Detecting C [-std=c99] compiler features compiled with the following output:
 Change Dir: /home/pi/eclipse-workspace/BPMDetector/Audio/TestAudio/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_c9226/fast"
-/usr/bin/make -f CMakeFiles/cmTC_c9226.dir/build.make CMakeFiles/cmTC_c9226.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_14d74/fast"
+/usr/bin/make -f CMakeFiles/cmTC_14d74.dir/build.make CMakeFiles/cmTC_14d74.dir/build
 make[1]: Verzeichnis „/home/pi/eclipse-workspace/BPMDetector/Audio/TestAudio/build/CMakeFiles/CMakeTmp“ wird betreten
-Building C object CMakeFiles/cmTC_c9226.dir/feature_tests.c.o
-/usr/bin/cc    -std=c99 -o CMakeFiles/cmTC_c9226.dir/feature_tests.c.o   -c /home/pi/eclipse-workspace/BPMDetector/Audio/TestAudio/build/CMakeFiles/feature_tests.c
-Linking C executable cmTC_c9226
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c9226.dir/link.txt --verbose=1
-/usr/bin/cc       CMakeFiles/cmTC_c9226.dir/feature_tests.c.o  -o cmTC_c9226 -rdynamic 
+Building C object CMakeFiles/cmTC_14d74.dir/feature_tests.c.o
+/usr/bin/cc    -std=c99 -o CMakeFiles/cmTC_14d74.dir/feature_tests.c.o   -c /home/pi/eclipse-workspace/BPMDetector/Audio/TestAudio/build/CMakeFiles/feature_tests.c
+Linking C executable cmTC_14d74
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_14d74.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_14d74.dir/feature_tests.c.o  -o cmTC_14d74 -rdynamic 
 make[1]: Verzeichnis „/home/pi/eclipse-workspace/BPMDetector/Audio/TestAudio/build/CMakeFiles/CMakeTmp“ wird verlassen
 
 
@@ -189,14 +189,14 @@ make[1]: Verzeichnis „/home/pi/eclipse-workspace/BPMDetector/Audio/TestAudio/b
 Detecting C [-std=c90] compiler features compiled with the following output:
 Change Dir: /home/pi/eclipse-workspace/BPMDetector/Audio/TestAudio/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_1ee83/fast"
-/usr/bin/make -f CMakeFiles/cmTC_1ee83.dir/build.make CMakeFiles/cmTC_1ee83.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_302de/fast"
+/usr/bin/make -f CMakeFiles/cmTC_302de.dir/build.make CMakeFiles/cmTC_302de.dir/build
 make[1]: Verzeichnis „/home/pi/eclipse-workspace/BPMDetector/Audio/TestAudio/build/CMakeFiles/CMakeTmp“ wird betreten
-Building C object CMakeFiles/cmTC_1ee83.dir/feature_tests.c.o
-/usr/bin/cc    -std=c90 -o CMakeFiles/cmTC_1ee83.dir/feature_tests.c.o   -c /home/pi/eclipse-workspace/BPMDetector/Audio/TestAudio/build/CMakeFiles/feature_tests.c
-Linking C executable cmTC_1ee83
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1ee83.dir/link.txt --verbose=1
-/usr/bin/cc       CMakeFiles/cmTC_1ee83.dir/feature_tests.c.o  -o cmTC_1ee83 -rdynamic 
+Building C object CMakeFiles/cmTC_302de.dir/feature_tests.c.o
+/usr/bin/cc    -std=c90 -o CMakeFiles/cmTC_302de.dir/feature_tests.c.o   -c /home/pi/eclipse-workspace/BPMDetector/Audio/TestAudio/build/CMakeFiles/feature_tests.c
+Linking C executable cmTC_302de
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_302de.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_302de.dir/feature_tests.c.o  -o cmTC_302de -rdynamic 
 make[1]: Verzeichnis „/home/pi/eclipse-workspace/BPMDetector/Audio/TestAudio/build/CMakeFiles/CMakeTmp“ wird verlassen
 
 
@@ -207,28 +207,28 @@ make[1]: Verzeichnis „/home/pi/eclipse-workspace/BPMDetector/Audio/TestAudio/b
 Determining if the CXX compiler works passed with the following output:
 Change Dir: /home/pi/eclipse-workspace/BPMDetector/Audio/TestAudio/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_b1bff/fast"
-/usr/bin/make -f CMakeFiles/cmTC_b1bff.dir/build.make CMakeFiles/cmTC_b1bff.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_19fb9/fast"
+/usr/bin/make -f CMakeFiles/cmTC_19fb9.dir/build.make CMakeFiles/cmTC_19fb9.dir/build
 make[1]: Verzeichnis „/home/pi/eclipse-workspace/BPMDetector/Audio/TestAudio/build/CMakeFiles/CMakeTmp“ wird betreten
-Building CXX object CMakeFiles/cmTC_b1bff.dir/testCXXCompiler.cxx.o
-/usr/bin/c++      -o CMakeFiles/cmTC_b1bff.dir/testCXXCompiler.cxx.o -c /home/pi/eclipse-workspace/BPMDetector/Audio/TestAudio/build/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
-Linking CXX executable cmTC_b1bff
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b1bff.dir/link.txt --verbose=1
-/usr/bin/c++        CMakeFiles/cmTC_b1bff.dir/testCXXCompiler.cxx.o  -o cmTC_b1bff -rdynamic 
+Building CXX object CMakeFiles/cmTC_19fb9.dir/testCXXCompiler.cxx.o
+/usr/bin/c++      -o CMakeFiles/cmTC_19fb9.dir/testCXXCompiler.cxx.o -c /home/pi/eclipse-workspace/BPMDetector/Audio/TestAudio/build/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
+Linking CXX executable cmTC_19fb9
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_19fb9.dir/link.txt --verbose=1
+/usr/bin/c++        CMakeFiles/cmTC_19fb9.dir/testCXXCompiler.cxx.o  -o cmTC_19fb9 -rdynamic 
 make[1]: Verzeichnis „/home/pi/eclipse-workspace/BPMDetector/Audio/TestAudio/build/CMakeFiles/CMakeTmp“ wird verlassen
 
 
 Detecting CXX compiler ABI info compiled with the following output:
 Change Dir: /home/pi/eclipse-workspace/BPMDetector/Audio/TestAudio/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_c4226/fast"
-/usr/bin/make -f CMakeFiles/cmTC_c4226.dir/build.make CMakeFiles/cmTC_c4226.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_5ac30/fast"
+/usr/bin/make -f CMakeFiles/cmTC_5ac30.dir/build.make CMakeFiles/cmTC_5ac30.dir/build
 make[1]: Verzeichnis „/home/pi/eclipse-workspace/BPMDetector/Audio/TestAudio/build/CMakeFiles/CMakeTmp“ wird betreten
-Building CXX object CMakeFiles/cmTC_c4226.dir/CMakeCXXCompilerABI.cpp.o
-/usr/bin/c++      -o CMakeFiles/cmTC_c4226.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.7/Modules/CMakeCXXCompilerABI.cpp
-Linking CXX executable cmTC_c4226
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c4226.dir/link.txt --verbose=1
-/usr/bin/c++       -v CMakeFiles/cmTC_c4226.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_c4226 -rdynamic  
+Building CXX object CMakeFiles/cmTC_5ac30.dir/CMakeCXXCompilerABI.cpp.o
+/usr/bin/c++      -o CMakeFiles/cmTC_5ac30.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.7/Modules/CMakeCXXCompilerABI.cpp
+Linking CXX executable cmTC_5ac30
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5ac30.dir/link.txt --verbose=1
+/usr/bin/c++       -v CMakeFiles/cmTC_5ac30.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_5ac30 -rdynamic  
 Using built-in specs.
 COLLECT_GCC=/usr/bin/c++
 COLLECT_LTO_WRAPPER=/usr/lib/gcc/arm-linux-gnueabihf/6/lto-wrapper
@@ -238,9 +238,9 @@ Thread model: posix
 gcc version 6.3.0 20170516 (Raspbian 6.3.0-18+rpi1+deb9u1) 
 COMPILER_PATH=/usr/lib/gcc/arm-linux-gnueabihf/6/:/usr/lib/gcc/arm-linux-gnueabihf/6/:/usr/lib/gcc/arm-linux-gnueabihf/:/usr/lib/gcc/arm-linux-gnueabihf/6/:/usr/lib/gcc/arm-linux-gnueabihf/
 LIBRARY_PATH=/usr/lib/gcc/arm-linux-gnueabihf/6/:/usr/lib/gcc/arm-linux-gnueabihf/6/../../../arm-linux-gnueabihf/:/usr/lib/gcc/arm-linux-gnueabihf/6/../../../:/lib/arm-linux-gnueabihf/:/lib/:/usr/lib/arm-linux-gnueabihf/:/usr/lib/
-COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_c4226' '-rdynamic' '-shared-libgcc' '-march=armv6' '-mfloat-abi=hard' '-mfpu=vfp' '-mtls-dialect=gnu'
- /usr/lib/gcc/arm-linux-gnueabihf/6/collect2 -plugin /usr/lib/gcc/arm-linux-gnueabihf/6/liblto_plugin.so -plugin-opt=/usr/lib/gcc/arm-linux-gnueabihf/6/lto-wrapper -plugin-opt=-fresolution=/tmp/ccVJ4OYa.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --sysroot=/ --build-id --eh-frame-hdr -export-dynamic -dynamic-linker /lib/ld-linux-armhf.so.3 -X --hash-style=gnu -m armelf_linux_eabi -o cmTC_c4226 /usr/lib/gcc/arm-linux-gnueabihf/6/../../../arm-linux-gnueabihf/crt1.o /usr/lib/gcc/arm-linux-gnueabihf/6/../../../arm-linux-gnueabihf/crti.o /usr/lib/gcc/arm-linux-gnueabihf/6/crtbegin.o -L/usr/lib/gcc/arm-linux-gnueabihf/6 -L/usr/lib/gcc/arm-linux-gnueabihf/6/../../../arm-linux-gnueabihf -L/usr/lib/gcc/arm-linux-gnueabihf/6/../../.. -L/lib/arm-linux-gnueabihf -L/usr/lib/arm-linux-gnueabihf CMakeFiles/cmTC_c4226.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/arm-linux-gnueabihf/6/crtend.o /usr/lib/gcc/arm-linux-gnueabihf/6/../../../arm-linux-gnueabihf/crtn.o
-COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_c4226' '-rdynamic' '-shared-libgcc' '-march=armv6' '-mfloat-abi=hard' '-mfpu=vfp' '-mtls-dialect=gnu'
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_5ac30' '-rdynamic' '-shared-libgcc' '-march=armv6' '-mfloat-abi=hard' '-mfpu=vfp' '-mtls-dialect=gnu'
+ /usr/lib/gcc/arm-linux-gnueabihf/6/collect2 -plugin /usr/lib/gcc/arm-linux-gnueabihf/6/liblto_plugin.so -plugin-opt=/usr/lib/gcc/arm-linux-gnueabihf/6/lto-wrapper -plugin-opt=-fresolution=/tmp/cclU9SVL.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --sysroot=/ --build-id --eh-frame-hdr -export-dynamic -dynamic-linker /lib/ld-linux-armhf.so.3 -X --hash-style=gnu -m armelf_linux_eabi -o cmTC_5ac30 /usr/lib/gcc/arm-linux-gnueabihf/6/../../../arm-linux-gnueabihf/crt1.o /usr/lib/gcc/arm-linux-gnueabihf/6/../../../arm-linux-gnueabihf/crti.o /usr/lib/gcc/arm-linux-gnueabihf/6/crtbegin.o -L/usr/lib/gcc/arm-linux-gnueabihf/6 -L/usr/lib/gcc/arm-linux-gnueabihf/6/../../../arm-linux-gnueabihf -L/usr/lib/gcc/arm-linux-gnueabihf/6/../../.. -L/lib/arm-linux-gnueabihf -L/usr/lib/arm-linux-gnueabihf CMakeFiles/cmTC_5ac30.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/arm-linux-gnueabihf/6/crtend.o /usr/lib/gcc/arm-linux-gnueabihf/6/../../../arm-linux-gnueabihf/crtn.o
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_5ac30' '-rdynamic' '-shared-libgcc' '-march=armv6' '-mfloat-abi=hard' '-mfpu=vfp' '-mtls-dialect=gnu'
 make[1]: Verzeichnis „/home/pi/eclipse-workspace/BPMDetector/Audio/TestAudio/build/CMakeFiles/CMakeTmp“ wird verlassen
 
 
@@ -248,14 +248,14 @@ Parsed CXX implicit link information from above output:
   link line regex: [^( *|.*[/\])(ld|([^/\]+-)?ld|collect2)[^/\]*( |$)]
   ignore line: [Change Dir: /home/pi/eclipse-workspace/BPMDetector/Audio/TestAudio/build/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_c4226/fast"]
-  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_c4226.dir/build.make CMakeFiles/cmTC_c4226.dir/build]
+  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_5ac30/fast"]
+  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_5ac30.dir/build.make CMakeFiles/cmTC_5ac30.dir/build]
   ignore line: [make[1]: Verzeichnis „/home/pi/eclipse-workspace/BPMDetector/Audio/TestAudio/build/CMakeFiles/CMakeTmp“ wird betreten]
-  ignore line: [Building CXX object CMakeFiles/cmTC_c4226.dir/CMakeCXXCompilerABI.cpp.o]
-  ignore line: [/usr/bin/c++      -o CMakeFiles/cmTC_c4226.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.7/Modules/CMakeCXXCompilerABI.cpp]
-  ignore line: [Linking CXX executable cmTC_c4226]
-  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c4226.dir/link.txt --verbose=1]
-  ignore line: [/usr/bin/c++       -v CMakeFiles/cmTC_c4226.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_c4226 -rdynamic  ]
+  ignore line: [Building CXX object CMakeFiles/cmTC_5ac30.dir/CMakeCXXCompilerABI.cpp.o]
+  ignore line: [/usr/bin/c++      -o CMakeFiles/cmTC_5ac30.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.7/Modules/CMakeCXXCompilerABI.cpp]
+  ignore line: [Linking CXX executable cmTC_5ac30]
+  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5ac30.dir/link.txt --verbose=1]
+  ignore line: [/usr/bin/c++       -v CMakeFiles/cmTC_5ac30.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_5ac30 -rdynamic  ]
   ignore line: [Using built-in specs.]
   ignore line: [COLLECT_GCC=/usr/bin/c++]
   ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/arm-linux-gnueabihf/6/lto-wrapper]
@@ -265,13 +265,13 @@ Parsed CXX implicit link information from above output:
   ignore line: [gcc version 6.3.0 20170516 (Raspbian 6.3.0-18+rpi1+deb9u1) ]
   ignore line: [COMPILER_PATH=/usr/lib/gcc/arm-linux-gnueabihf/6/:/usr/lib/gcc/arm-linux-gnueabihf/6/:/usr/lib/gcc/arm-linux-gnueabihf/:/usr/lib/gcc/arm-linux-gnueabihf/6/:/usr/lib/gcc/arm-linux-gnueabihf/]
   ignore line: [LIBRARY_PATH=/usr/lib/gcc/arm-linux-gnueabihf/6/:/usr/lib/gcc/arm-linux-gnueabihf/6/../../../arm-linux-gnueabihf/:/usr/lib/gcc/arm-linux-gnueabihf/6/../../../:/lib/arm-linux-gnueabihf/:/lib/:/usr/lib/arm-linux-gnueabihf/:/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_c4226' '-rdynamic' '-shared-libgcc' '-march=armv6' '-mfloat-abi=hard' '-mfpu=vfp' '-mtls-dialect=gnu']
-  link line: [ /usr/lib/gcc/arm-linux-gnueabihf/6/collect2 -plugin /usr/lib/gcc/arm-linux-gnueabihf/6/liblto_plugin.so -plugin-opt=/usr/lib/gcc/arm-linux-gnueabihf/6/lto-wrapper -plugin-opt=-fresolution=/tmp/ccVJ4OYa.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --sysroot=/ --build-id --eh-frame-hdr -export-dynamic -dynamic-linker /lib/ld-linux-armhf.so.3 -X --hash-style=gnu -m armelf_linux_eabi -o cmTC_c4226 /usr/lib/gcc/arm-linux-gnueabihf/6/../../../arm-linux-gnueabihf/crt1.o /usr/lib/gcc/arm-linux-gnueabihf/6/../../../arm-linux-gnueabihf/crti.o /usr/lib/gcc/arm-linux-gnueabihf/6/crtbegin.o -L/usr/lib/gcc/arm-linux-gnueabihf/6 -L/usr/lib/gcc/arm-linux-gnueabihf/6/../../../arm-linux-gnueabihf -L/usr/lib/gcc/arm-linux-gnueabihf/6/../../.. -L/lib/arm-linux-gnueabihf -L/usr/lib/arm-linux-gnueabihf CMakeFiles/cmTC_c4226.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/arm-linux-gnueabihf/6/crtend.o /usr/lib/gcc/arm-linux-gnueabihf/6/../../../arm-linux-gnueabihf/crtn.o]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_5ac30' '-rdynamic' '-shared-libgcc' '-march=armv6' '-mfloat-abi=hard' '-mfpu=vfp' '-mtls-dialect=gnu']
+  link line: [ /usr/lib/gcc/arm-linux-gnueabihf/6/collect2 -plugin /usr/lib/gcc/arm-linux-gnueabihf/6/liblto_plugin.so -plugin-opt=/usr/lib/gcc/arm-linux-gnueabihf/6/lto-wrapper -plugin-opt=-fresolution=/tmp/cclU9SVL.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --sysroot=/ --build-id --eh-frame-hdr -export-dynamic -dynamic-linker /lib/ld-linux-armhf.so.3 -X --hash-style=gnu -m armelf_linux_eabi -o cmTC_5ac30 /usr/lib/gcc/arm-linux-gnueabihf/6/../../../arm-linux-gnueabihf/crt1.o /usr/lib/gcc/arm-linux-gnueabihf/6/../../../arm-linux-gnueabihf/crti.o /usr/lib/gcc/arm-linux-gnueabihf/6/crtbegin.o -L/usr/lib/gcc/arm-linux-gnueabihf/6 -L/usr/lib/gcc/arm-linux-gnueabihf/6/../../../arm-linux-gnueabihf -L/usr/lib/gcc/arm-linux-gnueabihf/6/../../.. -L/lib/arm-linux-gnueabihf -L/usr/lib/arm-linux-gnueabihf CMakeFiles/cmTC_5ac30.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/arm-linux-gnueabihf/6/crtend.o /usr/lib/gcc/arm-linux-gnueabihf/6/../../../arm-linux-gnueabihf/crtn.o]
     arg [/usr/lib/gcc/arm-linux-gnueabihf/6/collect2] ==> ignore
     arg [-plugin] ==> ignore
     arg [/usr/lib/gcc/arm-linux-gnueabihf/6/liblto_plugin.so] ==> ignore
     arg [-plugin-opt=/usr/lib/gcc/arm-linux-gnueabihf/6/lto-wrapper] ==> ignore
-    arg [-plugin-opt=-fresolution=/tmp/ccVJ4OYa.res] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/cclU9SVL.res] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
     arg [-plugin-opt=-pass-through=-lc] ==> ignore
@@ -288,7 +288,7 @@ Parsed CXX implicit link information from above output:
     arg [-m] ==> ignore
     arg [armelf_linux_eabi] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_c4226] ==> ignore
+    arg [cmTC_5ac30] ==> ignore
     arg [/usr/lib/gcc/arm-linux-gnueabihf/6/../../../arm-linux-gnueabihf/crt1.o] ==> ignore
     arg [/usr/lib/gcc/arm-linux-gnueabihf/6/../../../arm-linux-gnueabihf/crti.o] ==> ignore
     arg [/usr/lib/gcc/arm-linux-gnueabihf/6/crtbegin.o] ==> ignore
@@ -297,7 +297,7 @@ Parsed CXX implicit link information from above output:
     arg [-L/usr/lib/gcc/arm-linux-gnueabihf/6/../../..] ==> dir [/usr/lib/gcc/arm-linux-gnueabihf/6/../../..]
     arg [-L/lib/arm-linux-gnueabihf] ==> dir [/lib/arm-linux-gnueabihf]
     arg [-L/usr/lib/arm-linux-gnueabihf] ==> dir [/usr/lib/arm-linux-gnueabihf]
-    arg [CMakeFiles/cmTC_c4226.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+    arg [CMakeFiles/cmTC_5ac30.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
     arg [-lstdc++] ==> lib [stdc++]
     arg [-lm] ==> lib [m]
     arg [-lgcc_s] ==> lib [gcc_s]
@@ -326,14 +326,14 @@ Parsed CXX implicit link information from above output:
 Detecting CXX [-std=c++14] compiler features compiled with the following output:
 Change Dir: /home/pi/eclipse-workspace/BPMDetector/Audio/TestAudio/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_be05f/fast"
-/usr/bin/make -f CMakeFiles/cmTC_be05f.dir/build.make CMakeFiles/cmTC_be05f.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_65bc2/fast"
+/usr/bin/make -f CMakeFiles/cmTC_65bc2.dir/build.make CMakeFiles/cmTC_65bc2.dir/build
 make[1]: Verzeichnis „/home/pi/eclipse-workspace/BPMDetector/Audio/TestAudio/build/CMakeFiles/CMakeTmp“ wird betreten
-Building CXX object CMakeFiles/cmTC_be05f.dir/feature_tests.cxx.o
-/usr/bin/c++     -std=c++14 -o CMakeFiles/cmTC_be05f.dir/feature_tests.cxx.o -c /home/pi/eclipse-workspace/BPMDetector/Audio/TestAudio/build/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_be05f
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_be05f.dir/link.txt --verbose=1
-/usr/bin/c++        CMakeFiles/cmTC_be05f.dir/feature_tests.cxx.o  -o cmTC_be05f -rdynamic 
+Building CXX object CMakeFiles/cmTC_65bc2.dir/feature_tests.cxx.o
+/usr/bin/c++     -std=c++14 -o CMakeFiles/cmTC_65bc2.dir/feature_tests.cxx.o -c /home/pi/eclipse-workspace/BPMDetector/Audio/TestAudio/build/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_65bc2
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_65bc2.dir/link.txt --verbose=1
+/usr/bin/c++        CMakeFiles/cmTC_65bc2.dir/feature_tests.cxx.o  -o cmTC_65bc2 -rdynamic 
 make[1]: Verzeichnis „/home/pi/eclipse-workspace/BPMDetector/Audio/TestAudio/build/CMakeFiles/CMakeTmp“ wird verlassen
 
 
@@ -399,14 +399,14 @@ make[1]: Verzeichnis „/home/pi/eclipse-workspace/BPMDetector/Audio/TestAudio/b
 Detecting CXX [-std=c++11] compiler features compiled with the following output:
 Change Dir: /home/pi/eclipse-workspace/BPMDetector/Audio/TestAudio/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_2defe/fast"
-/usr/bin/make -f CMakeFiles/cmTC_2defe.dir/build.make CMakeFiles/cmTC_2defe.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_8932a/fast"
+/usr/bin/make -f CMakeFiles/cmTC_8932a.dir/build.make CMakeFiles/cmTC_8932a.dir/build
 make[1]: Verzeichnis „/home/pi/eclipse-workspace/BPMDetector/Audio/TestAudio/build/CMakeFiles/CMakeTmp“ wird betreten
-Building CXX object CMakeFiles/cmTC_2defe.dir/feature_tests.cxx.o
-/usr/bin/c++     -std=c++11 -o CMakeFiles/cmTC_2defe.dir/feature_tests.cxx.o -c /home/pi/eclipse-workspace/BPMDetector/Audio/TestAudio/build/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_2defe
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2defe.dir/link.txt --verbose=1
-/usr/bin/c++        CMakeFiles/cmTC_2defe.dir/feature_tests.cxx.o  -o cmTC_2defe -rdynamic 
+Building CXX object CMakeFiles/cmTC_8932a.dir/feature_tests.cxx.o
+/usr/bin/c++     -std=c++11 -o CMakeFiles/cmTC_8932a.dir/feature_tests.cxx.o -c /home/pi/eclipse-workspace/BPMDetector/Audio/TestAudio/build/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_8932a
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8932a.dir/link.txt --verbose=1
+/usr/bin/c++        CMakeFiles/cmTC_8932a.dir/feature_tests.cxx.o  -o cmTC_8932a -rdynamic 
 make[1]: Verzeichnis „/home/pi/eclipse-workspace/BPMDetector/Audio/TestAudio/build/CMakeFiles/CMakeTmp“ wird verlassen
 
 
@@ -472,14 +472,14 @@ make[1]: Verzeichnis „/home/pi/eclipse-workspace/BPMDetector/Audio/TestAudio/b
 Detecting CXX [-std=c++98] compiler features compiled with the following output:
 Change Dir: /home/pi/eclipse-workspace/BPMDetector/Audio/TestAudio/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_151c7/fast"
-/usr/bin/make -f CMakeFiles/cmTC_151c7.dir/build.make CMakeFiles/cmTC_151c7.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_0ba18/fast"
+/usr/bin/make -f CMakeFiles/cmTC_0ba18.dir/build.make CMakeFiles/cmTC_0ba18.dir/build
 make[1]: Verzeichnis „/home/pi/eclipse-workspace/BPMDetector/Audio/TestAudio/build/CMakeFiles/CMakeTmp“ wird betreten
-Building CXX object CMakeFiles/cmTC_151c7.dir/feature_tests.cxx.o
-/usr/bin/c++     -std=c++98 -o CMakeFiles/cmTC_151c7.dir/feature_tests.cxx.o -c /home/pi/eclipse-workspace/BPMDetector/Audio/TestAudio/build/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_151c7
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_151c7.dir/link.txt --verbose=1
-/usr/bin/c++        CMakeFiles/cmTC_151c7.dir/feature_tests.cxx.o  -o cmTC_151c7 -rdynamic 
+Building CXX object CMakeFiles/cmTC_0ba18.dir/feature_tests.cxx.o
+/usr/bin/c++     -std=c++98 -o CMakeFiles/cmTC_0ba18.dir/feature_tests.cxx.o -c /home/pi/eclipse-workspace/BPMDetector/Audio/TestAudio/build/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_0ba18
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_0ba18.dir/link.txt --verbose=1
+/usr/bin/c++        CMakeFiles/cmTC_0ba18.dir/feature_tests.cxx.o  -o cmTC_0ba18 -rdynamic 
 make[1]: Verzeichnis „/home/pi/eclipse-workspace/BPMDetector/Audio/TestAudio/build/CMakeFiles/CMakeTmp“ wird verlassen
 
 
@@ -543,28 +543,28 @@ make[1]: Verzeichnis „/home/pi/eclipse-workspace/BPMDetector/Audio/TestAudio/b
 Determining if the include file pthread.h exists passed with the following output:
 Change Dir: /home/pi/eclipse-workspace/BPMDetector/Audio/TestAudio/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_db23e/fast"
-/usr/bin/make -f CMakeFiles/cmTC_db23e.dir/build.make CMakeFiles/cmTC_db23e.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_f6b09/fast"
+/usr/bin/make -f CMakeFiles/cmTC_f6b09.dir/build.make CMakeFiles/cmTC_f6b09.dir/build
 make[1]: Verzeichnis „/home/pi/eclipse-workspace/BPMDetector/Audio/TestAudio/build/CMakeFiles/CMakeTmp“ wird betreten
-Building C object CMakeFiles/cmTC_db23e.dir/CheckIncludeFile.c.o
-/usr/bin/cc     -o CMakeFiles/cmTC_db23e.dir/CheckIncludeFile.c.o   -c /home/pi/eclipse-workspace/BPMDetector/Audio/TestAudio/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
-Linking C executable cmTC_db23e
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_db23e.dir/link.txt --verbose=1
-/usr/bin/cc       CMakeFiles/cmTC_db23e.dir/CheckIncludeFile.c.o  -o cmTC_db23e -rdynamic 
+Building C object CMakeFiles/cmTC_f6b09.dir/CheckIncludeFile.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_f6b09.dir/CheckIncludeFile.c.o   -c /home/pi/eclipse-workspace/BPMDetector/Audio/TestAudio/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_f6b09
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f6b09.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_f6b09.dir/CheckIncludeFile.c.o  -o cmTC_f6b09 -rdynamic 
 make[1]: Verzeichnis „/home/pi/eclipse-workspace/BPMDetector/Audio/TestAudio/build/CMakeFiles/CMakeTmp“ wird verlassen
 
 
 Determining if the function pthread_create exists in the pthread passed with the following output:
 Change Dir: /home/pi/eclipse-workspace/BPMDetector/Audio/TestAudio/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_468f1/fast"
-/usr/bin/make -f CMakeFiles/cmTC_468f1.dir/build.make CMakeFiles/cmTC_468f1.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_5c718/fast"
+/usr/bin/make -f CMakeFiles/cmTC_5c718.dir/build.make CMakeFiles/cmTC_5c718.dir/build
 make[1]: Verzeichnis „/home/pi/eclipse-workspace/BPMDetector/Audio/TestAudio/build/CMakeFiles/CMakeTmp“ wird betreten
-Building C object CMakeFiles/cmTC_468f1.dir/CheckFunctionExists.c.o
-/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_468f1.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.7/Modules/CheckFunctionExists.c
-Linking C executable cmTC_468f1
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_468f1.dir/link.txt --verbose=1
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_468f1.dir/CheckFunctionExists.c.o  -o cmTC_468f1 -rdynamic -lpthread 
+Building C object CMakeFiles/cmTC_5c718.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_5c718.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.7/Modules/CheckFunctionExists.c
+Linking C executable cmTC_5c718
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5c718.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_5c718.dir/CheckFunctionExists.c.o  -o cmTC_5c718 -rdynamic -lpthread 
 make[1]: Verzeichnis „/home/pi/eclipse-workspace/BPMDetector/Audio/TestAudio/build/CMakeFiles/CMakeTmp“ wird verlassen
 
 

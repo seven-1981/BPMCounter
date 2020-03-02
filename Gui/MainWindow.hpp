@@ -65,9 +65,10 @@ private:
     void stop_application();
 
     void convert_to_string(double number, QString& str);
+    void convert_to_string(double number, QString& str, int digits, int precision);
 
     void set_color(QWidget* widget, Qt::GlobalColor color);
-    void set_number(QLCDNumber* lcdnbr, double number);
+    void set_number(QLCDNumber* lcdnbr, double number, int digits, int precision);
 
     const int VALUE_UPDATE_INTERVAL_MS = 200;
     const int FONT_SIZE = 48;
