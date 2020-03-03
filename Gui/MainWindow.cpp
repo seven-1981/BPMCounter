@@ -171,36 +171,20 @@ void MainWindow::stop_application()
 	QCoreApplication::quit();
 }
 
-void MainWindow::convert_to_string(double number, QString& str)
-{
-	int hundred = static_cast<int>( number 										 / 100);
-	int ten		= static_cast<int>((number - hundred * 100) 					 /  10);
-	int one		= static_cast<int>((number - hundred * 100 - ten * 10) 			 /   1);
-	int tenth	= static_cast<int>((number - hundred * 100 - ten * 10 - one * 1) *  10);
-	str.clear();
-	str.append(QString('0' + hundred));
-	str.append(QString('0' + ten));
-	str.append(QString('0' + one));
-	str.append(QString("."));
-	str.append(QString('0' + tenth));
-}
-
 void MainWindow::convert_to_string(double number, QString& str, int digits, int precision)
 {
 	int digit[digits] = { 0 };
 	double sum = 0;
-	double ex = pow(10, -(digits - precision - 1));
+	int signfDigits = digits - precision - 1;
+	double ex = pow(10, -signfDigits);
+	str.clear();
 	for (int i = 0; i < digits; ++i)
 	{
 		digit[i] = static_cast<int>((number - sum) * ex);
 		sum += digit[i] / ex;
 		ex *= 10;
-	}
-	str.clear();
-	for (int i = 0; i < digits; ++i)
-	{
 		str.append(QString('0' + digit[i]));
-		if ((i == digits - precision - 1) && (precision != 0))
+		if ((i == signfDigits) && (precision != 0))
 			str.append(QString("."));
 	}
 }
