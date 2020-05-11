@@ -25,6 +25,11 @@ bool RoundLed::power() const
 	return m_power;
 }
 
+void RoundLed::setFrameStyle(int style)
+{
+	QLabel::setFrameStyle(style);
+}
+
 void RoundLed::setPower(bool power)
 {
 	if (power != m_power)
@@ -37,7 +42,6 @@ void RoundLed::setPower(bool power)
 
 void RoundLed::paintEvent(QPaintEvent *event)
 {
-	Q_UNUSED(event)
 	QPainter ledPainter(this);
 	ledPainter.setPen(Qt::black);
 
@@ -48,6 +52,11 @@ void RoundLed::paintEvent(QPaintEvent *event)
 	else
 		ledPainter.setBrush(Qt::NoBrush);
 	ledPainter.drawEllipse(rec);
+
+	QPalette Pal = palette();
+	Pal.setColor(QPalette::WindowText, Qt::white);
+	QLabel::setPalette(Pal);
+	QLabel::paintEvent(event);
 }
 
 void RoundLed::rescale(QRect& rec)

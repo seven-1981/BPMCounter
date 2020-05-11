@@ -34,16 +34,18 @@ private:
 };
 
 
-class RoundLed : public QWidget
+class RoundLed : public QLabel
 {
     Q_OBJECT
     Q_PROPERTY(bool power READ power WRITE setPower NOTIFY powerChanged)
 
 public:
     explicit RoundLed(QWidget* parent = nullptr) :
-		QWidget(parent), m_power(false) { }
+		QLabel(parent), m_power(false) { }
 
     bool power() const;
+
+    void setFrameStyle(int style);
 
     RoundLed(const RoundLed&) = delete;
     RoundLed& operator=(const Led&) = delete;
@@ -61,7 +63,7 @@ private:
     bool m_power;
 
     void rescale(QRect& rec);
-	const float SCALE_FACTOR = 1.5;
+	const float SCALE_FACTOR = 1.3;
 };
 
 #endif

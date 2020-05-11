@@ -146,15 +146,24 @@ void MainWindow::setup_label()
 	m_recLabel->setFont(font);
 	m_detLabel->setFont(font);
 	m_rmsLabel->setFont(font);
+
+	set_color(m_recLabel, Qt::white);
+	m_recLabel->setFrameStyle(QFrame::Box | QFrame::Plain);
+	set_color(m_detLabel, Qt::white);
+	m_detLabel->setFrameStyle(QFrame::Box | QFrame::Plain);
+	set_color(m_rmsLabel, Qt::white);
+	m_rmsLabel->setFrameStyle(QFrame::Box | QFrame::Plain);
 }
 
 void MainWindow::setup_led()
 {
     m_recLed = new RoundLed(m_widget);
     m_recLed->setPower(false);
+    m_recLed->setFrameStyle(QFrame::Box | QFrame::Plain);
 
     m_detLed = new RoundLed(m_widget);
     m_detLed->setPower(false);
+    m_detLed->setFrameStyle(QFrame::Box | QFrame::Plain);
 }
 
 void MainWindow::setup_updater(int interval_ms)
