@@ -38,6 +38,10 @@ IAnalyzer.hpp
 ParamList.hpp
 /home/pi/eclipse-workspace/BPMDetector/Analyze/ParamList.hpp
 
+/home/pi/eclipse-workspace/BPMDetector/Analyze/Averaging.h
+cmath
+-
+
 /home/pi/eclipse-workspace/BPMDetector/Analyze/BPMAnalyzer.hpp
 AnalyzerParam.hpp
 /home/pi/eclipse-workspace/BPMDetector/Analyze/AnalyzerParam.hpp
@@ -134,6 +138,12 @@ FakeAnalyzerParam.hpp
 Buffer.hpp
 /home/pi/eclipse-workspace/BPMDetector/Analyze/TestAnalyze/Buffer.hpp
 
+/home/pi/eclipse-workspace/BPMDetector/Analyze/TestAnalyze/TestAveraging.cpp
+gtest/gtest.h
+-
+Averaging.h
+/home/pi/eclipse-workspace/BPMDetector/Analyze/TestAnalyze/Averaging.h
+
 /home/pi/eclipse-workspace/BPMDetector/Analyze/TestAnalyze/TestDSP.cpp
 Buffer.hpp
 /home/pi/eclipse-workspace/BPMDetector/Analyze/TestAnalyze/Buffer.hpp
@@ -157,6 +167,8 @@ TestAnalyzer.cpp
 /home/pi/eclipse-workspace/BPMDetector/Analyze/TestAnalyze/TestAnalyzer.cpp
 TestAnalyzerController.cpp
 /home/pi/eclipse-workspace/BPMDetector/Analyze/TestAnalyze/TestAnalyzerController.cpp
+TestAveraging.cpp
+/home/pi/eclipse-workspace/BPMDetector/Analyze/TestAnalyze/TestAveraging.cpp
 
 /home/pi/eclipse-workspace/BPMDetector/Analyze/TestAnalyze/TestParam.cpp
 gtest/gtest.h

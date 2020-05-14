@@ -4,6 +4,7 @@
 #include "TestParamList.cpp"
 #include "TestAnalyzer.cpp"
 #include "TestAnalyzerController.cpp"
+#include "TestAveraging.cpp"
 
 int main(int argc, char **argv) {
     testing::InitGoogleTest(&argc, argv);

@@ -4,6 +4,7 @@
 CMakeFiles/runTests.dir/TestMain.cpp.o: /home/pi/eclipse-workspace/BPMDetector/Analyze/AnalyzerContainer.hpp
 CMakeFiles/runTests.dir/TestMain.cpp.o: /home/pi/eclipse-workspace/BPMDetector/Analyze/AnalyzerController.hpp
 CMakeFiles/runTests.dir/TestMain.cpp.o: /home/pi/eclipse-workspace/BPMDetector/Analyze/AnalyzerParam.hpp
+CMakeFiles/runTests.dir/TestMain.cpp.o: /home/pi/eclipse-workspace/BPMDetector/Analyze/Averaging.h
 CMakeFiles/runTests.dir/TestMain.cpp.o: /home/pi/eclipse-workspace/BPMDetector/Analyze/BPMAnalyzer.hpp
 CMakeFiles/runTests.dir/TestMain.cpp.o: /home/pi/eclipse-workspace/BPMDetector/Analyze/DSP.hpp
 CMakeFiles/runTests.dir/TestMain.cpp.o: /home/pi/eclipse-workspace/BPMDetector/Analyze/IAnalyzer.hpp
@@ -14,6 +15,7 @@ CMakeFiles/runTests.dir/TestMain.cpp.o: /home/pi/eclipse-workspace/BPMDetector/A
 CMakeFiles/runTests.dir/TestMain.cpp.o: ../FakeAnalyzerParam.hpp
 CMakeFiles/runTests.dir/TestMain.cpp.o: ../TestAnalyzer.cpp
 CMakeFiles/runTests.dir/TestMain.cpp.o: ../TestAnalyzerController.cpp
+CMakeFiles/runTests.dir/TestMain.cpp.o: ../TestAveraging.cpp
 CMakeFiles/runTests.dir/TestMain.cpp.o: ../TestDSP.cpp
 CMakeFiles/runTests.dir/TestMain.cpp.o: ../TestMain.cpp
 CMakeFiles/runTests.dir/TestMain.cpp.o: ../TestParam.cpp
