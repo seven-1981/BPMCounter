@@ -1,6 +1,6 @@
 #include <gtest/gtest.h>
 
-#include "Averaging.h"
+#include "Averaging.hpp"
 
 
 const int TESTSIZE = 10;

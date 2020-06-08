@@ -38,7 +38,7 @@ IAnalyzer.hpp
 ParamList.hpp
 /home/pi/eclipse-workspace/BPMDetector/Analyze/ParamList.hpp
 
-/home/pi/eclipse-workspace/BPMDetector/Analyze/Averaging.h
+/home/pi/eclipse-workspace/BPMDetector/Analyze/Averaging.hpp
 cmath
 -
 
@@ -51,6 +51,8 @@ DSP.hpp
 /home/pi/eclipse-workspace/BPMDetector/Analyze/DSP.hpp
 StopWatch.hpp
 /home/pi/eclipse-workspace/BPMDetector/Analyze/StopWatch.hpp
+Averaging.hpp
+/home/pi/eclipse-workspace/BPMDetector/Analyze/Averaging.hpp
 Plotting.hpp
 /home/pi/eclipse-workspace/BPMDetector/Analyze/Plotting.hpp
 
@@ -141,8 +143,8 @@ Buffer.hpp
 /home/pi/eclipse-workspace/BPMDetector/Analyze/TestAnalyze/TestAveraging.cpp
 gtest/gtest.h
 -
-Averaging.h
-/home/pi/eclipse-workspace/BPMDetector/Analyze/TestAnalyze/Averaging.h
+Averaging.hpp
+/home/pi/eclipse-workspace/BPMDetector/Analyze/TestAnalyze/Averaging.hpp
 
 /home/pi/eclipse-workspace/BPMDetector/Analyze/TestAnalyze/TestDSP.cpp
 Buffer.hpp

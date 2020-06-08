@@ -5,6 +5,7 @@
 #include "Buffer.hpp"
 #include "DSP.hpp"
 #include "StopWatch.hpp"
+#include "Averaging.hpp"
 
 #ifdef ENABLE_BPMANALYZER_PLOT
 #include "Plotting.hpp"
@@ -25,7 +26,11 @@ public:
 			new TypedParam<ParamType::Double>("envelope filter recovery", 0.005L),
 			new TypedParam<ParamType::UInt>("autocorr resolution", 1200U),
 			new TypedParam<ParamType::Double>("bpm min value", 100.0L),
-			new TypedParam<ParamType::Double>("bpm max value", 200.0L) } ),
+			new TypedParam<ParamType::Double>("bpm max value", 200.0L),
+			new TypedParam<ParamType::Bool>("averaging active", true),
+			new TypedParam<ParamType::Double>("averaging threshold 1", 3.0f),
+			new TypedParam<ParamType::Double>("averaging threshold 2", 20.0f),
+			new TypedParam<ParamType::Int>("averaging max bad values", 3) } ),
 		m_buffer(buffer),
 		m_sample_rate_Hz(sample_rate_Hz),
 		m_origSize(0),
@@ -35,11 +40,17 @@ public:
 		m_env_filt_rec(0),
 		m_autocorrRes(0),
 		m_bpm_min(0),
-		m_bpm_max(0)
+		m_bpm_max(0),
+		m_averagingActive(false),
+		m_avgThreshold1(0.0f),
+		m_avgThreshold2(0.0f),
+		m_avgMaxBadValues(0)
 	{
 		m_initState = init_params();
 		init_sizes();
 		init_buffers();
+		// Create dynamically because of init order.
+		m_averaging = new Averaging<AVERAGING_SIZE>(m_avgThreshold1, m_avgThreshold2, m_avgMaxBadValues);
 	}
 
 	~BPMAnalyzer()
@@ -48,6 +59,7 @@ public:
 		delete m_bf_ds;
 		delete m_bf_ef;
 		delete m_bf_ac;
+		delete m_averaging;
 	}
 
 	FLOAT_TYPE analyze() override
@@ -90,6 +102,14 @@ private:
 	FLOAT_TYPE m_bpm_min;
 	FLOAT_TYPE m_bpm_max;
 
+	static const int AVERAGING_SIZE = 10;
+	Averaging<AVERAGING_SIZE>* m_averaging;
+
+	bool m_averagingActive;
+	double m_avgThreshold1;
+	double m_avgThreshold2;
+	int m_avgMaxBadValues;
+
 	int init_params()
 	{
 		if (AnalyzerParam::get("downsample cutoff", m_cutoffFreq) == -1) return -1;
@@ -98,6 +118,10 @@ private:
 		if (AnalyzerParam::get("autocorr resolution", m_autocorrRes) == -1) return -1;
 		if (AnalyzerParam::get("bpm min value", m_bpm_min) == -1) return -1;
 		if (AnalyzerParam::get("bpm max value", m_bpm_max) == -1) return -1;
+		if (AnalyzerParam::get("averaging active", m_averagingActive) == -1) return -1;
+		if (AnalyzerParam::get("averaging threshold 1", m_avgThreshold1) == -1) return -1;
+		if (AnalyzerParam::get("averaging threshold 2", m_avgThreshold2) == -1) return -1;
+		if (AnalyzerParam::get("averaging max bad values", m_avgMaxBadValues) == -1) return -1;
 		return 0;
 	}
 
