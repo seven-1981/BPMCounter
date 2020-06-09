@@ -79,7 +79,8 @@ public:
 		DSP::autocorr_bpm(*m_bf_ef, *m_bf_ac, m_sample_rate_Hz / m_dsFactor, m_bpm_min, m_bpm_max);
 		PLOT_BUF(*m_bf_ac, "Autocorrelation");
 		//watch.tic(std::cout);
-		return DSP::extract_bpm_value(*m_bf_ac, m_bpm_min, m_bpm_max);
+		double bpm_value = DSP::extract_bpm_value(*m_bf_ac, m_bpm_min, m_bpm_max);
+		return perform_averaging(bpm_value);
 	}
 
 private:
@@ -137,6 +138,14 @@ private:
 		m_bf_ds = new Buffer<T>(m_dsSize);
 		m_bf_ef = new Buffer<T>(m_dsSize);
 		m_bf_ac = new Buffer<FLOAT_TYPE>(m_autocorrRes);
+	}
+
+	double perform_averaging(double value)
+	{
+		if (m_averagingActive == true)
+			return m_averaging->process_value(value);
+		else
+			return value;
 	}
 };
 
