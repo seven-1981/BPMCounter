@@ -37,6 +37,7 @@
 									<listOptionValue builtIn="false" value="/usr/include/arm-linux-gnueabihf/qt5/QtCore"/>
 									<listOptionValue builtIn="false" value="/usr/include/arm-linux-gnueabihf/qt5/QtConcurrent"/>
 									<listOptionValue builtIn="false" value="/usr/include/arm-linux-gnueabihf/qt5/QtXml"/>
+									<listOptionValue builtIn="false" value="/usr/include/arm-linux-gnueabihf/qt5/QtWidgets/QPlainTextEdit"/>
 								</option>
 								<inputType id="cdt.managedbuild.tool.gnu.cpp.compiler.input.470521459" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.input"/>
 							</tool>
