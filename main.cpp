@@ -59,6 +59,7 @@ int main (int argc, char** argv)
 	std::this_thread::sleep_for(std::chrono::seconds(1));
 
     //w.setBaseSize(800, 600);
+
     w.showFullScreen();
     w.show();
     return a.exec();
