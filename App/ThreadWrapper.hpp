@@ -5,6 +5,7 @@
 #include <mutex>
 #include <future>
 #include <atomic>
+#include "Logger.hpp"
 
 template <typename C, typename T>
 using Func = T(C::*)();
@@ -47,6 +48,7 @@ public:
 		RP retVal { };
 		while (m_continueProd.load() == true)
 		{
+			Logger::logger().log("Starting production...\r\n");
 			std::unique_lock<std::mutex> lck(m_mtx);
 			m_produce.wait(lck, [this] { return !m_productionComplete.load(); } );
 			retVal = (m_instance->*m_funcProd)();
@@ -64,6 +66,7 @@ public:
 		RC retVal { };
 		while (m_continueCons.load() == true)
 		{
+			Logger::logger().log("Starting consumption...\r\n");
 			std::unique_lock<std::mutex> lck(m_mtx);
 			m_consume.wait(lck, [this] { return m_productionComplete.load(); } );
 			retVal = (m_instance->*m_funcCons)();

@@ -9,6 +9,7 @@
 
 #include <qt5/QtWidgets/qapplication.h>
 #include "MainWindow.hpp"
+#include "Log.hpp"
 
 
 void set_console_location(int col, int row)
@@ -41,9 +42,13 @@ void write_wavfile(Buffer<T>& buffer)
 
 int main (int argc, char** argv)
 {
-	clear_screen();
+	//clear_screen();
 
 	AppContainer app;
+    QApplication a(argc, argv);
+    MainWindow w(app);
+    Logger::logger().init_logger(&w);
+
 	Errors_e retVal = Errors_e::NO_ERROR;
 	if ((retVal = app.init()) != Errors_e::NO_ERROR)
 	{
@@ -53,8 +58,6 @@ int main (int argc, char** argv)
 
 	std::this_thread::sleep_for(std::chrono::seconds(1));
 
-    QApplication a(argc, argv);
-    MainWindow w(app);
     //w.setBaseSize(800, 600);
     w.showFullScreen();
     w.show();

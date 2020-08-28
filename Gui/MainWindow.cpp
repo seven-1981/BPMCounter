@@ -11,6 +11,7 @@
 #include "MainWindow.hpp"
 #include "AppContainer.hpp"
 #include "LED.hpp"
+#include "Log.hpp"
 #include "globals.hpp"
 
 
@@ -18,6 +19,7 @@ MainWindow::MainWindow(AppContainer& app, QWidget* parent) : QMainWindow(parent)
 {
 	setup_widget();
 	setup_number();
+	setup_log();
 	setup_label();
 	setup_led();
 	setup_layout();
@@ -29,6 +31,12 @@ MainWindow::~MainWindow()
 	//Qt automatically deletes childs
 	delete m_widget;
 	delete m_timer;
+}
+
+void MainWindow::log_message(const char* message)
+{
+	QString msg(message);
+	m_log->appendMessage(msg);
 }
 
 void MainWindow::update_bpm()
@@ -90,8 +98,10 @@ void MainWindow::setup_layout()
 
     m_topLayout->addWidget(m_bpmNumber);
     m_topLayout->addLayout(m_l1BotLayout);
+    m_topLayout->addWidget(m_log);
     m_topLayout->setStretch(0, LAYOUT_STRETCH_TOP_BPM);
-    m_topLayout->setStretch(1, LAYOUT_STRETCH_BOT_STAT);
+    m_topLayout->setStretch(1, LAYOUT_STRETCH_CNT_STAT);
+    m_topLayout->setStretch(2, LAYOUT_STRETCH_BOT_LOG);
 
     m_l1BotLayout->addLayout(m_l2LeftLayout);
     m_l1BotLayout->addLayout(m_l2RightLayout);
@@ -132,6 +142,11 @@ void MainWindow::setup_number()
 
 	set_number(m_bpmNumber, 0, 4, 1);
 	set_number(m_rmsNumber, 0, 5, 0);
+}
+
+void MainWindow::setup_log()
+{
+    m_log = new Log(m_widget);
 }
 
 void MainWindow::setup_label()

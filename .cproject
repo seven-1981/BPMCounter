@@ -18,9 +18,26 @@
 					<folderInfo id="cdt.managedbuild.toolchain.gnu.base.1908959816.1954457144" name="/" resourcePath="">
 						<toolChain id="cdt.managedbuild.toolchain.gnu.base.1818541124" name="Linux GCC" superClass="cdt.managedbuild.toolchain.gnu.base">
 							<targetPlatform archList="all" binaryParser="org.eclipse.cdt.core.ELF" id="cdt.managedbuild.target.gnu.platform.base.650014081" name="Debug Platform" osList="linux,hpux,aix,qnx" superClass="cdt.managedbuild.target.gnu.platform.base"/>
-							<builder command="makeall" id="cdt.managedbuild.target.gnu.builder.base.1572651861" keepEnvironmentInBuildfile="false" managedBuildOn="false" name="Gnu Make Builder" superClass="cdt.managedbuild.target.gnu.builder.base"/>
+							<builder buildPath="" command="makeall.sh" id="cdt.managedbuild.target.gnu.builder.base.1572651861" keepEnvironmentInBuildfile="false" managedBuildOn="false" name="Gnu Make Builder" superClass="cdt.managedbuild.target.gnu.builder.base"/>
 							<tool id="cdt.managedbuild.tool.gnu.archiver.base.1154347380" name="GCC Archiver" superClass="cdt.managedbuild.tool.gnu.archiver.base"/>
 							<tool id="cdt.managedbuild.tool.gnu.cpp.compiler.base.1137809248" name="GCC C++ Compiler" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.base">
+								<option id="gnu.cpp.compiler.option.include.paths.648757308" name="Include paths (-I)" superClass="gnu.cpp.compiler.option.include.paths" valueType="includePath">
+									<listOptionValue builtIn="false" value="/usr/include/qwt"/>
+									<listOptionValue builtIn="false" value="/usr/include/arm-linux-gnueabihf/qt5"/>
+									<listOptionValue builtIn="false" value="/usr/include/arm-linux-gnueabihf/qt5/QtNetwork"/>
+									<listOptionValue builtIn="false" value="/usr/include/arm-linux-gnueabihf/qt5/QtWidgets"/>
+									<listOptionValue builtIn="false" value="/usr/include/arm-linux-gnueabihf/qt5/QtTest"/>
+									<listOptionValue builtIn="false" value="/usr/include/arm-linux-gnueabihf/qt5/QtSql"/>
+									<listOptionValue builtIn="false" value="/usr/include/arm-linux-gnueabihf/qt5/QtPrintSupport"/>
+									<listOptionValue builtIn="false" value="/usr/include/arm-linux-gnueabihf/qt5/QtPlatformHeaders"/>
+									<listOptionValue builtIn="false" value="/usr/include/arm-linux-gnueabihf/qt5/QtOpenGLExtensions"/>
+									<listOptionValue builtIn="false" value="/usr/include/arm-linux-gnueabihf/qt5/QtOpenGL"/>
+									<listOptionValue builtIn="false" value="/usr/include/arm-linux-gnueabihf/qt5/QtGui"/>
+									<listOptionValue builtIn="false" value="/usr/include/arm-linux-gnueabihf/qt5/QtDBus"/>
+									<listOptionValue builtIn="false" value="/usr/include/arm-linux-gnueabihf/qt5/QtCore"/>
+									<listOptionValue builtIn="false" value="/usr/include/arm-linux-gnueabihf/qt5/QtConcurrent"/>
+									<listOptionValue builtIn="false" value="/usr/include/arm-linux-gnueabihf/qt5/QtXml"/>
+								</option>
 								<inputType id="cdt.managedbuild.tool.gnu.cpp.compiler.input.470521459" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.input"/>
 							</tool>
 							<tool id="cdt.managedbuild.tool.gnu.c.compiler.base.1725414074" name="GCC C Compiler" superClass="cdt.managedbuild.tool.gnu.c.compiler.base">
@@ -43,15 +60,6 @@
 			<storageModule moduleId="org.eclipse.cdt.core.externalSettings"/>
 		</cconfiguration>
 	</storageModule>
-	<storageModule moduleId="scannerConfiguration">
-		<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
-		<scannerConfigBuildInfo instanceId="cdt.managedbuild.toolchain.gnu.base.1088331713;cdt.managedbuild.toolchain.gnu.base.1088331713.2064512247;cdt.managedbuild.tool.gnu.c.compiler.base.1434213151;cdt.managedbuild.tool.gnu.c.compiler.input.746891470">
-			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
-		</scannerConfigBuildInfo>
-		<scannerConfigBuildInfo instanceId="cdt.managedbuild.toolchain.gnu.base.1088331713;cdt.managedbuild.toolchain.gnu.base.1088331713.2064512247;cdt.managedbuild.tool.gnu.cpp.compiler.base.310103995;cdt.managedbuild.tool.gnu.cpp.compiler.input.158887539">
-			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
-		</scannerConfigBuildInfo>
-	</storageModule>
 	<storageModule moduleId="cdtBuildSystem" version="4.0.0">
 		<project id="BPMDetector.null.1025154422" name="BPMDetector"/>
 	</storageModule>
@@ -60,5 +68,20 @@
 		<configuration configurationName="Default">
 			<resource resourceType="PROJECT" workspacePath="/BPMDetector"/>
 		</configuration>
+	</storageModule>
+	<storageModule moduleId="scannerConfiguration">
+		<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
+		<scannerConfigBuildInfo instanceId="cdt.managedbuild.toolchain.gnu.base.1088331713;cdt.managedbuild.toolchain.gnu.base.1088331713.2064512247;cdt.managedbuild.tool.gnu.c.compiler.base.1434213151;cdt.managedbuild.tool.gnu.c.compiler.input.746891470">
+			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
+		</scannerConfigBuildInfo>
+		<scannerConfigBuildInfo instanceId="cdt.managedbuild.toolchain.gnu.base.1908959816;cdt.managedbuild.toolchain.gnu.base.1908959816.1954457144;cdt.managedbuild.tool.gnu.cpp.compiler.base.1137809248;cdt.managedbuild.tool.gnu.cpp.compiler.input.470521459">
+			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
+		</scannerConfigBuildInfo>
+		<scannerConfigBuildInfo instanceId="cdt.managedbuild.toolchain.gnu.base.1088331713;cdt.managedbuild.toolchain.gnu.base.1088331713.2064512247;cdt.managedbuild.tool.gnu.cpp.compiler.base.310103995;cdt.managedbuild.tool.gnu.cpp.compiler.input.158887539">
+			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
+		</scannerConfigBuildInfo>
+		<scannerConfigBuildInfo instanceId="cdt.managedbuild.toolchain.gnu.base.1908959816;cdt.managedbuild.toolchain.gnu.base.1908959816.1954457144;cdt.managedbuild.tool.gnu.c.compiler.base.1725414074;cdt.managedbuild.tool.gnu.c.compiler.input.1790224582">
+			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
+		</scannerConfigBuildInfo>
 	</storageModule>
 </cproject>

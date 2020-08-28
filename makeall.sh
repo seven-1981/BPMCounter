@@ -1,5 +1,6 @@
 #!/bin/bash
 reset_build() {
+echo Dir=$1
 BUILD_DIR=$1
 cd $BUILD_DIR
 rm -r build
@@ -7,6 +8,13 @@ mkdir build
 cd build
 }
 
+if [ "$1" == "clean" ]; then
+	echo Cleaning BPMDetector...
+	reset_build ..
+	exit 0
+fi
+
+echo Building BPMDetector...
 echo Build Audio tests...
 reset_build Audio/TestAudio
 cmake ..

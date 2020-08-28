@@ -1,0 +1,6 @@
+eclipse.preferences.version=1
+environment/project/cdt.managedbuild.toolchain.gnu.base.1908959816/PATH/delimiter=\:
+environment/project/cdt.managedbuild.toolchain.gnu.base.1908959816/PATH/operation=replace
+environment/project/cdt.managedbuild.toolchain.gnu.base.1908959816/PATH/value=/usr/local/sbin\:/usr/local/bin\:/usr/sbin\:/usr/bin\:/sbin\:/bin\:/usr/local/games\:/usr/games\:/home/pi/git_repos/BPMDetector
+environment/project/cdt.managedbuild.toolchain.gnu.base.1908959816/append=true
+environment/project/cdt.managedbuild.toolchain.gnu.base.1908959816/appendContributed=true

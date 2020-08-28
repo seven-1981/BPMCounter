@@ -6,6 +6,7 @@
 
 class AppContainer;
 class RoundLed;
+class Log;
 QT_FORWARD_DECLARE_CLASS(QLCDNumber)
 QT_FORWARD_DECLARE_CLASS(QTimer)
 QT_FORWARD_DECLARE_CLASS(QKeyEvent)
@@ -22,6 +23,8 @@ class MainWindow : public QMainWindow
 public:
     MainWindow(AppContainer& app, QWidget* = nullptr);
     ~MainWindow();
+
+    void log_message(const char* message);
 
 public Q_SLOTS:
 	void update_bpm();
@@ -52,12 +55,15 @@ private:
 
     QTimer* m_timer;
 
+    Log* m_log;
+
     void keyPressEvent(QKeyEvent* event);
     void closeEvent(QCloseEvent* event);
 
     void setup_widget();
     void setup_layout();
     void setup_number();
+    void setup_log();
     void setup_label();
     void setup_led();
     void setup_updater(int interval_ms);
@@ -71,7 +77,8 @@ private:
     const int VALUE_UPDATE_INTERVAL_MS = 200;
     const int FONT_SIZE = 48;
     const int LAYOUT_STRETCH_TOP_BPM  = 4;
-    const int LAYOUT_STRETCH_BOT_STAT = 1;
+    const int LAYOUT_STRETCH_CNT_STAT = 1;
+    const int LAYOUT_STRETCH_BOT_LOG = 1;
     const int LAYOUT_STRETCH_LT_STAT = 1;
     const int LAYOUT_STRETCH_RT_STAT = 1;
     const int LAYOUT_STRETCH_RMS_LT = 1;

@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 2.6)
 
 # Set project path
-set(PROJ_PATH "/home/pi/eclipse-workspace/BPMDetector")
+set(PROJ_PATH "/home/pi/git_repos/BPMDetector")
 
 # Set include directories
 list(APPEND includes "${PROJ_PATH}"

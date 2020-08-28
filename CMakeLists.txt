@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 2.6)
 
 # Set project path
-set(PROJ_PATH "/home/pi/eclipse-workspace/BPMDetector")
+set(PROJ_PATH "/home/pi/git_repos/BPMDetector")
 
 # Set include directories
 list(APPEND includes "${PROJ_PATH}"
@@ -14,6 +14,7 @@ list(APPEND includes "${PROJ_PATH}"
 
 # Locate sources
 list(APPEND sources "${PROJ_PATH}/App/AppContainer.cpp"
+					"${PROJ_PATH}/App/Logger.cpp"
 					"${PROJ_PATH}/Audio/AudioCardLister.cpp"
 		    		"${PROJ_PATH}/Audio/ALSACardInfoGetter.cpp"
 				    "${PROJ_PATH}/Audio/AudioCardConfigurator.cpp"
@@ -27,6 +28,7 @@ list(APPEND sources "${PROJ_PATH}/App/AppContainer.cpp"
 				    "${PROJ_PATH}/Gui/FrequencySpectrum.cpp"
 				    "${PROJ_PATH}/Gui/Spectrograph.cpp"
 				    "${PROJ_PATH}/Gui/LED.cpp"
+				    "${PROJ_PATH}/Gui/Log.cpp"
 				    "${PROJ_PATH}/Analyze/ParamList.cpp"
 				    "${PROJ_PATH}/Analyze/AnalyzerParam.cpp"
 				    "${PROJ_PATH}/Analyze/AnalyzerContainer.cpp")
