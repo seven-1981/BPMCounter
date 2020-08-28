@@ -1,0 +1,3 @@
+/home/pi/eclipse-workspace/BPMDetector/Plot/build/CMakeFiles/rebuild_cache.dir
+/home/pi/eclipse-workspace/BPMDetector/Plot/build/CMakeFiles/edit_cache.dir
+/home/pi/eclipse-workspace/BPMDetector/Plot/build/CMakeFiles/Plot.dir
