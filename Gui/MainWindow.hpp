@@ -24,11 +24,11 @@ public:
     MainWindow(AppContainer& app, QWidget* = nullptr);
     ~MainWindow();
 
-    void log_message(const char* message);
-
 public Q_SLOTS:
 	void update_bpm();
 	void update_rec();
+
+    void log_message(const char* message);
 
 private:
     AppContainer& m_app;

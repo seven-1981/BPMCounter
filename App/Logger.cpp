@@ -2,19 +2,17 @@
 #include "MainWindow.hpp"
 
 
-Logger::Logger() :
-	m_mainWindow(nullptr)
-{
-
-}
+Logger::Logger(QObject* parent) :
+	m_initDone(false) { }
 
 void Logger::init_logger(MainWindow* w)
 {
-	m_mainWindow = w;
+	connect(this, &Logger::log_signal, w, &MainWindow::log_message);
+	m_initDone = true;
 }
 
 void Logger::log(const char* text)
 {
-	if (m_mainWindow == nullptr) return;
-	m_mainWindow->log_message(text);
+	if (m_initDone == false) return;
+	emit log_signal(text);
 }

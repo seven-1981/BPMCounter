@@ -1,11 +1,16 @@
 #ifndef _LOGGER_H
 #define _LOGGER_H
 
+
+#include <QObject>
+
 class MainWindow;
 
 
-class Logger
+class Logger : public QObject
 {
+	Q_OBJECT
+
 public:
 	static Logger& logger()
 	{
@@ -14,13 +19,15 @@ public:
 	}
 
 	void init_logger(MainWindow* w);
-
 	void log(const char* text);
 
-private:
-	Logger();
+signals:
+	void log_signal(const char* text);
 
-	MainWindow* m_mainWindow;
+private:
+	Logger(QObject* parent = nullptr);
+
+	bool m_initDone;
 };
 
 
