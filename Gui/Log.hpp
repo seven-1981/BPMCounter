@@ -19,6 +19,8 @@ public:
 
 private:
     QFile m_logFile;
+
+    void appendTimestamp(QString& text);
 };
 
 #endif

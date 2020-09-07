@@ -55,6 +55,8 @@ target_link_libraries(BPMDetector boost_iostreams boost_system boost_filesystem)
 
 # Definitions
 #add_definitions(-DENABLE_BPMANALYZER_PLOT)
+# Project path
+add_definitions(-DLOGFILE_PATH="${PROJ_PATH}/log.txt")
 
 # Set compiler flags
 list(APPEND flags "-Wall" "-std=c++11" "-g" "-Wno-psabi" "-O1" "-Og")

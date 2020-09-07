@@ -1,7 +1,6 @@
 #ifndef _LOGGER_H
 #define _LOGGER_H
 
-
 #include <QObject>
 
 class MainWindow;
@@ -19,10 +18,15 @@ public:
 	}
 
 	void init_logger(MainWindow* w);
-	void log(const char* text);
+
+	Logger& operator<<(const char* text);
+	Logger& operator<<(int number);
+	Logger& operator<<(double number);
 
 signals:
-	void log_signal(const char* text);
+	void log_signal_cc(const char* text);
+	void log_signal_i(int number);
+	void log_signal_d(double number);
 
 private:
 	Logger(QObject* parent = nullptr);
