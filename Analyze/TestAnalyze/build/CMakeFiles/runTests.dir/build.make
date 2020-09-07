@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/pi/eclipse-workspace/BPMDetector/Analyze/TestAnalyze
+CMAKE_SOURCE_DIR = /home/pi/git_repos/BPMDetector/Analyze/TestAnalyze
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/pi/eclipse-workspace/BPMDetector/Analyze/TestAnalyze/build
+CMAKE_BINARY_DIR = /home/pi/git_repos/BPMDetector/Analyze/TestAnalyze/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/runTests.dir/depend.make
@@ -59,16 +59,16 @@ include CMakeFiles/runTests.dir/flags.make
 
 CMakeFiles/runTests.dir/TestMain.cpp.o: CMakeFiles/runTests.dir/flags.make
 CMakeFiles/runTests.dir/TestMain.cpp.o: ../TestMain.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/eclipse-workspace/BPMDetector/Analyze/TestAnalyze/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/runTests.dir/TestMain.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/runTests.dir/TestMain.cpp.o -c /home/pi/eclipse-workspace/BPMDetector/Analyze/TestAnalyze/TestMain.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/git_repos/BPMDetector/Analyze/TestAnalyze/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/runTests.dir/TestMain.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/runTests.dir/TestMain.cpp.o -c /home/pi/git_repos/BPMDetector/Analyze/TestAnalyze/TestMain.cpp
 
 CMakeFiles/runTests.dir/TestMain.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/runTests.dir/TestMain.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/pi/eclipse-workspace/BPMDetector/Analyze/TestAnalyze/TestMain.cpp > CMakeFiles/runTests.dir/TestMain.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/pi/git_repos/BPMDetector/Analyze/TestAnalyze/TestMain.cpp > CMakeFiles/runTests.dir/TestMain.cpp.i
 
 CMakeFiles/runTests.dir/TestMain.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/runTests.dir/TestMain.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/pi/eclipse-workspace/BPMDetector/Analyze/TestAnalyze/TestMain.cpp -o CMakeFiles/runTests.dir/TestMain.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/pi/git_repos/BPMDetector/Analyze/TestAnalyze/TestMain.cpp -o CMakeFiles/runTests.dir/TestMain.cpp.s
 
 CMakeFiles/runTests.dir/TestMain.cpp.o.requires:
 
@@ -81,96 +81,96 @@ CMakeFiles/runTests.dir/TestMain.cpp.o.provides: CMakeFiles/runTests.dir/TestMai
 CMakeFiles/runTests.dir/TestMain.cpp.o.provides.build: CMakeFiles/runTests.dir/TestMain.cpp.o
 
 
-CMakeFiles/runTests.dir/home/pi/eclipse-workspace/BPMDetector/Analyze/ParamList.cpp.o: CMakeFiles/runTests.dir/flags.make
-CMakeFiles/runTests.dir/home/pi/eclipse-workspace/BPMDetector/Analyze/ParamList.cpp.o: /home/pi/eclipse-workspace/BPMDetector/Analyze/ParamList.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/eclipse-workspace/BPMDetector/Analyze/TestAnalyze/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/runTests.dir/home/pi/eclipse-workspace/BPMDetector/Analyze/ParamList.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/runTests.dir/home/pi/eclipse-workspace/BPMDetector/Analyze/ParamList.cpp.o -c /home/pi/eclipse-workspace/BPMDetector/Analyze/ParamList.cpp
+CMakeFiles/runTests.dir/home/pi/git_repos/BPMDetector/Analyze/ParamList.cpp.o: CMakeFiles/runTests.dir/flags.make
+CMakeFiles/runTests.dir/home/pi/git_repos/BPMDetector/Analyze/ParamList.cpp.o: /home/pi/git_repos/BPMDetector/Analyze/ParamList.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/git_repos/BPMDetector/Analyze/TestAnalyze/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/runTests.dir/home/pi/git_repos/BPMDetector/Analyze/ParamList.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/runTests.dir/home/pi/git_repos/BPMDetector/Analyze/ParamList.cpp.o -c /home/pi/git_repos/BPMDetector/Analyze/ParamList.cpp
 
-CMakeFiles/runTests.dir/home/pi/eclipse-workspace/BPMDetector/Analyze/ParamList.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/runTests.dir/home/pi/eclipse-workspace/BPMDetector/Analyze/ParamList.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/pi/eclipse-workspace/BPMDetector/Analyze/ParamList.cpp > CMakeFiles/runTests.dir/home/pi/eclipse-workspace/BPMDetector/Analyze/ParamList.cpp.i
+CMakeFiles/runTests.dir/home/pi/git_repos/BPMDetector/Analyze/ParamList.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/runTests.dir/home/pi/git_repos/BPMDetector/Analyze/ParamList.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/pi/git_repos/BPMDetector/Analyze/ParamList.cpp > CMakeFiles/runTests.dir/home/pi/git_repos/BPMDetector/Analyze/ParamList.cpp.i
 
-CMakeFiles/runTests.dir/home/pi/eclipse-workspace/BPMDetector/Analyze/ParamList.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/runTests.dir/home/pi/eclipse-workspace/BPMDetector/Analyze/ParamList.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/pi/eclipse-workspace/BPMDetector/Analyze/ParamList.cpp -o CMakeFiles/runTests.dir/home/pi/eclipse-workspace/BPMDetector/Analyze/ParamList.cpp.s
+CMakeFiles/runTests.dir/home/pi/git_repos/BPMDetector/Analyze/ParamList.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/runTests.dir/home/pi/git_repos/BPMDetector/Analyze/ParamList.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/pi/git_repos/BPMDetector/Analyze/ParamList.cpp -o CMakeFiles/runTests.dir/home/pi/git_repos/BPMDetector/Analyze/ParamList.cpp.s
 
-CMakeFiles/runTests.dir/home/pi/eclipse-workspace/BPMDetector/Analyze/ParamList.cpp.o.requires:
+CMakeFiles/runTests.dir/home/pi/git_repos/BPMDetector/Analyze/ParamList.cpp.o.requires:
 
-.PHONY : CMakeFiles/runTests.dir/home/pi/eclipse-workspace/BPMDetector/Analyze/ParamList.cpp.o.requires
+.PHONY : CMakeFiles/runTests.dir/home/pi/git_repos/BPMDetector/Analyze/ParamList.cpp.o.requires
 
-CMakeFiles/runTests.dir/home/pi/eclipse-workspace/BPMDetector/Analyze/ParamList.cpp.o.provides: CMakeFiles/runTests.dir/home/pi/eclipse-workspace/BPMDetector/Analyze/ParamList.cpp.o.requires
-	$(MAKE) -f CMakeFiles/runTests.dir/build.make CMakeFiles/runTests.dir/home/pi/eclipse-workspace/BPMDetector/Analyze/ParamList.cpp.o.provides.build
-.PHONY : CMakeFiles/runTests.dir/home/pi/eclipse-workspace/BPMDetector/Analyze/ParamList.cpp.o.provides
+CMakeFiles/runTests.dir/home/pi/git_repos/BPMDetector/Analyze/ParamList.cpp.o.provides: CMakeFiles/runTests.dir/home/pi/git_repos/BPMDetector/Analyze/ParamList.cpp.o.requires
+	$(MAKE) -f CMakeFiles/runTests.dir/build.make CMakeFiles/runTests.dir/home/pi/git_repos/BPMDetector/Analyze/ParamList.cpp.o.provides.build
+.PHONY : CMakeFiles/runTests.dir/home/pi/git_repos/BPMDetector/Analyze/ParamList.cpp.o.provides
 
-CMakeFiles/runTests.dir/home/pi/eclipse-workspace/BPMDetector/Analyze/ParamList.cpp.o.provides.build: CMakeFiles/runTests.dir/home/pi/eclipse-workspace/BPMDetector/Analyze/ParamList.cpp.o
-
-
-CMakeFiles/runTests.dir/home/pi/eclipse-workspace/BPMDetector/Analyze/AnalyzerParam.cpp.o: CMakeFiles/runTests.dir/flags.make
-CMakeFiles/runTests.dir/home/pi/eclipse-workspace/BPMDetector/Analyze/AnalyzerParam.cpp.o: /home/pi/eclipse-workspace/BPMDetector/Analyze/AnalyzerParam.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/eclipse-workspace/BPMDetector/Analyze/TestAnalyze/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/runTests.dir/home/pi/eclipse-workspace/BPMDetector/Analyze/AnalyzerParam.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/runTests.dir/home/pi/eclipse-workspace/BPMDetector/Analyze/AnalyzerParam.cpp.o -c /home/pi/eclipse-workspace/BPMDetector/Analyze/AnalyzerParam.cpp
-
-CMakeFiles/runTests.dir/home/pi/eclipse-workspace/BPMDetector/Analyze/AnalyzerParam.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/runTests.dir/home/pi/eclipse-workspace/BPMDetector/Analyze/AnalyzerParam.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/pi/eclipse-workspace/BPMDetector/Analyze/AnalyzerParam.cpp > CMakeFiles/runTests.dir/home/pi/eclipse-workspace/BPMDetector/Analyze/AnalyzerParam.cpp.i
-
-CMakeFiles/runTests.dir/home/pi/eclipse-workspace/BPMDetector/Analyze/AnalyzerParam.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/runTests.dir/home/pi/eclipse-workspace/BPMDetector/Analyze/AnalyzerParam.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/pi/eclipse-workspace/BPMDetector/Analyze/AnalyzerParam.cpp -o CMakeFiles/runTests.dir/home/pi/eclipse-workspace/BPMDetector/Analyze/AnalyzerParam.cpp.s
-
-CMakeFiles/runTests.dir/home/pi/eclipse-workspace/BPMDetector/Analyze/AnalyzerParam.cpp.o.requires:
-
-.PHONY : CMakeFiles/runTests.dir/home/pi/eclipse-workspace/BPMDetector/Analyze/AnalyzerParam.cpp.o.requires
-
-CMakeFiles/runTests.dir/home/pi/eclipse-workspace/BPMDetector/Analyze/AnalyzerParam.cpp.o.provides: CMakeFiles/runTests.dir/home/pi/eclipse-workspace/BPMDetector/Analyze/AnalyzerParam.cpp.o.requires
-	$(MAKE) -f CMakeFiles/runTests.dir/build.make CMakeFiles/runTests.dir/home/pi/eclipse-workspace/BPMDetector/Analyze/AnalyzerParam.cpp.o.provides.build
-.PHONY : CMakeFiles/runTests.dir/home/pi/eclipse-workspace/BPMDetector/Analyze/AnalyzerParam.cpp.o.provides
-
-CMakeFiles/runTests.dir/home/pi/eclipse-workspace/BPMDetector/Analyze/AnalyzerParam.cpp.o.provides.build: CMakeFiles/runTests.dir/home/pi/eclipse-workspace/BPMDetector/Analyze/AnalyzerParam.cpp.o
+CMakeFiles/runTests.dir/home/pi/git_repos/BPMDetector/Analyze/ParamList.cpp.o.provides.build: CMakeFiles/runTests.dir/home/pi/git_repos/BPMDetector/Analyze/ParamList.cpp.o
 
 
-CMakeFiles/runTests.dir/home/pi/eclipse-workspace/BPMDetector/Analyze/AnalyzerContainer.cpp.o: CMakeFiles/runTests.dir/flags.make
-CMakeFiles/runTests.dir/home/pi/eclipse-workspace/BPMDetector/Analyze/AnalyzerContainer.cpp.o: /home/pi/eclipse-workspace/BPMDetector/Analyze/AnalyzerContainer.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/eclipse-workspace/BPMDetector/Analyze/TestAnalyze/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/runTests.dir/home/pi/eclipse-workspace/BPMDetector/Analyze/AnalyzerContainer.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/runTests.dir/home/pi/eclipse-workspace/BPMDetector/Analyze/AnalyzerContainer.cpp.o -c /home/pi/eclipse-workspace/BPMDetector/Analyze/AnalyzerContainer.cpp
+CMakeFiles/runTests.dir/home/pi/git_repos/BPMDetector/Analyze/AnalyzerParam.cpp.o: CMakeFiles/runTests.dir/flags.make
+CMakeFiles/runTests.dir/home/pi/git_repos/BPMDetector/Analyze/AnalyzerParam.cpp.o: /home/pi/git_repos/BPMDetector/Analyze/AnalyzerParam.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/git_repos/BPMDetector/Analyze/TestAnalyze/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/runTests.dir/home/pi/git_repos/BPMDetector/Analyze/AnalyzerParam.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/runTests.dir/home/pi/git_repos/BPMDetector/Analyze/AnalyzerParam.cpp.o -c /home/pi/git_repos/BPMDetector/Analyze/AnalyzerParam.cpp
 
-CMakeFiles/runTests.dir/home/pi/eclipse-workspace/BPMDetector/Analyze/AnalyzerContainer.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/runTests.dir/home/pi/eclipse-workspace/BPMDetector/Analyze/AnalyzerContainer.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/pi/eclipse-workspace/BPMDetector/Analyze/AnalyzerContainer.cpp > CMakeFiles/runTests.dir/home/pi/eclipse-workspace/BPMDetector/Analyze/AnalyzerContainer.cpp.i
+CMakeFiles/runTests.dir/home/pi/git_repos/BPMDetector/Analyze/AnalyzerParam.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/runTests.dir/home/pi/git_repos/BPMDetector/Analyze/AnalyzerParam.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/pi/git_repos/BPMDetector/Analyze/AnalyzerParam.cpp > CMakeFiles/runTests.dir/home/pi/git_repos/BPMDetector/Analyze/AnalyzerParam.cpp.i
 
-CMakeFiles/runTests.dir/home/pi/eclipse-workspace/BPMDetector/Analyze/AnalyzerContainer.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/runTests.dir/home/pi/eclipse-workspace/BPMDetector/Analyze/AnalyzerContainer.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/pi/eclipse-workspace/BPMDetector/Analyze/AnalyzerContainer.cpp -o CMakeFiles/runTests.dir/home/pi/eclipse-workspace/BPMDetector/Analyze/AnalyzerContainer.cpp.s
+CMakeFiles/runTests.dir/home/pi/git_repos/BPMDetector/Analyze/AnalyzerParam.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/runTests.dir/home/pi/git_repos/BPMDetector/Analyze/AnalyzerParam.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/pi/git_repos/BPMDetector/Analyze/AnalyzerParam.cpp -o CMakeFiles/runTests.dir/home/pi/git_repos/BPMDetector/Analyze/AnalyzerParam.cpp.s
 
-CMakeFiles/runTests.dir/home/pi/eclipse-workspace/BPMDetector/Analyze/AnalyzerContainer.cpp.o.requires:
+CMakeFiles/runTests.dir/home/pi/git_repos/BPMDetector/Analyze/AnalyzerParam.cpp.o.requires:
 
-.PHONY : CMakeFiles/runTests.dir/home/pi/eclipse-workspace/BPMDetector/Analyze/AnalyzerContainer.cpp.o.requires
+.PHONY : CMakeFiles/runTests.dir/home/pi/git_repos/BPMDetector/Analyze/AnalyzerParam.cpp.o.requires
 
-CMakeFiles/runTests.dir/home/pi/eclipse-workspace/BPMDetector/Analyze/AnalyzerContainer.cpp.o.provides: CMakeFiles/runTests.dir/home/pi/eclipse-workspace/BPMDetector/Analyze/AnalyzerContainer.cpp.o.requires
-	$(MAKE) -f CMakeFiles/runTests.dir/build.make CMakeFiles/runTests.dir/home/pi/eclipse-workspace/BPMDetector/Analyze/AnalyzerContainer.cpp.o.provides.build
-.PHONY : CMakeFiles/runTests.dir/home/pi/eclipse-workspace/BPMDetector/Analyze/AnalyzerContainer.cpp.o.provides
+CMakeFiles/runTests.dir/home/pi/git_repos/BPMDetector/Analyze/AnalyzerParam.cpp.o.provides: CMakeFiles/runTests.dir/home/pi/git_repos/BPMDetector/Analyze/AnalyzerParam.cpp.o.requires
+	$(MAKE) -f CMakeFiles/runTests.dir/build.make CMakeFiles/runTests.dir/home/pi/git_repos/BPMDetector/Analyze/AnalyzerParam.cpp.o.provides.build
+.PHONY : CMakeFiles/runTests.dir/home/pi/git_repos/BPMDetector/Analyze/AnalyzerParam.cpp.o.provides
 
-CMakeFiles/runTests.dir/home/pi/eclipse-workspace/BPMDetector/Analyze/AnalyzerContainer.cpp.o.provides.build: CMakeFiles/runTests.dir/home/pi/eclipse-workspace/BPMDetector/Analyze/AnalyzerContainer.cpp.o
+CMakeFiles/runTests.dir/home/pi/git_repos/BPMDetector/Analyze/AnalyzerParam.cpp.o.provides.build: CMakeFiles/runTests.dir/home/pi/git_repos/BPMDetector/Analyze/AnalyzerParam.cpp.o
+
+
+CMakeFiles/runTests.dir/home/pi/git_repos/BPMDetector/Analyze/AnalyzerContainer.cpp.o: CMakeFiles/runTests.dir/flags.make
+CMakeFiles/runTests.dir/home/pi/git_repos/BPMDetector/Analyze/AnalyzerContainer.cpp.o: /home/pi/git_repos/BPMDetector/Analyze/AnalyzerContainer.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/git_repos/BPMDetector/Analyze/TestAnalyze/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/runTests.dir/home/pi/git_repos/BPMDetector/Analyze/AnalyzerContainer.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/runTests.dir/home/pi/git_repos/BPMDetector/Analyze/AnalyzerContainer.cpp.o -c /home/pi/git_repos/BPMDetector/Analyze/AnalyzerContainer.cpp
+
+CMakeFiles/runTests.dir/home/pi/git_repos/BPMDetector/Analyze/AnalyzerContainer.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/runTests.dir/home/pi/git_repos/BPMDetector/Analyze/AnalyzerContainer.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/pi/git_repos/BPMDetector/Analyze/AnalyzerContainer.cpp > CMakeFiles/runTests.dir/home/pi/git_repos/BPMDetector/Analyze/AnalyzerContainer.cpp.i
+
+CMakeFiles/runTests.dir/home/pi/git_repos/BPMDetector/Analyze/AnalyzerContainer.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/runTests.dir/home/pi/git_repos/BPMDetector/Analyze/AnalyzerContainer.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/pi/git_repos/BPMDetector/Analyze/AnalyzerContainer.cpp -o CMakeFiles/runTests.dir/home/pi/git_repos/BPMDetector/Analyze/AnalyzerContainer.cpp.s
+
+CMakeFiles/runTests.dir/home/pi/git_repos/BPMDetector/Analyze/AnalyzerContainer.cpp.o.requires:
+
+.PHONY : CMakeFiles/runTests.dir/home/pi/git_repos/BPMDetector/Analyze/AnalyzerContainer.cpp.o.requires
+
+CMakeFiles/runTests.dir/home/pi/git_repos/BPMDetector/Analyze/AnalyzerContainer.cpp.o.provides: CMakeFiles/runTests.dir/home/pi/git_repos/BPMDetector/Analyze/AnalyzerContainer.cpp.o.requires
+	$(MAKE) -f CMakeFiles/runTests.dir/build.make CMakeFiles/runTests.dir/home/pi/git_repos/BPMDetector/Analyze/AnalyzerContainer.cpp.o.provides.build
+.PHONY : CMakeFiles/runTests.dir/home/pi/git_repos/BPMDetector/Analyze/AnalyzerContainer.cpp.o.provides
+
+CMakeFiles/runTests.dir/home/pi/git_repos/BPMDetector/Analyze/AnalyzerContainer.cpp.o.provides.build: CMakeFiles/runTests.dir/home/pi/git_repos/BPMDetector/Analyze/AnalyzerContainer.cpp.o
 
 
 # Object files for target runTests
 runTests_OBJECTS = \
 "CMakeFiles/runTests.dir/TestMain.cpp.o" \
-"CMakeFiles/runTests.dir/home/pi/eclipse-workspace/BPMDetector/Analyze/ParamList.cpp.o" \
-"CMakeFiles/runTests.dir/home/pi/eclipse-workspace/BPMDetector/Analyze/AnalyzerParam.cpp.o" \
-"CMakeFiles/runTests.dir/home/pi/eclipse-workspace/BPMDetector/Analyze/AnalyzerContainer.cpp.o"
+"CMakeFiles/runTests.dir/home/pi/git_repos/BPMDetector/Analyze/ParamList.cpp.o" \
+"CMakeFiles/runTests.dir/home/pi/git_repos/BPMDetector/Analyze/AnalyzerParam.cpp.o" \
+"CMakeFiles/runTests.dir/home/pi/git_repos/BPMDetector/Analyze/AnalyzerContainer.cpp.o"
 
 # External object files for target runTests
 runTests_EXTERNAL_OBJECTS =
 
 runTests: CMakeFiles/runTests.dir/TestMain.cpp.o
-runTests: CMakeFiles/runTests.dir/home/pi/eclipse-workspace/BPMDetector/Analyze/ParamList.cpp.o
-runTests: CMakeFiles/runTests.dir/home/pi/eclipse-workspace/BPMDetector/Analyze/AnalyzerParam.cpp.o
-runTests: CMakeFiles/runTests.dir/home/pi/eclipse-workspace/BPMDetector/Analyze/AnalyzerContainer.cpp.o
+runTests: CMakeFiles/runTests.dir/home/pi/git_repos/BPMDetector/Analyze/ParamList.cpp.o
+runTests: CMakeFiles/runTests.dir/home/pi/git_repos/BPMDetector/Analyze/AnalyzerParam.cpp.o
+runTests: CMakeFiles/runTests.dir/home/pi/git_repos/BPMDetector/Analyze/AnalyzerContainer.cpp.o
 runTests: CMakeFiles/runTests.dir/build.make
 runTests: /usr/lib/libgtest.a
 runTests: CMakeFiles/runTests.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/pi/eclipse-workspace/BPMDetector/Analyze/TestAnalyze/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable runTests"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/pi/git_repos/BPMDetector/Analyze/TestAnalyze/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable runTests"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/runTests.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -179,9 +179,9 @@ CMakeFiles/runTests.dir/build: runTests
 .PHONY : CMakeFiles/runTests.dir/build
 
 CMakeFiles/runTests.dir/requires: CMakeFiles/runTests.dir/TestMain.cpp.o.requires
-CMakeFiles/runTests.dir/requires: CMakeFiles/runTests.dir/home/pi/eclipse-workspace/BPMDetector/Analyze/ParamList.cpp.o.requires
-CMakeFiles/runTests.dir/requires: CMakeFiles/runTests.dir/home/pi/eclipse-workspace/BPMDetector/Analyze/AnalyzerParam.cpp.o.requires
-CMakeFiles/runTests.dir/requires: CMakeFiles/runTests.dir/home/pi/eclipse-workspace/BPMDetector/Analyze/AnalyzerContainer.cpp.o.requires
+CMakeFiles/runTests.dir/requires: CMakeFiles/runTests.dir/home/pi/git_repos/BPMDetector/Analyze/ParamList.cpp.o.requires
+CMakeFiles/runTests.dir/requires: CMakeFiles/runTests.dir/home/pi/git_repos/BPMDetector/Analyze/AnalyzerParam.cpp.o.requires
+CMakeFiles/runTests.dir/requires: CMakeFiles/runTests.dir/home/pi/git_repos/BPMDetector/Analyze/AnalyzerContainer.cpp.o.requires
 
 .PHONY : CMakeFiles/runTests.dir/requires
 
@@ -190,6 +190,6 @@ CMakeFiles/runTests.dir/clean:
 .PHONY : CMakeFiles/runTests.dir/clean
 
 CMakeFiles/runTests.dir/depend:
-	cd /home/pi/eclipse-workspace/BPMDetector/Analyze/TestAnalyze/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/pi/eclipse-workspace/BPMDetector/Analyze/TestAnalyze /home/pi/eclipse-workspace/BPMDetector/Analyze/TestAnalyze /home/pi/eclipse-workspace/BPMDetector/Analyze/TestAnalyze/build /home/pi/eclipse-workspace/BPMDetector/Analyze/TestAnalyze/build /home/pi/eclipse-workspace/BPMDetector/Analyze/TestAnalyze/build/CMakeFiles/runTests.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/pi/git_repos/BPMDetector/Analyze/TestAnalyze/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/pi/git_repos/BPMDetector/Analyze/TestAnalyze /home/pi/git_repos/BPMDetector/Analyze/TestAnalyze /home/pi/git_repos/BPMDetector/Analyze/TestAnalyze/build /home/pi/git_repos/BPMDetector/Analyze/TestAnalyze/build /home/pi/git_repos/BPMDetector/Analyze/TestAnalyze/build/CMakeFiles/runTests.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/runTests.dir/depend
 

@@ -6,9 +6,9 @@
 
 #IncludeRegexTransform: 
 
-/home/pi/eclipse-workspace/BPMDetector/Analyze/DSP.hpp
+/home/pi/git_repos/BPMDetector/Analyze/DSP.hpp
 Buffer.hpp
-/home/pi/eclipse-workspace/BPMDetector/Analyze/Buffer.hpp
+/home/pi/git_repos/BPMDetector/Analyze/Buffer.hpp
 limits
 -
 cmath
@@ -24,7 +24,7 @@ string
 cassert
 -
 
-/home/pi/eclipse-workspace/BPMDetector/Audio/Buffer.hpp
+/home/pi/git_repos/BPMDetector/Audio/Buffer.hpp
 cassert
 -
 memory
@@ -32,9 +32,9 @@ memory
 algorithm
 -
 
-/home/pi/eclipse-workspace/BPMDetector/Plot/Plotting.hpp
+/home/pi/git_repos/BPMDetector/Plot/Plotting.hpp
 Buffer.hpp
-/home/pi/eclipse-workspace/BPMDetector/Plot/Buffer.hpp
+/home/pi/git_repos/BPMDetector/Plot/Buffer.hpp
 gnuplot-iostream.h
 -
 vector
@@ -44,13 +44,13 @@ utility
 string
 -
 
-/home/pi/eclipse-workspace/BPMDetector/Plot/main.cpp
+/home/pi/git_repos/BPMDetector/Plot/main.cpp
 Buffer.hpp
-/home/pi/eclipse-workspace/BPMDetector/Plot/Buffer.hpp
+/home/pi/git_repos/BPMDetector/Plot/Buffer.hpp
 DSP.hpp
-/home/pi/eclipse-workspace/BPMDetector/Plot/DSP.hpp
+/home/pi/git_repos/BPMDetector/Plot/DSP.hpp
 iostream
 -
 Plotting.hpp
-/home/pi/eclipse-workspace/BPMDetector/Plot/Plotting.hpp
+/home/pi/git_repos/BPMDetector/Plot/Plotting.hpp
 

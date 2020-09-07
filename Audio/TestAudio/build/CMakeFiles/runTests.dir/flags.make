@@ -6,5 +6,5 @@ CXX_FLAGS =   -Wall -std=c++11
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/pi/eclipse-workspace/BPMDetector -I/home/pi/eclipse-workspace/BPMDetector/Audio -I/home/pi/eclipse-workspace/BPMDetector/Audio/Wavfiles 
+CXX_INCLUDES = -I/home/pi/git_repos/BPMDetector -I/home/pi/git_repos/BPMDetector/Audio -I/home/pi/git_repos/BPMDetector/Audio/Wavfiles 
 
