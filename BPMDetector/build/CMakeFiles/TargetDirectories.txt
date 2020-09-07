@@ -1,4 +1,0 @@
-/home/pi/eclipse-workspace/BPMDetector/build/CMakeFiles/rebuild_cache.dir
-/home/pi/eclipse-workspace/BPMDetector/build/CMakeFiles/edit_cache.dir
-/home/pi/eclipse-workspace/BPMDetector/build/CMakeFiles/BPMDetector.dir
-/home/pi/eclipse-workspace/BPMDetector/build/CMakeFiles/BPMDetector_automoc.dir
