@@ -1,3 +1,0 @@
-/home/pi/git_repos/BPMDetector/Analyze/TestAnalyze/build/CMakeFiles/rebuild_cache.dir
-/home/pi/git_repos/BPMDetector/Analyze/TestAnalyze/build/CMakeFiles/edit_cache.dir
-/home/pi/git_repos/BPMDetector/Analyze/TestAnalyze/build/CMakeFiles/runTests.dir
