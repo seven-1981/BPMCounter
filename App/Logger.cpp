@@ -18,12 +18,9 @@ void Logger::init_logger(MainWindow* w)
 
 Logger& Logger::operator<<(const char* text)
 {
-	if (m_initDone == false)
-	{
-		std::string str(text);
-		std::cout << "Logger not yet initialized... Msg = " << str << std::endl;
+	std::string str(text);
+	if (check_initDone(str) == false)
 		return *this;
-	}
 
 	emit log_signal_cc(text);
 	return *this;
@@ -31,12 +28,9 @@ Logger& Logger::operator<<(const char* text)
 
 Logger& Logger::operator<<(int number)
 {
-	if (m_initDone == false)
-	{
-		std::string str = std::to_string(number);
-		std::cout << "Logger not yet initialized... Msg = " << str << std::endl;
+	std::string str = std::to_string(number);
+	if (check_initDone(str) == false)
 		return *this;
-	}
 
 	emit log_signal_i(number);
 	return *this;
@@ -44,13 +38,20 @@ Logger& Logger::operator<<(int number)
 
 Logger& Logger::operator<<(double number)
 {
-	if (m_initDone == false)
-	{
-		std::string str = std::to_string(number);
-		std::cout << "Logger not yet initialized... Msg = " << str << std::endl;
+	std::string str = std::to_string(number);
+	if (check_initDone(str) == false)
 		return *this;
-	}
 
 	emit log_signal_d(number);
 	return *this;
+}
+
+bool Logger::check_initDone(const std::string& str)
+{
+	if (m_initDone == false)
+	{
+		std::cout << "Logger not yet initialized... Message = '" << str << "'" << std::endl;
+		return false;
+	}
+	return true;
 }

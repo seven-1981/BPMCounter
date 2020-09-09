@@ -31,6 +31,7 @@ public:
 
 	bool get_status();
 	void stop_detection();
+	void start_detection();
 
 private:
 	CARD_CONFIG_TYPE m_config;

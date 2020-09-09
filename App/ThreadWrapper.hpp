@@ -48,9 +48,9 @@ public:
 		RP retVal { };
 		while (m_continueProd.load() == true)
 		{
-			Logger::logger() << "Starting production...";
 			std::unique_lock<std::mutex> lck(m_mtx);
 			m_produce.wait(lck, [this] { return !m_productionComplete.load(); } );
+			Logger::logger() << "Starting production...\n";
 			retVal = (m_instance->*m_funcProd)();
 			m_prodRetval.store(retVal);
 			m_productionComplete.store(true);
@@ -66,9 +66,9 @@ public:
 		RC retVal { };
 		while (m_continueCons.load() == true)
 		{
-			Logger::logger() << "Starting consumption...";
 			std::unique_lock<std::mutex> lck(m_mtx);
 			m_consume.wait(lck, [this] { return m_productionComplete.load(); } );
+			Logger::logger() << "Starting consumption...\n";
 			retVal = (m_instance->*m_funcCons)();
 			m_consRetval.store(retVal);
 			m_productionComplete.store(false);

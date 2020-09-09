@@ -7,6 +7,7 @@
 #include "IRecordingService.hpp"
 #include "Buffer.hpp"
 #include "globals.hpp"
+#include "Logger.hpp"
 
 #include <unordered_map>
 #include <atomic>
@@ -81,6 +82,7 @@ private:
     Errors_e fill_buffer(T* sourceBuffer, Buffer<T>& bufferToFill, int size)
     {
         int retVal = m_service->pcm_readi(sourceBuffer, size);
+        Logger::logger() << "Recorded " << retVal << " audio samples.\n";
         if (retVal != size)
         {
             return convert_errorCode(retVal);

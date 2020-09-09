@@ -31,6 +31,8 @@ signals:
 private:
 	Logger(QObject* parent = nullptr);
 
+	bool check_initDone(const std::string& str);
+
 	bool m_initDone;
 };
 

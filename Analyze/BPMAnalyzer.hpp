@@ -6,6 +6,7 @@
 #include "DSP.hpp"
 #include "StopWatch.hpp"
 #include "Averaging.hpp"
+#include "Logger.hpp"
 
 #ifdef ENABLE_BPMANALYZER_PLOT
 #include "Plotting.hpp"
@@ -67,6 +68,7 @@ public:
 		if (m_initState != 0) return 0.0;
 		if (m_origSize == 0) return 0.0;
 		StopWatch watch;
+		Logger::logger() << "Starting BPM analysis...\n";
 		FLOAT_TYPE dt = 1.0f / static_cast<FLOAT_TYPE>(m_sample_rate_Hz);
 		DSP::lowpass_filter(m_buffer, *m_bf_lp, m_cutoffFreq, dt);
 		//watch.tic(std::cout);
@@ -80,6 +82,7 @@ public:
 		PLOT_BUF(*m_bf_ac, "Autocorrelation");
 		//watch.tic(std::cout);
 		double bpm_value = DSP::extract_bpm_value(*m_bf_ac, m_bpm_min, m_bpm_max);
+		Logger::logger() << "Finished analysis. BPM value = " << bpm_value << ".\n";
 		return perform_averaging(bpm_value);
 	}
 

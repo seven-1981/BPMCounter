@@ -35,7 +35,7 @@ public:
 		//Determine RMS value - if below threshold, no detection is performed
 		set_analyzer(m_indexRms);
 		m_rmsValue = m_container.analyze();
-		if (m_rmsValue < 0)	return 0.0;
+		//if (m_rmsValue < 0)	return 0.0;
 		set_analyzer(m_indexBpm);
 		return m_container.analyze();
 	}

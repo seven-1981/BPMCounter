@@ -19,8 +19,14 @@ public:
 
 private:
     QFile m_logFile;
+	bool m_crlfFound;
 
     void appendTimestamp(QString& text);
+
+	bool is_crlfAppended(const QString& str);
+	void handle_crlf(QString& str);
+
+	bool is_scrollbarAtBottom();
 };
 
 #endif

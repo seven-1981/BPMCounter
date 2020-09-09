@@ -71,3 +71,9 @@ void AppContainer::stop_detection()
 {
 	m_wrapper.stop_production();
 }
+
+void AppContainer::start_detection()
+{
+	m_wrapper.start_producer();
+	m_wrapper.start_consumer();
+}

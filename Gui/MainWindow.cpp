@@ -85,6 +85,16 @@ void MainWindow::keyPressEvent(QKeyEvent* event)
 	{
 		stop_application();
 	}
+
+	if (event->key() == Qt::Key_S)
+	{
+		m_app.stop_detection();
+	}
+
+	if (event->key() == Qt::Key_C)
+	{
+		m_app.start_detection();
+	}
 }
 
 void MainWindow::closeEvent(QCloseEvent* event)
