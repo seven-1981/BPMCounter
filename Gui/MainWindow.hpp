@@ -28,9 +28,7 @@ public Q_SLOTS:
 	void update_bpm();
 	void update_rec();
 
-    void log_message_cc(const char* message);
-    void log_message_i(int number);
-    void log_message_d(double number);
+    void log_message(QVariant message);
 
 private:
     AppContainer& m_app;

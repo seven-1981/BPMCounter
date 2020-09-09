@@ -4,54 +4,57 @@
 #include "Logger.hpp"
 #include "MainWindow.hpp"
 
+#include <QString>
+
 
 Logger::Logger(QObject* parent) :
 	m_initDone(false) { }
 
 void Logger::init_logger(MainWindow* w)
 {
-	connect(this, &Logger::log_signal_cc, w, &MainWindow::log_message_cc);
-	connect(this, &Logger::log_signal_i, w, &MainWindow::log_message_i);
-	connect(this, &Logger::log_signal_d, w, &MainWindow::log_message_d);
+	connect(this, &Logger::log_signal, w, &MainWindow::log_message);
 	m_initDone = true;
 }
 
 Logger& Logger::operator<<(const char* text)
 {
-	std::string str(text);
-	if (check_initDone(str) == false)
-		return *this;
+	QString str(text);
 
-	emit log_signal_cc(text);
-	return *this;
+	return do_log(str);
 }
 
 Logger& Logger::operator<<(int number)
 {
-	std::string str = std::to_string(number);
-	if (check_initDone(str) == false)
-		return *this;
+	QString str;
+	str.setNum(number);
 
-	emit log_signal_i(number);
-	return *this;
+	return do_log(str);
 }
 
 Logger& Logger::operator<<(double number)
 {
-	std::string str = std::to_string(number);
-	if (check_initDone(str) == false)
-		return *this;
+	QString str;
+	str.setNum(number);
 
-	emit log_signal_d(number);
-	return *this;
+	return do_log(str);
 }
 
-bool Logger::check_initDone(const std::string& str)
+bool Logger::check_initDone(const QString& str)
 {
 	if (m_initDone == false)
 	{
-		std::cout << "Logger not yet initialized... Message = '" << str << "'" << std::endl;
+		std::cout << "Logger not yet initialized... Message = '" << str.toStdString() << "'" << std::endl;
 		return false;
 	}
 	return true;
+}
+
+Logger& Logger::do_log(QString& str)
+{
+	if (check_initDone(str) == false)
+		return *this;
+
+	QVariant msg(str);
+	emit log_signal(msg);
+	return *this;
 }

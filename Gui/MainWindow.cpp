@@ -6,6 +6,8 @@
 #include <QVBoxLayout>
 #include <QHBoxLayout>
 #include <QFrame>
+#include <QVariant>
+#include <QString>
 #include <cmath>
 #include <iostream>
 #include "MainWindow.hpp"
@@ -33,23 +35,9 @@ MainWindow::~MainWindow()
 	delete m_timer;
 }
 
-void MainWindow::log_message_cc(const char* message)
+void MainWindow::log_message(QVariant message)
 {
-	QString msg(message);
-	m_log->appendMessage(msg);
-}
-
-void MainWindow::log_message_i(int number)
-{
-	QString msg;
-	msg.setNum(number);
-	m_log->appendMessage(msg);
-}
-
-void MainWindow::log_message_d(double number)
-{
-	QString msg;
-	msg.setNum(number);
+	QString msg = message.toString();
 	m_log->appendMessage(msg);
 }
 

@@ -2,6 +2,7 @@
 #define _LOGGER_H
 
 #include <QObject>
+#include <QVariant>
 
 class MainWindow;
 
@@ -24,14 +25,13 @@ public:
 	Logger& operator<<(double number);
 
 signals:
-	void log_signal_cc(const char* text);
-	void log_signal_i(int number);
-	void log_signal_d(double number);
+	void log_signal(QVariant message);
 
 private:
 	Logger(QObject* parent = nullptr);
 
-	bool check_initDone(const std::string& str);
+	bool check_initDone(const QString& str);
+	Logger& do_log(QString& str);
 
 	bool m_initDone;
 };
